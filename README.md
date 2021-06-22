@@ -14,9 +14,7 @@ ColorUI在语雀有个群友共同在维护的知识库，里面有一些群友�
 
 ## 使用UniApp开发
 
-
-
-### [Color-UI/UniApp (github.com)](https://github.com/Color-UI/UniApp)
+[ColorUI](https://github.com/weilanwl/ColorUI)
 
 
 
