@@ -1,0 +1,9 @@
+<ui-sys main="green" doc title="系统">
+    <view class="ui-container">
+        <view class="ellipse bg-green-gradient"/>
+        <ui-title title="简介" depth="2" isIcon/>
+
+        <view> 等待适配：ui-code，ui-menu</view>
+
+    </view>
+</ui-sys>

@@ -44,7 +44,7 @@ Component({
         },
         height: {
             type: String,
-            value: '340rpx'
+            value: '272rpx'
         },
         imgHeight: {
             type: String,

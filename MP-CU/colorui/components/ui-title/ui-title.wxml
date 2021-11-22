@@ -13,12 +13,12 @@
             <text>{{ title }}</text>
             <slot></slot>
             <view class="action-line {{line}}" wx:if="{{hasLine}}">
-                <view></view>
-                <view></view>
+                <view class="view"></view>
+                <view class="view"></view>
             </view>
             <view class="action-dot {{dot}}" wx:if="{{hasDot}}">
-                <view></view>
-                <view></view>
+                <view class="view"></view>
+                <view class="view"></view>
             </view>
         </view>
         <view class="action-desc {{desc}}" wx:if="{{desc!=''}}">{{ subTitle }}</view>

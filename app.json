@@ -1,10 +1,12 @@
 {
     "pages":[
-        "pages/document/home",
+        "pages/home/home",
         "pages/template/home",
         "pages/community/home",
         "pages/find/home",
-        "pages/my/home"
+        "pages/my/home",
+
+        "pages/document/system/system"
     ],
     "window":{
         "backgroundTextStyle": "light",
@@ -19,13 +21,13 @@
     },
     "tabBar": {
         "custom": true,
-        "list": [{
-            "pagePath": "pages/document/home",
-            "text": "首页"
-        },{
-            "pagePath": "pages/template/home",
-            "text": "其他"
-        }]
+        "list": [
+            {"pagePath": "pages/home/home"},
+            {"pagePath": "pages/template/home"},
+            {"pagePath": "pages/community/home"},
+            {"pagePath": "pages/find/home"},
+            {"pagePath": "pages/my/home"}
+        ]
     },
     "style": "v2",
     "sitemapLocation": "sitemap.json"

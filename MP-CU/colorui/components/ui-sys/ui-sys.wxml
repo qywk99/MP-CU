@@ -1,6 +1,7 @@
 <view class="ui-page {{theme?'theme-' + theme:''}} {{main?'main-' + main:''}} {{fonts?'font-' + fonts:''}}">
     <view class="page-body {{bg}} {{ui}}" style="{{styles}}">
         <view class="page-body-main">
+            <app-navbar bg="{{navBg}}" title="{{title}}" wx:if="{{title}}"/>
             <slot/>
             <app-footer wx:if="{{app_footer}}"/>
             <ui-tabbar ui="shadow border-top" datas="{{tabbarData}}" wx:if="{{tabbar}}"/>

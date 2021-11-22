@@ -103,7 +103,6 @@ Component({
     },
     lifetimes: {
         created() {
-            console.log(this.data.scrollTop)
             this.opacityStatus();
         },
         attached() {
@@ -128,19 +127,15 @@ Component({
                 opacityVal: val
             })
         },
-        clickItem(e) {
-            /*let item = e.currentTarget.dataset.item;
-            if (item.type === 'tab') {
-                wx.switchTab({
-                    url: item.url
-                });
-            } else if (item.type === 'nav') {
-                wx.navigateTo({
-                    url: item.url
-                });
-            } else if (item.type === 'tap') {
-                this.triggerEvent("tap",item);
-            }*/
-        }
+        _navBack() {
+            if (this.stopBack) {
+                this.triggerEvent("navback");
+            } else {
+                app.cu_tools._backPage();
+            }
+        },
+        _navHome() {
+            app.cu_tools._toHome();
+        },
     }
 })
