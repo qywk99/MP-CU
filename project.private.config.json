@@ -1,0 +1,23 @@
+{
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "系统文档",
+          "pathName": "pages/document/system/system",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}
