@@ -1,5 +1,5 @@
 {
     "usingComponents": {
-
+        "ui-code": "/MP-CU/colorui/components/ui-code/ui-code"
     }
 }

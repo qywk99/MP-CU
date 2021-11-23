@@ -122,7 +122,7 @@ Component({
     methods: {
         opacityStatus() {
             let top = this.data.scrollTop;
-            let val = top > this.sys_navBar ? 1 : top * 0.01;
+            let val = top > this.data.sys_navBar ? 1 : top * 0.01;
             this.setData({
                 opacityVal: val
             })
