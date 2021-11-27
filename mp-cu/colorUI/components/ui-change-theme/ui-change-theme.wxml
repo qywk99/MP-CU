@@ -1,0 +1,52 @@
+<view>
+    <view class="ui-menu sm-border {{ui}}">
+        <!-- @tap="setTheme(sys_theme == 'auto' ? 'light' : 'auto')" -->
+        <view class="ui-menu-item" >
+            <view class="ui-menu-item-content">跟随系统</view>
+            <view class="action">
+                <!--ui-switch :checked="sys_theme == 'auto'"></ui-switch-->
+            </view>
+        </view>
+        <!-- x -->
+        <view class="ui-menu-item" wx:if="{{$state.sys_theme !== 'auto'}}">
+            <view class="flex flex-center py-5 text-center flex-sub">
+                <view class="pr-5">
+                    <view class="mobile-phone border {{$state.sys_theme === 'light'?'cur':''}}" data-value="light" bindtap="tapThemeChange">
+                        <view class="ui-BG-Main radius"/>
+                        <view class="bg-gray radius"/>
+                        <view class="bg-gray radius"/>
+                        <view class="borders border-top mt-5 mx-4 border-dark-6"/>
+                    </view>
+                    <view>浅色</view>
+                </view>
+                <view class="pl-5">
+                    <view class="mobile-phone border dark {{$state.sys_theme === 'dark'?'cur':''}}" data-value="dark" bindtap="tapThemeChange">
+                        <view class="ui-BG-Main radius"/>
+                        <view class="bg-dark-4 radius"/>
+                        <view class="bg-dark-4 radius"/>
+                        <view class="borders border-top mt-5 mx-4 border-white"/>
+                    </view>
+                    <view>深色</view>
+                </view>
+            </view>
+        </view>
+        <view class="ui-menu-item">
+            <view class="ui-menu-item-content">强调色</view>
+            <!-- @tap="$Modal.show('ColorPicker')"-->
+            <view class="action">
+                <!--ui-radio :bg="`bg-${sys_main} shadow-${sys_main} shadow-sm`"></ui-radio-->
+            </view>
+        </view>
+    </view>
+
+    <ui-modal name="ColorPicker">
+        <view class="ui-grid ui-cols-6 p-3">
+            <!--@tap="chooseColor(item)"-->
+            <view class="text-center ui-item py-2 my-2" wx:for="{{color}}" wx:key="index">
+                <text class="bg-{{item}} shadow-{{item}} shadow-sm"></text>
+                <!--ui-radio :value="sys_main" :label="item" :bg="`bg-${item} shadow-${item} shadow-sm`"
+                    :unbg="`bg-${item} shadow-${item} shadow-sm`"></ui-radio-->
+            </view>
+        </view>
+    </ui-modal>
+</view>

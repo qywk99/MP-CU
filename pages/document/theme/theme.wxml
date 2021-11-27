@@ -1,4 +1,4 @@
-<ui-sys main="green" doc title="主题" setTheme="{{theme}}">
+<ui-sys main="green" doc title="主题">
     <view class="ui-container">
 
         <ui-title title="简介" depth="2" isIcon/>
@@ -39,7 +39,7 @@
         <view class="paragraph">引用组件来切换系统的主题以及强调色</view>
         <ui-code tag="pre" lang="html" title content="{{code1}}"/>
         <view class="my-4 text-d">演示：</view>
-        <ui-change-theme ui="radius border" bind:onThemeChange="onThemeChange"/>
+        <ui-change-theme ui="radius border"/>
         <ui-menu ui="mt-4 radius border">
             <ui-menu-item icon="cicon-equalizer" title="参数"/>
         </ui-menu>

@@ -21,16 +21,16 @@
         "navigationStyle": "custom"
     },
     "usingComponents": {
-        "ui-sys": "MP-CU/colorui/components/ui-sys/ui-sys",
-        "ui-title": "MP-CU/colorui/components/ui-title/ui-title",
-        "ui-code": "/MP-CU/colorui/components/ui-code/ui-code",
-        "ui-loading": "/MP-CU/colorui/components/ui-loading/ui-loading",
-        "ui-menu": "/MP-CU/colorui/components/ui-menu/ui-menu",
-        "ui-menu-item": "/MP-CU/colorui/components/ui-menu-item/ui-menu-item",
-        "ui-avatar": "/MP-CU/colorui/components/ui-avatar/ui-avatar",
-        "ui-avatar-stack": "/MP-CU/colorui/components/ui-avatar-stack/ui-avatar-stack",
-        "ui-modal": "/MP-CU/colorui/components/ui-modal/ui-modal",
-        "ui-toast": "/MP-CU/colorui/components/ui-toast/ui-toast"
+        "ui-sys": "mp-cu/colorUI/components/ui-sys/ui-sys",
+        "ui-title": "mp-cu/colorUI/components/ui-title/ui-title",
+        "ui-code": "mp-cu/colorUI/components/ui-code/ui-code",
+        "ui-loading": "mp-cu/colorUI/components/ui-loading/ui-loading",
+        "ui-menu": "mp-cu/colorUI/components/ui-menu/ui-menu",
+        "ui-menu-item": "mp-cu/colorUI/components/ui-menu-item/ui-menu-item",
+        "ui-avatar": "mp-cu/colorUI/components/ui-avatar/ui-avatar",
+        "ui-avatar-stack": "mp-cu/colorUI/components/ui-avatar-stack/ui-avatar-stack",
+        "ui-modal": "mp-cu/colorUI/components/ui-modal/ui-modal",
+        "ui-toast": "mp-cu/colorUI/components/ui-toast/ui-toast"
     },
     "tabBar": {
         "custom": true,

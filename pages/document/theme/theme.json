@@ -1,5 +1,5 @@
 {
     "usingComponents": {
-        "ui-change-theme": "/MP-CU/colorui/components/ui-change-theme/ui-change-theme"
+        "ui-change-theme": "/mp-cu/colorUI/components/ui-change-theme/ui-change-theme"
     }
 }

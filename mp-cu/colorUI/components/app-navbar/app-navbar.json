@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "ui-navbar": "/mp-cu/colorUI/components/ui-navbar/ui-navbar"
+  }
+}

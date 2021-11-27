@@ -1,6 +1,4 @@
-# MP CU Beta V3.2.6
-
-#### 介绍
+# MP CU
 
 本项目为 `colorui3.x` 微信小程序原生版。
 
@@ -8,7 +6,30 @@
 
 `colorui3.x` 地址： [https://github.com/weilanwl/coloruiBeta](https://github.com/Color-UI/MP-CU)
 
+本项目地址：[https://github.com/Color-UI/MP-CU](https://github.com/Color-UI/MP-CU)
+
 <hr/>
+
+### 准备配置
+
+需要先升级小程序开发工具到 `2021-10-11` 之后的版本,
+然后，检查根目录下，`project.config.json` 配置文件内的 `"setting"` 节点下，是否配置了：
+
+``` 
+"useCompilerPlugins": [
+    "sass"
+]
+```
+
+如果没有配置，需要手动配置一下
+
+由于小程序默认开启了 `v2` 的样式，在v2模式下，`colorUI` 部分样式会失效。
+完整 `colorUI` 样式，需要在 `app.json` 文件内，删除 `v2` 即可
+
+``` 
+"style": "v2", //删掉这段
+```
+
 
 ### 框架配置
 
@@ -65,3 +86,6 @@ App({
 }
 
 ```
+
+
+`custom-tab-bar` 文件夹是不需要的，只是本框架演示demo用的自定义tabBar，实际项目中，自行考虑整合。

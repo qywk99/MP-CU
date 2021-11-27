@@ -3,7 +3,7 @@ const app = getApp();
 Page({
     data: {
         tabbarData: app.colorUI.config.tabbar,
-        sys_navBar: app.colorUI.config.sys_navBar,
+        sys_navBar: app.colorUI.tools.sys_navBar,
         sys_capsule: app.colorUI.tools.sys_capsule(),
         sys_scrollTop: 0,
         swiperList: [{img: "/static/img/mp-cu.png"}, {img: "/static/img/8v2yr.png"}, {img: "/static/img/qhgtb.png"}],
