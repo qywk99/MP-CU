@@ -1,4 +1,5 @@
-const app = getApp();
+import config from '../../../config/index'
+import tools from '../../../utils/tools'
 
 Component({
     data: {
@@ -6,8 +7,8 @@ Component({
         capsuleStyle: {},
         capsuleBack: {},
         opacityVal: 0,
-        sys_statusBar: app.cu_config.sys_statusBar,
-        sys_navBar: app.cu_config.sys_navBar,
+        sys_statusBar: config.sys_statusBar,
+        sys_navBar: config.sys_navBar,
         isFristPage: true
     },
     options: {
@@ -107,7 +108,7 @@ Component({
         },
         attached() {
             this.setData({
-                isFristPage: app.cu_tools.sys_isFirstPage()
+                isFristPage: tools.sys_isFirstPage()
             });
         },
         ready() {
@@ -131,11 +132,11 @@ Component({
             if (this.stopBack) {
                 this.triggerEvent("navback");
             } else {
-                app.cu_tools._backPage();
+                tools._backPage();
             }
         },
         _navHome() {
-            app.cu_tools._toHome();
+            tools._toHome();
         },
     }
 })

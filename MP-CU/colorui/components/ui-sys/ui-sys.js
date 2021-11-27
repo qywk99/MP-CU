@@ -1,11 +1,12 @@
-const app = getApp();
+import colorUI from '../../../colorui'
+
 Component({
     data: {
         isLoading: false,
-		app_footer: app.cu_config.app_footer,
-        sys_theme: app.cu_tools.sys_theme,
-        sys_main: app.cu_tools.sys_main,
-        sys_text: app.cu_tools.sys_text,
+		app_footer: colorUI.config.app_footer,
+        sys_theme: colorUI.tools.sys_theme,
+        sys_main: colorUI.tools.sys_main,
+        sys_text: colorUI.tools.sys_text,
     },
     options: {
         // 表示页面 wxss 样式将影响到自定义组件，但自定义组件 wxss 中指定的样式不会影响页面；

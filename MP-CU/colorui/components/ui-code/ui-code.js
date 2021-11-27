@@ -1,4 +1,5 @@
-const Prism = require("./prism");
+import Prism from '../../../utils/prism'
+
 Component({
     data: {
         nodes: [],

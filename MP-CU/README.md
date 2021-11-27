@@ -1,12 +1,12 @@
 # MP CU
 
-本项目为 colorui3.x 微信小程序原生版。
+本项目为 `colorui3.x` 微信小程序原生版。
 
-colorui3.x 默认只支持uni-app，本项目中colorui框架为移植修改版。
+`colorui3.x` 默认只支持 `uni-app`，本项目中 `colorui` 框架为移植修改版。
 
-colorui3.x 地址： https://github.com/weilanwl/coloruiBeta
+`colorui3.x` 地址： [https://github.com/weilanwl/coloruiBeta](https://github.com/Color-UI/MP-CU)
 
-本项目地址：https://github.com/Color-UI/MP-CU/tree/beta-v3.2
+本项目地址：[https://github.com/Color-UI/MP-CU](https://github.com/Color-UI/MP-CU)
 
 <hr/>
 
@@ -21,40 +21,37 @@ colorui3.x 地址： https://github.com/weilanwl/coloruiBeta
 ]
 ```
 
-
 如果没有配置，需要手动配置一下
 
-由于小程序默认开启了v2的样式，在v2模式下，colorUI部分样式会失效。
-完整colorUI样式，需要在 `app.json` 文件内，删除 `v2` 即可
+由于小程序默认开启了 `v2` 的样式，在v2模式下，`colorUI` 部分样式会失效。
+完整 `colorUI` 样式，需要在 `app.json` 文件内，删除 `v2` 即可
 
 ``` 
 "style": "v2", //删掉这段
 ```
 
 
-
 ### 框架配置
 
-在根目录的 `app.js` 文件里引入相关配置, 注意, 请不要修改 `cu_config` 和 `cu_tools` 名字,否则, 会报错：
+在根目录的 `app.js` 文件里引入相关配置：
 
 ``` 
 
-const mp_cu_config = require('/MP-CU/app/config/index');
-const mp_cu_tools = require('/MP-CU/utils/tools');
+const colorUI = require('/MP-CU/colorui');
 
 App({
+    //挂载到app上
+    colorUI: colorUI,
+    
+    //小程序启动
     onLaunch() {
 
     },
 	.....
 	.....
-	// 注意不要修改前面的名字，`cu_config` 和 `cu_tools`
-    cu_config: mp_cu_config,
-    cu_tools: mp_cu_tools,
 })
 
 ```
-
 
 然后在根目录的 `app.scss` 文件里引入相关框架的css文件。
 
@@ -64,7 +61,7 @@ App({
 
 
 // 实际项目中，可删除下面的相关文件和引用，因为图标太多，体积较大，可能你项目里并不需要这么多图标，建议自行添加需要的扩展icon图标引用。
-// @import './MP-CU/app/icon/doc';
+// @import './MP-CU/icon/doc';
 
 ```
 
@@ -73,9 +70,7 @@ App({
 
 ``` 
 
-/MP-CU/app/config/index.js'  // 一些框架的配置项
-
-/MP-CU/utils/tools.js'  // 一些框架中使用的方法函数，可复用。
+/MP-CU/config/index.js'  // 框架的默认配置项
 
 ```
 
@@ -93,5 +88,4 @@ App({
 ```
 
 
-custom-tab-bar 文件夹是不需要的，只是本框架演示demo用的自定义tabBar，实际项目中，自行考虑整合。
-
+`custom-tab-bar` 文件夹是不需要的，只是本框架演示demo用的自定义tabBar，实际项目中，自行考虑整合。

@@ -1,8 +1,9 @@
-const app = getApp();
+import config from '../../../config/index'
+
 Component({
     data: {
         touch: false,
-        sys_navBar: app.cu_config.sys_navBar,
+        sys_navBar: config.sys_navBar,
     },
     options: {
         addGlobalClass: true,

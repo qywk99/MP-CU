@@ -1,10 +1,10 @@
-const app = getApp();
+import config from '../../../config/index'
 
 Component({
     data: {
         fixed: true,
-        sys_statusBar: app.cu_config.sys_statusBar,
-        sys_navBar: app.cu_config.sys_navBar
+        sys_statusBar: config.sys_statusBar,
+        sys_navBar: config.sys_navBar
     },
     options: {
         addGlobalClass: true

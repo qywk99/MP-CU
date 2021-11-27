@@ -1,4 +1,4 @@
-const app = getApp();
+import tools from '../../utils/tools'
 
 Component({
     data: {
@@ -17,7 +17,7 @@ Component({
     lifetimes: {
         attached() {
             this.setData({
-                colorName: app.cu_tools.getColor()
+                colorName: tools.getColor()
             });
         }
     },

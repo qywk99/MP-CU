@@ -1,4 +1,5 @@
-const config = require('../app/config/index');
+import config from '../config/index'
+
 module.exports = {
     sys_theme: wx.getStorageSync('sys_theme')?wx.getStorageSync('sys_theme'):config.theme,
     sys_main: wx.getStorageSync('sys_main')?wx.getStorageSync('sys_main'):config.main,

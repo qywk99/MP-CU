@@ -2,9 +2,9 @@ const app = getApp();
 
 Page({
     data: {
-        tabbarData: app.cu_config.tabbar,
-        sys_navBar: app.cu_config.sys_navBar,
-        sys_capsule: app.cu_tools.sys_capsule(),
+        tabbarData: app.colorUI.config.tabbar,
+        sys_navBar: app.colorUI.config.sys_navBar,
+        sys_capsule: app.colorUI.tools.sys_capsule(),
         sys_scrollTop: 0,
         swiperList: [{img: "/static/img/mp-cu.png"}, {img: "/static/img/8v2yr.png"}, {img: "/static/img/qhgtb.png"}],
         navData: [{
