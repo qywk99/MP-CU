@@ -1,9 +1,11 @@
 const app = getApp();
-
 Component({
     data: {
         isLoading: false,
 		app_footer: app.cu_config.app_footer,
+        sys_theme: app.cu_tools.sys_theme,
+        sys_main: app.cu_tools.sys_main,
+        sys_text: app.cu_tools.sys_text,
     },
     options: {
         // 表示页面 wxss 样式将影响到自定义组件，但自定义组件 wxss 中指定的样式不会影响页面；
@@ -11,18 +13,6 @@ Component({
         //multipleSlots: true  //多插槽
     },
     properties: {
-        theme: {    //主题
-            type: String,
-            value: 'light'
-        },
-        main: {     //主色
-            type: String,
-            value: 'blur'
-        },
-        fonts: {     //字体大小
-            type: String,
-            value: 1
-        },
         styles: {   //样式
             type: String,
             value: ''
@@ -60,8 +50,61 @@ Component({
             type: Array,
             value: []
         },
+        setTheme: {
+            type: String,
+            value: ''
+        },
+        setMain: {
+            type: String,
+            value: ''
+        },
+        setText: {
+            type: String,
+            value: ''
+        },
+    },
+    lifetimes: {
+        created() {
+
+        },
+        attached() {
+
+        },
+        ready() {
+
+        },
+    },
+    observers: {
+        'setTheme'(res) {
+            if (res) {
+                this.setData({
+                    sys_theme: res
+                })
+            }
+        },
+        'setMain'(res) {
+            if (res) {
+                this.setData({
+                    sys_main: res
+                })
+            }
+        },
+        'setText'(res) {
+            if (res) {
+                this.setData({
+                    sys_text: res
+                })
+            }
+        },
     },
     methods: {
-
+        /*get_sys_data() {
+            this.setData({
+                app_footer: app.cu_config.app_footer,
+                sys_theme: app.cu_tools.sys_theme,
+                sys_main: app.cu_tools.sys_main,
+                sys_text: app.cu_tools.sys_text
+            });
+        },*/
     }
 })

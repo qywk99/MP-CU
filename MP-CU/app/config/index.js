@@ -3,7 +3,7 @@ module.exports = {
 	isTheme: false,						// 是否开启多主题（true:会读缓存，能设置对应的主题)
 	themeAuto: false,					// 跟随系统
 	theme: 'light',						// 设置默认主题
-	main: 'blue',						// 设置默认强调色å
+	main: 'blue',						// 设置默认强调色
 	text: 1,							// 设置默认字号等级(0-4)
 	app_footer: true,					//显示底部colorui版权
 	homePath: '/pages/home/home',		// 设置首页路径(一些组件会用到跳回主页，请每个项目设置好！)
@@ -44,5 +44,5 @@ module.exports = {
 		curIcon: '/static/tab_icon/my_cur.png',
 		url: '/pages/my/home',
 		type: 'tab'
-	}]
+	}],
 }

@@ -41,6 +41,12 @@
           "pathName": "pages/document/avatar/avatar",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "主题",
+          "pathName": "pages/document/theme/theme",
+          "query": "",
+          "scene": null
         }
       ]
     }

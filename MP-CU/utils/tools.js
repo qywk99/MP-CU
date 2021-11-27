@@ -1,5 +1,20 @@
-//const app = getApp();
+const config = require('../app/config/index');
 module.exports = {
+    sys_theme: wx.getStorageSync('sys_theme')?wx.getStorageSync('sys_theme'):config.theme,
+    sys_main: wx.getStorageSync('sys_main')?wx.getStorageSync('sys_main'):config.main,
+    sys_text: wx.getStorageSync('sys_text')?wx.getStorageSync('sys_text'):config.text,
+    //设置主题
+    setTheme(val) {
+        wx.setStorageSync('sys_theme', val);
+    },
+    //设置主颜色
+    setMain(val) {
+        wx.setStorageSync('sys_main', val);
+    },
+    //设置字号等级
+    setText(val) {
+        wx.setStorageSync('sys_text', val);
+    },
     sys_capsule() {
         let capsule = wx.getMenuButtonBoundingClientRect();
         if (!capsule) {
@@ -32,7 +47,7 @@ module.exports = {
     },
     _toHome() {
         wx.switchTab({
-            url: '/pages/home/home',
+            url: config.homePath,
             fail(res) {
                 console.log(res);
             }
@@ -76,5 +91,5 @@ module.exports = {
                 })
                 break;
         }
-    },
+    }
 }

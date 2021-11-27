@@ -1,4 +1,4 @@
-<view class="ui-page {{theme?'theme-' + theme:''}} {{main?'main-' + main:''}} {{fonts?'font-' + fonts:''}}">
+<view class="ui-page {{sys_theme?'theme-' + sys_theme:''}} {{sys_main?'main-' + sys_main:''}} {{sys_text?'font-' + sys_text:''}}">
     <view class="page-body {{bg}} {{ui}}" style="{{styles}}">
         <view class="page-body-main">
             <app-navbar bg="{{navBg}}" title="{{title}}" wx:if="{{title}}"/>
