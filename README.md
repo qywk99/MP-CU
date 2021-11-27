@@ -18,7 +18,14 @@ colorui3.x 地址： https://github.com/weilanwl/coloruiBeta
 ]
 ```
 
-如果没有配置，需要手动配置一下，应该就没问题了。
+如果没有配置，需要手动配置一下
+
+由于小程序默认开启了v2的样式，在v2模式下，colorUI部分样式会失效。
+完整colorUI样式，需要在 `app.json` 文件内，删除 `v2` 即可
+
+``` 
+"style": "v2", //删掉这段
+```
 
 
 ### 框架配置

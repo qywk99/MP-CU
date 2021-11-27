@@ -1,4 +1,5 @@
 {
+  "setting": {},
   "condition": {
     "plugin": {
       "list": []
@@ -14,6 +15,30 @@
         {
           "name": "系统文档",
           "pathName": "pages/document/system/system",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "菜单",
+          "pathName": "pages/document/menu/menu",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "按钮",
+          "pathName": "pages/document/button/button",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "加载",
+          "pathName": "pages/document/loading/loading",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "头像",
+          "pathName": "pages/document/avatar/avatar",
           "query": "",
           "scene": null
         }

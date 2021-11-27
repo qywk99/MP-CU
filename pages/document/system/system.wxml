@@ -10,7 +10,9 @@
         </view>
         <ui-code tag="pre" lang="html" content="{{code1}}" title/>
 
-        <view>这里还缺 ui-menu 系列组件。</view>
+        <ui-menu ui="radius border">
+            <ui-menu-item icon="cicon-equalizer" title="参数" bindtap="tapNative"/>
+        </ui-menu>
 
         <ui-title title="使用背景" depth="2" isIcon/>
         <view class="">

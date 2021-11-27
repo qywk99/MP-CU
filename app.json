@@ -6,7 +6,11 @@
         "pages/find/home",
         "pages/my/home",
 
-        "pages/document/system/system"
+        "pages/document/system/system",
+        "pages/document/menu/menu",
+        "pages/document/button/button",
+        "pages/document/loading/loading",
+        "pages/document/avatar/avatar"
     ],
     "window":{
         "backgroundTextStyle": "light",
@@ -17,7 +21,13 @@
     },
     "usingComponents": {
         "ui-sys": "MP-CU/colorui/components/ui-sys/ui-sys",
-        "ui-title": "MP-CU/colorui/components/ui-title/ui-title"
+        "ui-title": "MP-CU/colorui/components/ui-title/ui-title",
+        "ui-code": "/MP-CU/colorui/components/ui-code/ui-code",
+        "ui-loading": "/MP-CU/colorui/components/ui-loading/ui-loading",
+        "ui-menu": "/MP-CU/colorui/components/ui-menu/ui-menu",
+        "ui-menu-item": "/MP-CU/colorui/components/ui-menu-item/ui-menu-item",
+        "ui-avatar": "/MP-CU/colorui/components/ui-avatar/ui-avatar",
+        "ui-avatar-stack": "/MP-CU/colorui/components/ui-avatar-stack/ui-avatar-stack"
     },
     "tabBar": {
         "custom": true,
@@ -29,6 +39,5 @@
             {"pagePath": "pages/my/home"}
         ]
     },
-    "style": "v2",
     "sitemapLocation": "sitemap.json"
 }

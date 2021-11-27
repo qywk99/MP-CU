@@ -10,4 +10,7 @@ Page({
     onLoad() {
 
     },
+    tapNative() {
+        //'/pages/parameter/parameter?component=ui-sys'
+    }
 })
