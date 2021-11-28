@@ -1,5 +1,4 @@
 const app = getApp();
-
 Page({
     data: {
         sys_navBar: app.ColorUi.tools.sys_navBar,
