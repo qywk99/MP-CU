@@ -1,4 +1,4 @@
-<ui-sys main="green" img="/static/img/4put2.png" tabbar tabbarData="{{tabbarData}}">
+<ui-sys main="green" img="/static/img/4put2.png" tabbar>
 
     <ui-navbar back="{{false}}" opacity scrollTop="{{sys_scrollTop}}">
         <view class="flex-bar p-3" wx:if="{{sys_scrollTop > sys_navBar}}">

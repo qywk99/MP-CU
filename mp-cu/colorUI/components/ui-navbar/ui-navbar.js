@@ -1,13 +1,11 @@
-import tools from '../../../utils/tools'
-
 Component({
     data: {
         statusCur: '',
         capsuleStyle: {},
         capsuleBack: {},
         opacityVal: 0,
-        sys_statusBar: tools.sys_statusBar,
-        sys_navBar: tools.sys_navBar,
+        sys_statusBar: getApp().ColorUi.tools.sys_statusBar,
+        sys_navBar: getApp().ColorUi.tools.sys_navBar,
         isFristPage: true
     },
     options: {
@@ -106,8 +104,9 @@ Component({
             this.opacityStatus();
         },
         attached() {
+            const page = this.sys_isFirstPage();
             this.setData({
-                isFristPage: this.sys_isFirstPage()
+                isFristPage: page
             });
         },
         ready() {

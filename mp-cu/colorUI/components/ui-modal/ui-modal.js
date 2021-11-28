@@ -1,9 +1,7 @@
-import tools from '../../../utils/tools'
-
 Component({
     data: {
         touch: false,
-        sys_navBar: tools.sys_navBar,
+        sys_navBar: getApp().ColorUi.tools.sys_navBar,
     },
     options: {
         addGlobalClass: true,

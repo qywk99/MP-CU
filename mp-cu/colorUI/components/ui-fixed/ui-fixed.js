@@ -1,10 +1,8 @@
-import tools from '../../../utils/tools'
-
 Component({
     data: {
         fixed: true,
-        sys_statusBar: tools.sys_statusBar,
-        sys_navBar: tools.sys_navBar
+        sys_statusBar: getApp().ColorUi.tools.sys_statusBar,
+        sys_navBar: getApp().ColorUi.tools.sys_navBar
     },
     options: {
         addGlobalClass: true

@@ -1,5 +1,3 @@
-import tools from '../../utils/tools'
-
 Component({
     data: {
         colorName: ''
@@ -17,7 +15,7 @@ Component({
     lifetimes: {
         attached() {
             this.setData({
-                colorName: tools.getColor()
+                colorName: getApp().ColorUi.tools.getColor()
             });
         }
     },
