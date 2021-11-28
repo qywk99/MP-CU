@@ -2,6 +2,14 @@ import Store from '../utils/store'
 
 
 const ColorUIStore  = (config) =>{
+    if(config.autoChangeTheme){ //开启自动适配主题色
+        wx.onThemeChange((res)=>{
+            store.setState({
+                sys_theme: res.theme,
+            });
+            wx.setStorageSync('sys_theme', res.theme);
+        })
+    }
     const store =  new Store({
         debug: true, // 关闭内部日志的输出。
         state: {

@@ -71,6 +71,7 @@ export default class ColorUI {
     }
     setStore(){
         this.store = ColorUIStore(this)
+        console.log(this.store)
     }
     getColorUiStore (){
         return this.store

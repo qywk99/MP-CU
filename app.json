@@ -42,5 +42,6 @@
             {"pagePath": "pages/my/home"}
         ]
     },
+    "darkmode": true,
     "sitemapLocation": "sitemap.json"
 }

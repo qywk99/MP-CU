@@ -55,7 +55,7 @@ Component({
 
         },
         attached() {
-            //console.log(colorUI.store.getState().sys_theme)
+            // console.log(colorUI.store.getState().sys_theme)
         },
         ready() {
 
