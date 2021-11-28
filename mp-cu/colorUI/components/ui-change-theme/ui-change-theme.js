@@ -29,8 +29,11 @@ Component({
         },*/
     },
     methods: {
+        tapAutoThemeChange(e) {
+            let val = e.currentTarget.dataset.value;
+            this.setTheme(val==='auto'?'light':'auto');
+        },
         tapThemeChange(e) {
-            console.log(e.currentTarget.dataset.value)
             this.setTheme(e.currentTarget.dataset.value);
         },
         /*chooseColor(val) {

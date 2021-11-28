@@ -1,4 +1,4 @@
-<ui-sys main="green" doc title="菜单">
+<ui-sys doc title="菜单">
     <view class="ui-container">
         <ui-title title="菜单" depth="2" isIcon/>
 

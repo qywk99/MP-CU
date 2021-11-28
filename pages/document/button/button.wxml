@@ -1,4 +1,4 @@
-<ui-sys main="green" doc title="按钮">
+<ui-sys doc title="按钮">
     <view class="ui-container">
         <ui-title title="默认" depth="2" isIcon/>
         <view class="p-3 flex-between">

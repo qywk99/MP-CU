@@ -2,7 +2,7 @@ import Store from '../utils/store'
 
 const ColorUIStore  = (config) =>{
     const store = new Store({
-        debug: true, // 内部日志的输出。
+        debug: false, // 内部日志的输出。
         state: {
             sys_theme: wx.getStorageSync('sys_theme')?wx.getStorageSync('sys_theme'):config.theme,
             sys_main: wx.getStorageSync('sys_main')?wx.getStorageSync('sys_main'):config.main,

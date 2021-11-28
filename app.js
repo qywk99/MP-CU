@@ -1,7 +1,7 @@
 //引入框架的方法函数库
 import ColorUI from './mp-cu/ui'
 var ColorUi = new ColorUI({
-    // 配置
+    // 配置，使用的默认的配置项时，可以不在这里配置
     theme: 'light',       // 设置默认主题(light 浅色，dark 深色，auto 自动跟随系统)，默认 浅色
     //main: 'blue',       // 设置默认强调色（参考背景色），默认 blue
     //text: '1',          // 设置默认字号等级(0-4)，默认 1

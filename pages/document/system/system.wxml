@@ -1,4 +1,4 @@
-<ui-sys main="green" doc title="系统">
+<ui-sys doc title="系统">
     <view class="ui-container">
         <view class="ellipse bg-green-gradient"/>
         <ui-title title="简介" depth="2" isIcon/>
@@ -11,7 +11,7 @@
         <ui-code tag="pre" lang="html" content="{{code1}}" title/>
 
         <ui-menu ui="radius border">
-            <ui-menu-item icon="cicon-equalizer" title="参数" bindtap="tapNative"/>
+            <ui-menu-item icon="cicon-equalizer" title="参数" bindtap="tapNative" arrow/>
         </ui-menu>
 
         <ui-title title="使用背景" depth="2" isIcon/>

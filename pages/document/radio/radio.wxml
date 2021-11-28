@@ -1,0 +1,55 @@
+<ui-sys doc title="单选框">
+    <view class="ui-container">
+        <ui-title title="简介" depth="2" isIcon/>
+        <view class="paragraph">单选框</view>
+    </view>
+
+    <ui-title title="基础用法" depth="2" isIcon ui="mx-4"/>
+    <view class="p-4">值: {{ radio }}</view>
+
+    <ui-radio model:value="{{radio}}" label="1">选项1</ui-radio>
+    <ui-radio model:value="{{radio}}" label="2">选项2</ui-radio>
+    <ui-radio model:value="{{radio}}" label="3">选项3</ui-radio>
+
+    <ui-title title="卡片样式" depth="2" isIcon ui="mx-4"/>
+    <ui-radio-group bg="bg-red-thin" model:value="{{clearable}}" clearable>
+        <ui-radio label="1" ui="card lg shadow-lg">
+            <view class="flex-bar flex-sub w-100">
+                <view class="flex-sub">
+                    <view class="text-xl">套餐一</view>
+                    <view class="ui-TC-3">一个月会员</view>
+                </view>
+                <view class="ml-5 px-4 text-xxl text-price text-orange">300.00</view>
+            </view>
+        </ui-radio>
+        <ui-radio label="2" ui="card lg check shadow-lg" bg="bg-red">
+            <view class="flex-bar flex-sub w-100">
+                <view class="flex-sub">
+                    <view class="text-xl">套餐二</view>
+                    <view class="ui-TC-3">两个月会员</view>
+                </view>
+                <view class="ml-5 px-4 text-xxl text-price text-orange">580.00</view>
+            </view>
+        </ui-radio>
+        <ui-radio label="3" ui="card lg line shadow-lg">
+            <view class="flex-bar flex-sub w-100">
+                <view class="flex-sub">
+                    <view class="text-xl">套餐三</view>
+                    <view class="ui-TC-3">三个月会员</view>
+                </view>
+                <view class="ml-5 px-4 text-xxl text-price text-orange">760.00</view>
+            </view>
+        </ui-radio>
+        <!-- 消除样式 -->
+        <ui-radio label="4" ui="card lg line shadow-lg" none>
+            <view class="flex-bar flex-sub w-100">
+                <view class="flex-sub">
+                    <view class="text-xl">套餐四 （消除样式）</view>
+                    <view class="ui-TC-3">四个月会员</view>
+                </view>
+                <view class="ml-5 px-4 text-xxl text-price text-orange">960.00</view>
+            </view>
+        </ui-radio>
+    </ui-radio-group>
+
+</ui-sys>

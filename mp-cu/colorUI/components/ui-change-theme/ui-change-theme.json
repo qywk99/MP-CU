@@ -1,4 +1,6 @@
 {
   "component": true,
-  "usingComponents": {}
+  "usingComponents": {
+    "ui-switch": "/mp-cu/colorUI/components/ui-switch/ui-switch"
+  }
 }

@@ -1,4 +1,4 @@
-<ui-sys main="green" doc title="主题">
+<ui-sys doc title="主题">
     <view class="ui-container">
 
         <ui-title title="简介" depth="2" isIcon/>

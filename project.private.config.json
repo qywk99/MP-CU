@@ -47,6 +47,12 @@
           "pathName": "pages/document/theme/theme",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "单选框",
+          "pathName": "pages/document/radio/radio",
+          "query": "",
+          "scene": null
         }
       ]
     }

@@ -1,10 +1,9 @@
 <view>
     <view class="ui-menu sm-border {{ui}}">
-        <!-- @tap="setTheme(sys_theme == 'auto' ? 'light' : 'auto')" -->
-        <view class="ui-menu-item" >
+        <view class="ui-menu-item" data-value="{{$state.sys_theme}}" bindtap="tapAutoThemeChange">
             <view class="ui-menu-item-content">跟随系统</view>
             <view class="action">
-                <!--ui-switch :checked="sys_theme == 'auto'"></ui-switch-->
+                <ui-switch checked="{{$state.sys_theme === 'auto'}}"/>
             </view>
         </view>
         <!-- x -->

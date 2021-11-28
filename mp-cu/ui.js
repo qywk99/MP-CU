@@ -62,11 +62,13 @@ export default class ColorUI {
         this.tabBar = tabBar
         this.store = {}
         this.tools = tools
+    }
+    setStore() {
+        this.store = ColorUIStore(this)
         //开启自动适配主题色
-        //let sys_theme = wx.getStorageSync('sys_theme');
+        let theme = this.store.getState().sys_theme;
         if (theme === 'auto') {
             wx.onThemeChange((res)=>{
-                console.log(res)
                 this.store.setState({sys_theme: 'auto'});
                 wx.setStorageSync('sys_theme', 'auto');
                 this.setStatusStyle(wx.getSystemInfoSync().theme === 'light' ? 'dark' : 'light')
@@ -75,9 +77,6 @@ export default class ColorUI {
             wx.setStorageSync('sys_theme', theme)
             this.setStatusStyle(theme === 'light' ? 'dark' : 'light');
         }
-    }
-    setStore() {
-        this.store = ColorUIStore(this)
     }
     getColorUiStore() {
         return this.store

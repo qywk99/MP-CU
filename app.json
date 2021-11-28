@@ -11,7 +11,9 @@
         "pages/document/button/button",
         "pages/document/loading/loading",
         "pages/document/avatar/avatar",
-        "pages/document/theme/theme"
+        "pages/document/theme/theme",
+        "pages/document/switch/switch",
+        "pages/document/radio/radio"
     ],
     "window":{
         "backgroundTextStyle": "light",
@@ -30,7 +32,10 @@
         "ui-avatar": "mp-cu/colorUI/components/ui-avatar/ui-avatar",
         "ui-avatar-stack": "mp-cu/colorUI/components/ui-avatar-stack/ui-avatar-stack",
         "ui-modal": "mp-cu/colorUI/components/ui-modal/ui-modal",
-        "ui-toast": "mp-cu/colorUI/components/ui-toast/ui-toast"
+        "ui-toast": "mp-cu/colorUI/components/ui-toast/ui-toast",
+        "ui-switch": "mp-cu/colorUI/components/ui-switch/ui-switch",
+        "ui-radio-group": "mp-cu/colorUI/components/ui-radio-group/ui-radio-group",
+        "ui-radio": "mp-cu/colorUI/components/ui-radio/ui-radio"
     },
     "tabBar": {
         "custom": true,
