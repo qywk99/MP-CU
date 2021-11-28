@@ -14,7 +14,7 @@
 
 在根目录的 `app.js` 文件里引入相关配置：
 
-``` 
+``` js
 
 //引入框架的方法函数库
 import ColorUI from './mp-cu/ui'
@@ -42,7 +42,7 @@ App({
 
 然后在根目录的 `app.scss` 文件里引入相关框架的css文件。
 
-``` 
+``` css
 
 @import './mp-cu/colorUI/scss/ui';
 
@@ -55,7 +55,7 @@ App({
 
 相关文件路径：
 
-``` 
+``` js
 
 /mp-cu/ui.js'   // 框架的默认配置项，不建议修改框架内置的配置，以免后续更新升级被覆盖
 
@@ -66,7 +66,7 @@ App({
 
 挂载组件，在 `app.json` 或 `xxx.json` 文件里配置
 
-``` 
+``` json
 
 "usingComponents": {
 	"ui-sys": "mp-cu/colorUI/components/ui-sys/ui-sys"
