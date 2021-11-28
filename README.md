@@ -10,6 +10,32 @@
 
 <hr/>
 
+### 准备配置
+
+需要先升级小程序开发工具到 `2021-10-11` 之后的版本,
+然后，检查根目录下，`project.config.json` 配置文件内的 `"setting"` 节点下，是否配置了：
+
+``` json
+
+"useCompilerPlugins": [
+    "sass"
+]
+
+```
+
+如果没有配置，需要手动配置一下
+
+由于小程序默认开启了 `v2` 的样式，在v2模式下，`colorUI` 部分样式会失效。
+完整 `colorUI` 样式，需要在 `app.json` 文件内，删除 `v2` 即可
+
+``` json
+
+"style": "v2", //删掉这段
+
+```
+
+
+
 ### 框架配置
 
 在根目录的 `app.js` 文件里引入相关配置：
@@ -46,9 +72,8 @@ App({
 
 @import './mp-cu/colorUI/scss/ui';
 
-
-// 实际项目中，可删除下面的相关文件和引用，因为图标太多，体积较大，可能你项目里并不需要这么多图标，建议自行添加需要的扩展icon图标引用。
-// @import './icon/doc';
+/* 实际项目中，可删除下面的相关文件和引用，因为图标太多，体积较大，可能你项目里并不需要这么多图标，建议自行添加需要的扩展icon图标引用。*/
+/* @import './icon/doc'; */
 
 ```
 
@@ -69,7 +94,7 @@ App({
 ``` json
 
 "usingComponents": {
-	"ui-sys": "mp-cu/colorUI/components/ui-sys/ui-sys"
+  "ui-sys": "mp-cu/colorUI/components/ui-sys/ui-sys"
 }
 
 ```
