@@ -38,6 +38,9 @@
         <ui-title title="主题切换组件" depth="2" isIcon/>
         <view class="paragraph">引用组件来切换系统的主题以及强调色</view>
         <ui-code tag="pre" lang="html" title content="{{code1}}"/>
+        <view class="paragraph">自动跟随系统主题功能，需要在 app.json 中配置(在安卓上，切换系统主题时，会重载小程序)</view>
+        <ui-code tag="pre" lang="json" title content="{{code2}}"/>
+
         <view class="my-4 text-d">演示：</view>
         <ui-change-theme ui="radius border"/>
         <ui-menu ui="mt-4 radius border">

@@ -11,50 +11,7 @@
       "list": []
     },
     "miniprogram": {
-      "list": [
-        {
-          "name": "系统文档",
-          "pathName": "pages/document/system/system",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "菜单",
-          "pathName": "pages/document/menu/menu",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "按钮",
-          "pathName": "pages/document/button/button",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "加载",
-          "pathName": "pages/document/loading/loading",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "头像",
-          "pathName": "pages/document/avatar/avatar",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "主题",
-          "pathName": "pages/document/theme/theme",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "单选框",
-          "pathName": "pages/document/radio/radio",
-          "query": "",
-          "scene": null
-        }
-      ]
+      "list": []
     }
   }
 }

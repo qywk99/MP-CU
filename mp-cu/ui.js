@@ -62,7 +62,7 @@ export default class ColorUI {
         this.tabBar = tabBar
         this.tools = tools
         console.log(
-            `%c colorUi 主文件启动成功 %c 当前版本V3.0.1 wechat Apache%c`,
+            `%c colorUi 主文件启动成功 %c 当前版本V3.2.6 wechat Apache%c`,
             'background:#35495e ; padding: 1px; border-radius: 3px 0 0 3px;  color: #fff',
             'background:#0081ff ;padding: 1px 5px; border-radius: 0 3px 3px 0;  color: #fff; font-weight: bold;',
             'background:transparent'

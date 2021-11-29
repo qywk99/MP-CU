@@ -6,7 +6,8 @@
 
 `colorui3.x` 默认只支持 `uni-app`，本项目中 `colorui` 框架为移植修改版。
 
-`colorui3.x` 地址： [https://github.com/weilanwl/coloruiBeta](https://github.com/Color-UI/MP-CU),内置的vuex 渲染引擎感谢 [https://github.com/xiaoyao96/wxMiniStore](https://github.com/xiaoyao96/wxMiniStore)
+`colorui3.x` 地址： [https://github.com/weilanwl/coloruiBeta](https://github.com/Color-UI/MP-CU)
+内置的vuex 渲染引擎感谢 [https://github.com/xiaoyao96/wxMiniStore](https://github.com/xiaoyao96/wxMiniStore)
 
 <hr/>
 
@@ -34,7 +35,7 @@
 
 ```
 
-
+<hr/>
 
 ### 框架配置
 
@@ -82,6 +83,7 @@ App({
 
 ```
 
+<hr/>
 
 ### 组件使用方式
 
@@ -95,11 +97,31 @@ App({
 
 ```
 
+<hr/>
+
+### 其它说明
+
 `custom-tab-bar` 文件夹是不需要的，只是本框架演示demo用的自定义tabBar，实际项目中，自行考虑整合。
+
+自动跟随系统主题，切换主题功能，在 `app.json` 文件里配置
+
+``` json
+
+"darkmode": true'
+
+```
+
+开启自动跟随后，在安卓机端切换主题时，会重载小程序，具体原因，参考微信官方说明：[https://developers.weixin.qq.com/community/develop/doc/000a88c66f00183d414c9879451400](https://developers.weixin.qq.com/community/develop/doc/000a88c66f00183d414c9879451400)
+
+
+<hr/>
 
 ## 内置方法
 - [x] 内置 vuex ，在页面调用 this.setCuData(key , data ) key 表示键名 ， data表示设定的数据,读取数据采用this.getCuData(key) , 清空数据采用this.clearCuData()
-### 支持的uniapp3.0模板
+
+<hr/>
+
+### 已有组件和功能
 - [x] sys
 - [x] avatar
 - [x] card
@@ -117,9 +139,11 @@ App({
 - [x] title
 - [x] toast
 - [x] button
+- [x] background
+- [x] icon
 - [ ] checkbox
 - [ ] drawer
-- [ ] icon
 - [ ] input
 - [ ] list
 - [ ] input
+

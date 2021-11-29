@@ -11,4 +11,9 @@ Page({
     onLoad() {
 
     },
+    clearableChange(e) {
+        this.setData({
+            clearable: e.detail
+        })
+    },
 })

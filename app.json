@@ -15,7 +15,9 @@
     "pages/document/radio/radio",
     "pages/document/card/card",
     "pages/document/grid/grid",
-    "pages/document/fixed/fixed"
+    "pages/document/fixed/fixed",
+    "pages/document/background/background",
+    "pages/document/icon/icon"
   ],
   "window": {
     "backgroundTextStyle": "light",
