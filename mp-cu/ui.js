@@ -60,13 +60,14 @@ export default class ColorUI {
         this.footer = footer
         this.homePath = homePath
         this.tabBar = tabBar
-        this.store = {}
         this.tools = tools
-    }
-    setStore() {
+        console.log(
+            `%c colorUi 主文件启动成功 %c 当前版本V3.0.1 wechat Apache%c`,
+            'background:#35495e ; padding: 1px; border-radius: 3px 0 0 3px;  color: #fff',
+            'background:#0081ff ;padding: 1px 5px; border-radius: 0 3px 3px 0;  color: #fff; font-weight: bold;',
+            'background:transparent'
+        )
         this.store = ColorUIStore(this)
-        //开启自动适配主题色
-        let theme = this.store.getState().sys_theme;
         if (theme === 'auto') {
             wx.onThemeChange((res)=>{
                 this.store.setState({sys_theme: 'auto'});

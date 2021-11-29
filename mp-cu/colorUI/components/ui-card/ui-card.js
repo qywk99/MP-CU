@@ -8,7 +8,8 @@ Component({
             type: String
         },
         imgHeight: {
-            type: String
+            type: String,
+            value: 'auto'
         },
         title: {
             type: String
@@ -28,7 +29,7 @@ Component({
         },
         isTitle: {
             type: Boolean,
-            value: false
+            value: true
         },
         isTag: {
             type: Boolean,
@@ -37,5 +38,10 @@ Component({
     },
     methods: {
 
+    },
+    lifetimes:{
+        attached(){
+            console.log("hello",this.title)
+        }
     }
 })

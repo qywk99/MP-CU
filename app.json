@@ -1,52 +1,66 @@
 {
-    "pages":[
-        "pages/home/home",
-        "pages/template/home",
-        "pages/community/home",
-        "pages/find/home",
-        "pages/my/home",
-
-        "pages/document/system/system",
-        "pages/document/menu/menu",
-        "pages/document/button/button",
-        "pages/document/loading/loading",
-        "pages/document/avatar/avatar",
-        "pages/document/theme/theme",
-        "pages/document/switch/switch",
-        "pages/document/radio/radio"
-    ],
-    "window":{
-        "backgroundTextStyle": "light",
-        "navigationBarBackgroundColor": "#FFFFFF",
-        "navigationBarTitleText": "MP-CU (ColorUI)",
-        "navigationBarTextStyle": "black",
-        "navigationStyle": "custom"
-    },
-    "usingComponents": {
-        "ui-sys": "mp-cu/colorUI/components/ui-sys/ui-sys",
-        "ui-title": "mp-cu/colorUI/components/ui-title/ui-title",
-        "ui-code": "mp-cu/colorUI/components/ui-code/ui-code",
-        "ui-loading": "mp-cu/colorUI/components/ui-loading/ui-loading",
-        "ui-menu": "mp-cu/colorUI/components/ui-menu/ui-menu",
-        "ui-menu-item": "mp-cu/colorUI/components/ui-menu-item/ui-menu-item",
-        "ui-avatar": "mp-cu/colorUI/components/ui-avatar/ui-avatar",
-        "ui-avatar-stack": "mp-cu/colorUI/components/ui-avatar-stack/ui-avatar-stack",
-        "ui-modal": "mp-cu/colorUI/components/ui-modal/ui-modal",
-        "ui-toast": "mp-cu/colorUI/components/ui-toast/ui-toast",
-        "ui-switch": "mp-cu/colorUI/components/ui-switch/ui-switch",
-        "ui-radio-group": "mp-cu/colorUI/components/ui-radio-group/ui-radio-group",
-        "ui-radio": "mp-cu/colorUI/components/ui-radio/ui-radio"
-    },
-    "tabBar": {
-        "custom": true,
-        "list": [
-            {"pagePath": "pages/home/home"},
-            {"pagePath": "pages/template/home"},
-            {"pagePath": "pages/community/home"},
-            {"pagePath": "pages/find/home"},
-            {"pagePath": "pages/my/home"}
-        ]
-    },
-    "darkmode": true,
-    "sitemapLocation": "sitemap.json"
+  "pages": [
+    "pages/home/home",
+    "pages/template/home",
+    "pages/community/home",
+    "pages/find/home",
+    "pages/my/home",
+    "pages/document/system/system",
+    "pages/document/menu/menu",
+    "pages/document/button/button",
+    "pages/document/loading/loading",
+    "pages/document/avatar/avatar",
+    "pages/document/theme/theme",
+    "pages/document/switch/switch",
+    "pages/document/radio/radio",
+    "pages/document/card/card",
+    "pages/document/grid/grid",
+    "pages/document/fixed/fixed"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "navigationBarTitleText": "MP-CU (ColorUI)",
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "custom"
+  },
+  "usingComponents": {
+    "ui-sys": "mp-cu/colorUI/components/ui-sys/ui-sys",
+    "ui-title": "mp-cu/colorUI/components/ui-title/ui-title",
+    "ui-code": "mp-cu/colorUI/components/ui-code/ui-code",
+    "ui-loading": "mp-cu/colorUI/components/ui-loading/ui-loading",
+    "ui-menu": "mp-cu/colorUI/components/ui-menu/ui-menu",
+    "ui-menu-item": "mp-cu/colorUI/components/ui-menu-item/ui-menu-item",
+    "ui-avatar": "mp-cu/colorUI/components/ui-avatar/ui-avatar",
+    "ui-avatar-stack": "mp-cu/colorUI/components/ui-avatar-stack/ui-avatar-stack",
+    "ui-modal": "mp-cu/colorUI/components/ui-modal/ui-modal",
+    "ui-toast": "mp-cu/colorUI/components/ui-toast/ui-toast",
+    "ui-switch": "mp-cu/colorUI/components/ui-switch/ui-switch",
+    "ui-radio-group": "mp-cu/colorUI/components/ui-radio-group/ui-radio-group",
+    "ui-radio": "mp-cu/colorUI/components/ui-radio/ui-radio",
+    "ui-card": "mp-cu/colorUI/components/ui-card/ui-card",
+    "ui-fixed" : "mp-cu/colorUI/components/ui-fixed/ui-fixed"
+  },
+  "tabBar": {
+    "custom": true,
+    "list": [
+      {
+        "pagePath": "pages/home/home"
+      },
+      {
+        "pagePath": "pages/template/home"
+      },
+      {
+        "pagePath": "pages/community/home"
+      },
+      {
+        "pagePath": "pages/find/home"
+      },
+      {
+        "pagePath": "pages/my/home"
+      }
+    ]
+  },
+  "darkmode": true,
+  "sitemapLocation": "sitemap.json"
 }

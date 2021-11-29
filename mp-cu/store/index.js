@@ -7,8 +7,28 @@ const ColorUIStore  = (config) =>{
             sys_theme: wx.getStorageSync('sys_theme')?wx.getStorageSync('sys_theme'):config.theme,
             sys_main: wx.getStorageSync('sys_main')?wx.getStorageSync('sys_main'):config.main,
             sys_text: wx.getStorageSync('sys_text')?wx.getStorageSync('sys_text'):config.text,
+            colorUI_data : {}
         },
         methods: {
+            //存储 数据
+            setCuData(key , data){
+                let colorUI_data = store.$state.colorUI_data
+                colorUI_data[key] = data
+                store.setState({
+                    colorUI_data
+                })
+            },
+            // 读取数据
+            getCuData(key){
+                let colorUI_data = store.$state.colorUI_data
+                let isExitData = colorUI_data.hasOwnProperty(key)
+                if(isExitData){
+                    return store.$state.colorUI_data[key]
+                }else{
+                    console.error(key,"没有缓存！请先缓存")
+                    return null
+                }
+            },
             //设置主题
             setTheme(data) {
                 store.setState({ sys_theme: data });

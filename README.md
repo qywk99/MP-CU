@@ -6,7 +6,7 @@
 
 `colorui3.x` 默认只支持 `uni-app`，本项目中 `colorui` 框架为移植修改版。
 
-`colorui3.x` 地址： [https://github.com/weilanwl/coloruiBeta](https://github.com/Color-UI/MP-CU)
+`colorui3.x` 地址： [https://github.com/weilanwl/coloruiBeta](https://github.com/Color-UI/MP-CU),内置的vuex 渲染引擎感谢 [https://github.com/xiaoyao96/wxMiniStore](https://github.com/xiaoyao96/wxMiniStore)
 
 <hr/>
 
@@ -46,17 +46,13 @@
 import ColorUI from './mp-cu/ui'
 var ColorUi = new ColorUI({
     theme: 'light',     // 设置默认主题(light 浅色，dark 深色，auto 自动跟随系统)，默认 浅色
-    //main: 'blue',       // 设置默认强调色（参考背景色），默认 blue
-    //text: '1',          // 设置默认字号等级(0-4)，默认 1
-    //footer: true,       // 显示底部colorUI版权(如果属于开源作品，请带上ColorUI版权！！！)，默认 显示
-    //homePath: '',       // 设置首页路径(一些组件会用到跳回主页，请每个项目设置好！)，配置内容请参考 /mp-cu/ui.js 文件
-    //tabBar: [],         // 配置系统tabBar，如果使用小程序自带的，可不配置此项，配置内容请参考 /mp-cu/ui.js 文件
+// 具体配置可前往源文件 /mp-cu/ui中查看
 })
 
 App({  
-    ColorUi,        //挂载到app上
+    ColorUi,        //将colorui主文件挂载到app上
     onLaunch() {
-        ColorUi.setStore()
+
     },
     onShow() {
 
@@ -100,3 +96,30 @@ App({
 ```
 
 `custom-tab-bar` 文件夹是不需要的，只是本框架演示demo用的自定义tabBar，实际项目中，自行考虑整合。
+
+## 内置方法
+- [x] 内置 vuex ，在页面调用 this.setCuData(key , data ) key 表示键名 ， data表示设定的数据,读取数据采用this.getCuData(key) , 清空数据采用this.clearCuData()
+### 支持的uniapp3.0模板
+- [x] sys
+- [x] avatar
+- [x] card
+- [x] theme
+- [x] code
+- [x] fixed
+- [x] loading
+- [x] menu
+- [x] modal
+- [x] navbar
+- [x] radio
+- [x] swiper
+- [x] switch
+- [x] tabbar
+- [x] title
+- [x] toast
+- [x] button
+- [ ] checkbox
+- [ ] drawer
+- [ ] icon
+- [ ] input
+- [ ] list
+- [ ] input
