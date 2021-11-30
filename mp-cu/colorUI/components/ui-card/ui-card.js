@@ -38,10 +38,5 @@ Component({
     },
     methods: {
 
-    },
-    lifetimes:{
-        attached(){
-            console.log("hello",this.title)
-        }
     }
 })

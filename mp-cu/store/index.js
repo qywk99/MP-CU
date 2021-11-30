@@ -29,6 +29,12 @@ const ColorUIStore  = (config) =>{
                     return null
                 }
             },
+            //清空数据
+            clearCuData(){
+                store.setState({
+                    colorUI_data : {}
+                })
+            },
             //设置主题
             setTheme(data) {
                 store.setState({ sys_theme: data });

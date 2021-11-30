@@ -1,5 +1,6 @@
 import tools from '/utils/tools'
-import {ColorUIStore} from '/store/index'
+import { ColorUIStore } from '/store/index'
+import { culog } from './utils/log'
 
 /**
  *  ColorUi 主Js文件
@@ -13,8 +14,8 @@ import {ColorUIStore} from '/store/index'
 
 export default class ColorUI {
     constructor({
-        theme = 'light',					
-        main = 'blue',						
+        theme = 'light',
+        main = 'blue',
         text = 1,
         footer = true,
         homePath = '/pages/home/home',
@@ -61,32 +62,28 @@ export default class ColorUI {
         this.homePath = homePath
         this.tabBar = tabBar
         this.tools = tools
+        this.log = culog
+        this.store = ColorUIStore(this)
+        this.colorUiInit()
+    }
+    //colorui 主框架初始化
+    colorUiInit(){
         console.log(
             `%c colorUi 主文件启动成功 %c 当前版本V3.2.6 wechat Apache%c`,
             'background:#35495e ; padding: 1px; border-radius: 3px 0 0 3px;  color: #fff',
             'background:#0081ff ;padding: 1px 5px; border-radius: 0 3px 3px 0;  color: #fff; font-weight: bold;',
             'background:transparent'
         )
-        this.store = ColorUIStore(this)
-        if (theme === 'auto') {
-            wx.onThemeChange((res)=>{
-                this.store.setState({sys_theme: 'auto'});
+        if (this.theme === 'auto') {
+            wx.onThemeChange((res) => {
+                this.store.setState({ sys_theme: 'auto' });
                 wx.setStorageSync('sys_theme', 'auto');
                 this.setStatusStyle(wx.getSystemInfoSync().theme === 'light' ? 'dark' : 'light')
             })
         } else {
-            wx.setStorageSync('sys_theme', theme)
-            this.setStatusStyle(theme === 'light' ? 'dark' : 'light');
+            wx.setStorageSync('sys_theme', this.theme)
+            this.setStatusStyle(this.theme === 'light' ? 'dark' : 'light');
         }
-    }
-    getColorUiStore() {
-        return this.store
-    }
-    getColorUiTools() {
-        return this.tools
-    }
-    getColorUiTabBar() {
-        return this.tabBar
     }
     //设置系统颜色
     setStatusStyle(status) {
