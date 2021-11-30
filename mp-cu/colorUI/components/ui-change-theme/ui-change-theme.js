@@ -17,7 +17,7 @@ Component({
 
         },
         attached() {
-
+            
         },
         ready() {
 

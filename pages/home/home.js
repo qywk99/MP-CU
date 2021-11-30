@@ -64,7 +64,7 @@ Page({
         }],
     },
     onLoad() {
-
+        // this.$colorui.log("home.js")
     },
     // 监听用户滑动页面事件。
     onPageScroll(e) {

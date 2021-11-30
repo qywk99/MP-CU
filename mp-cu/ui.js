@@ -67,13 +67,7 @@ export default class ColorUI {
         this.colorUiInit()
     }
     //colorui 主框架初始化
-    colorUiInit(){
-        console.log(
-            `%c colorUi 主文件启动成功 %c 当前版本V3.2.6 wechat Apache%c`,
-            'background:#35495e ; padding: 1px; border-radius: 3px 0 0 3px;  color: #fff',
-            'background:#0081ff ;padding: 1px 5px; border-radius: 0 3px 3px 0;  color: #fff; font-weight: bold;',
-            'background:transparent'
-        )
+    colorUiInit() {
         if (this.theme === 'auto') {
             wx.onThemeChange((res) => {
                 this.store.setState({ sys_theme: 'auto' });
@@ -84,6 +78,49 @@ export default class ColorUI {
             wx.setStorageSync('sys_theme', this.theme)
             this.setStatusStyle(this.theme === 'light' ? 'dark' : 'light');
         }
+        const originPage = Page
+        const originComponent = Component;
+        let that = this
+        App.Page = function (o = {}, ...args) {
+            o.$colorui = that
+            originPage(o, ...args);
+        }
+        try {
+            Page = App.Page
+        } catch (e) { }
+        //重写组件
+        App.Component = function (o = {}, ...args) {
+            o.data = {
+                ...(o.data || {}),
+                $colorui: that,
+              };
+            Object.keys(that).forEach((key) => {
+                //行为注入
+                if (typeof that[key] === "function") {
+                    o.methods || (o.methods = {});
+                    o.methods[key] = that[key];
+                }
+            });
+            if(that.tools){
+                Object.keys(that.tools).forEach((key) => {
+                    //行为注入
+                    if (typeof that.tools[key] === "function") {
+                        o.methods || (o.methods = {});
+                        o.methods[key] = that.tools[key];
+                    }
+                }); 
+            }
+            originComponent(o, ...args);
+        };
+        try {
+            Component = App.Component;
+        } catch (e) {}
+        console.log(
+            `%c colorUi 主文件启动成功 %c 当前版本V3.2.6 wechat Apache%c`,
+            'background:#35495e ; padding: 1px; border-radius: 3px 0 0 3px;  color: #fff',
+            'background:#0081ff ;padding: 1px 5px; border-radius: 0 3px 3px 0;  color: #fff; font-weight: bold;',
+            'background:transparent'
+        )
     }
     //设置系统颜色
     setStatusStyle(status) {

@@ -84,6 +84,10 @@ const ColorUIStore  = (config) =>{
             sys_isFirstPage() {
                 return getCurrentPages().length === 1
             },
+            //获取store 实例
+            getStore$r(){
+                console.log(store)
+            }
         }
     });
     return store;

@@ -49,10 +49,10 @@ Component({
 
         },
         attached() {
-            // console.log(colorUI.store.getState().sys_theme)
+            
         },
         ready() {
-
+            // this.data.$colorui.log('hello')
         },
     },
     observers: {
