@@ -225,7 +225,7 @@ export const ColorUi = new ColorUI({
 })
 
 ```
-该配置文件，在项目所有页面中，都可以直接调用`this.culog ()`,就可以调用改config 文件中的函数体，当然data和config均可以在页面中获取，为了方便您获取当前项目配置，当您在其他页面修改后，store 内部的内容便会实时更新。
+该配置文件，在项目所有页面中，都可以直接调用`this.culog ()`,就可以调用该config 文件中的函数体，当然data和config均可以在页面中获取，为了方便您获取当前项目配置，colorui为您将配置文件也一同注册进data里面了。当您在其他页面修改后，store 内部的内容便会实时更新（包括已经打开过的页面和未打开过的页面）。
 具体可以参考colorui的主题配置。
 <span style='color : red'>注意，您设置的函数，data，等配置名称不能存在以下情况 
    [`"data"` ,
