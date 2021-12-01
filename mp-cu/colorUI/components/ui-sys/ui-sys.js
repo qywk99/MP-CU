@@ -1,8 +1,6 @@
 Component({
     data: {
         isLoading: false,
-		app_footer: getApp().ColorUi.footer,
-        tabbarData: getApp().ColorUi.tabBar,
     },
     options: {
         // 表示页面 wxss 样式将影响到自定义组件，但自定义组件 wxss 中指定的样式不会影响页面；
@@ -46,7 +44,7 @@ Component({
     },
     lifetimes: {
         created() {
-
+            
         },
         attached() {
             

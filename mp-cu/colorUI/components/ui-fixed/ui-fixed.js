@@ -1,8 +1,6 @@
 Component({
     data: {
         fixed: true,
-        sys_statusBar: getApp().ColorUi.tools.sys_statusBar,
-        sys_navBar: getApp().ColorUi.tools.sys_navBar
     },
     options: {
         addGlobalClass: true

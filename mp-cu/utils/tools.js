@@ -7,13 +7,21 @@ module.exports = {
         let colorArr = ['yellow', 'orange', 'red', 'pink', 'mauve', 'purple', 'blue', 'cyan', 'green', 'olive', 'grey', 'brown'];
         return colorArr[Math.floor(Math.random() * colorArr.length)]
     },
+    // 获取胶囊信息
     sys_capsule() {
         let capsule = wx.getMenuButtonBoundingClientRect();
         if (!capsule) {
-            console.log('getMenuButtonBoundingClientRect error');
-            capsule = {bottom: 56, height: 32, left: 278, right: 365, top: 24, width: 87};
+            console.error('getMenuButtonBoundingClientRect error');
+            capsule = { bottom: 56, height: 32, left: 278, right: 365, top: 24, width: 87 };
         }
         return capsule;
     },
-    
+    TYPE_ARRAY :"[object Array]",
+    TYPE_OBJECT : "[object Object]",
+    _typeOf : function (val) {
+        return Object.prototype.toString.call(val);
+    },
+    _deepClone :function (obj) {
+        return JSON.parse(JSON.stringify(obj));
+    },
 }

@@ -1,7 +1,6 @@
 Component({
     data: {
         touch: false,
-        sys_navBar: getApp().ColorUi.tools.sys_navBar,
     },
     options: {
         addGlobalClass: true,

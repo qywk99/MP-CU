@@ -8,7 +8,7 @@ Page({
         code4: '<template>\n  <ui-sys bg="bg-none" img="....">\n    ...业务代码\n  </ui-sys>\n</template>'
     },
     onLoad() {
-        
+        this.$cuState.setState('theme' , 'dark')
     },
     
     tapNative() {

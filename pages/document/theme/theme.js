@@ -7,9 +7,9 @@ Page({
         code2: '...\n"darkmode": true',
     },
     onLoad() {
-        
+        this.culog('hello')
     },
     tapAvatar() {
-        // /pages/parameter/parameter?component=ui-theme
+        
     },
 })

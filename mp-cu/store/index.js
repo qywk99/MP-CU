@@ -1,98 +1,127 @@
-import Store from '../utils/store'
+// 此处参考 https://github.com/xiaoyao96/wxMiniStore
 
-const ColorUIStore  = (config) =>{
-    const store = new Store({
-        debug: false, // 内部日志的输出。
-        state: {
-            sys_theme: wx.getStorageSync('sys_theme')?wx.getStorageSync('sys_theme'):config.theme,
-            sys_main: wx.getStorageSync('sys_main')?wx.getStorageSync('sys_main'):config.main,
-            sys_text: wx.getStorageSync('sys_text')?wx.getStorageSync('sys_text'):config.text,
-            colorUI_data : {}
-        },
-        methods: {
-            //存储 数据
-            setCuData(key , data){
-                let colorUI_data = store.$state.colorUI_data
-                colorUI_data[key] = data
-                store.setState({
-                    colorUI_data
-                })
-            },
-            // 读取数据
-            getCuData(key){
-                let colorUI_data = store.$state.colorUI_data
-                let isExitData = colorUI_data.hasOwnProperty(key)
-                if(isExitData){
-                    return store.$state.colorUI_data[key]
-                }else{
-                    console.error(key,"没有缓存！请先缓存")
-                    return null
-                }
-            },
-            //清空数据
-            clearCuData(){
-                store.setState({
-                    colorUI_data : {}
-                })
-            },
-            //设置主题
-            setTheme(data) {
-                store.setState({ sys_theme: data });
-                wx.setStorageSync('sys_theme', data);
-                //跟随系统
-                if (data === 'auto') {
-                    config.setStatusStyle(wx.getSystemInfoSync().theme === 'light' ? 'dark' : 'light');
-                } else {
-                    config.setStatusStyle(data === 'light' ? 'dark' : 'light');
-                }
-            },
-            //设置主颜色
-            setMain(data) {
-                store.setState({
-                    sys_main: data,
-                });
-                wx.setStorageSync('sys_main', data);
-            },
-            //设置字号等级
-            setText(data) {
-                store.setState({
-                    sys_text: data,
-                });
-                wx.setStorageSync('sys_text', data);
-            },
-            _toHome() {
-                wx.switchTab({
-                    url: config.homePath,
-                    fail(res) {
-                        console.log(res);
-                    }
-                });
-            },
-            _backPage() {
-                if (this.sys_isFirstPage) {
-                    this._toHome();
-                } else {
-                    wx.navigateBack({
-                        delta: 1,
-                        fail(res) {
-                            console.log(res);
-                        }
+import diff from '../utils/diff'
+import { _typeOf, TYPE_ARRAY, TYPE_OBJECT, _deepClone } from "../utils/tools";
+
+const setData = function (obj, data) {
+    let result = _deepClone(data);
+    let origin = _deepClone(obj);
+    Object.keys(origin).forEach((key) => {
+        dataHandler(key, origin[key], result);
+    });
+    return result;
+};
+const dataHandler = function (key, result, data) {
+    let arr = pathHandler(key);
+    let d = data;
+    for (let i = 0; i < arr.length - 1; i++) {
+        keyToData(arr[i], arr[i + 1], d);
+        d = d[arr[i]];
+    }
+    d[arr[arr.length - 1]] = result;
+};
+
+const pathHandler = function (key) {
+    let current = "",
+        keyArr = [];
+    for (let i = 0, len = key.length; i < len; i++) {
+        if (key[0] === "[") {
+            throw new Error("key值不能以[]开头");
+        }
+        if (key[i].match(/\.|\[/g)) {
+            cleanAndPush(current, keyArr);
+            current = "";
+        }
+        current += key[i];
+    }
+    cleanAndPush(current, keyArr);
+    return keyArr;
+};
+
+const cleanAndPush = function (key, arr) {
+    let r = cleanKey(key);
+    if (r !== "") {
+        arr.push(r);
+    }
+};
+
+const keyToData = function (prev, current, data) {
+    if (prev === "") {
+        return;
+    }
+    const type = _typeOf(data[prev]);
+    if (typeof current === "number" && type !== TYPE_ARRAY) {
+        data[prev] = [];
+    } else if (typeof current === "string" && type !== TYPE_OBJECT) {
+        data[prev] = {};
+    }
+};
+
+const cleanKey = function (key) {
+    if (key.match(/\[\S+\]/g)) {
+        let result = key.replace(/\[|\]/g, "");
+        if (!Number.isNaN(parseInt(result))) {
+            return +result;
+        } else {
+            throw new Error(`[]中必须为数字`);
+        }
+    }
+    return key.replace(/\[|\.|\]| /g, "");
+};
+
+export const CUStoreInit = (config) => {
+    let $store = {
+        state: {},
+        $p: [],
+        setState(obj, fn = () => { }) {
+            if (_typeOf(obj) !== TYPE_OBJECT) {
+                throw new Error("setState的第一个参数须为object!");
+            }
+            let prev = $store.state;
+            let current = setData(obj, prev);
+            $store.state = current;
+            //如果有组件
+            if ($store.$p.length > 0) {
+                let diffObj = diff(current, prev);
+                let keys = Object.keys(diffObj);
+                if (keys.length > 0) {
+                    const newObj = {};
+                    keys.forEach((key) => {
+                        newObj["$cuStore." + key] = diffObj[key];
                     });
+                    let pros = $store.$p.map((r) => {
+                        if (r.$cuStore.hasOwnProperty("useProp")) {
+                            let useprops = _filterKey(
+                                newObj,
+                                r.$cuStore.useProp,
+                                (key, useKey) =>
+                                    key === "$cuStore." + useKey ||
+                                    !!key.match(new RegExp("^[$]cuStore." + useKey + "[.|[]", "g"))
+                            );
+                            if (Object.keys(useprops).length > 0) {
+                                return new Promise((resolve) => {
+                                    r.setData(useprops, resolve);
+                                });
+                            } else {
+                                return Promise.resolve();
+                            }
+                        }
+                        return new Promise((resolve) => {
+                            r.setData(newObj, resolve);
+                        });
+                    });
+                    Promise.all(pros).then(fn);
+                } else {
+                    fn();
                 }
-            },
-            //实例是否为路由栈的第一个页面
-            sys_isFirstPage() {
-                return getCurrentPages().length === 1
-            },
-            //获取store 实例
-            getStore$r(){
-                console.log(store)
+            } else {
+                fn();
             }
         }
-    });
-    return store;
-}
+    }
+    $store.state.sys_theme = wx.getStorageSync('sys_theme') ? wx.getStorageSync('sys_theme') : config.theme
+    $store.state.sys_main = wx.getStorageSync('sys_main') ? wx.getStorageSync('sys_main') : config.main
+    $store.state.sys_text = wx.getStorageSync('sys_text') ? wx.getStorageSync('sys_text') : config.text
+    return $store
 
-module.exports = {
-    ColorUIStore 
-};
+}

@@ -5,6 +5,11 @@ Component({
     options: {
         addGlobalClass: true
     },
+    methods:{
+        log(){
+            console.log("123")
+        }
+    },
     properties: {
         data: {
             type: Object,
@@ -15,7 +20,7 @@ Component({
     lifetimes: {
         attached() {
             this.setData({
-                colorName: getApp().ColorUi.tools.getColor()
+                colorName: this.getColor()
             });
         }
     },

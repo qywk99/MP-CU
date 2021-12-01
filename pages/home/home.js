@@ -1,8 +1,6 @@
 const app = getApp();
 Page({
     data: {
-        sys_navBar: app.ColorUi.tools.sys_navBar,
-        sys_capsule: app.ColorUi.tools.sys_capsule(),
         sys_scrollTop: 0,
         swiperList: [{img: "/static/img/mp-cu.png"}, {img: "/static/img/8v2yr.png"}, {img: "/static/img/qhgtb.png"}],
         navData: [{
@@ -64,7 +62,7 @@ Page({
         }],
     },
     onLoad() {
-        // this.$colorui.log("home.js")
+        
     },
     // 监听用户滑动页面事件。
     onPageScroll(e) {
