@@ -1,3 +1,8 @@
+/***
+ * @author  bypanghu@163.com (https://github.com/bypanghu)
+ * @author iZaizai (https://github.com/iZaiZaiA)
+ */
+
 import tools from '/utils/tools'
 import { CUStoreInit } from '/store/index'
 import { _typeOf, _deepClone } from "./utils/tools";
@@ -192,7 +197,6 @@ export default class ColorUI {
                 $cuConfig: that.config,
                 $cuStore: store.state
             };
-            o.$store = store
             //注入colorui 函数体
             Object.keys(baseMethod).forEach(key => {
                 if (typeof baseMethod[key] === 'function') {

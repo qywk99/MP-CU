@@ -1,6 +1,6 @@
-import { ColorUi } from './config'
+import { colorui } from './config'
 App({  
-    ColorUi,        //挂载到app上
+    colorui,        //挂载到app上
     onLaunch() {
         
     },

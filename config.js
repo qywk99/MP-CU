@@ -1,6 +1,6 @@
 
 import ColorUI from './mp-cu/ui'
-export const ColorUi = new ColorUI({
+export const colorui = new ColorUI({
   config: {
     sys_theme: 'auto',
     theme: 'auto',

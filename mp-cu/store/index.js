@@ -1,5 +1,8 @@
 // 此处参考 https://github.com/xiaoyao96/wxMiniStore
-
+/***
+ * @author  bypanghu@163.com (https://github.com/bypanghu)
+ * @author iZaizai (https://github.com/iZaiZaiA)
+ */
 import diff from '../utils/diff'
 import { _typeOf, TYPE_ARRAY, TYPE_OBJECT, _deepClone } from "../utils/tools";
 

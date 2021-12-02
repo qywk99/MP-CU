@@ -1,8 +1,8 @@
-<ui-sys img="/static/img/4put2.png" tabbar>
+<ui-sys img="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-2dd21fa9-731c-43b7-b092-2b6264029de8/8df0ef6f-15e5-42b5-b872-135a8c0be7ea.png" tabbar>
 
     <ui-navbar back="{{false}}" opacity scrollTop="{{sys_scrollTop}}">
         <view class="flex-bar p-3" wx:if="{{sys_scrollTop > sys_navBar}}">
-            <image src="/static/img/hapm8.png" mode="aspectFill" style="width: 200rpx;height: 56rpx;"/>
+            <image src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-2dd21fa9-731c-43b7-b092-2b6264029de8/895030f2-81e1-4112-8ef4-918c01f89063.png" mode="aspectFill" style="width: 200rpx;height: 56rpx;"/>
         </view>
         <view class="p-3 flex-bar flex-sub" wx:if="{{sys_scrollTop > sys_navBar}}">
             <view url="/pages/search/search" class="flex-sub flex-bar">
