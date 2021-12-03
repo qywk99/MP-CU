@@ -4,8 +4,6 @@ Component({
         capsuleStyle: {},
         capsuleBack: {},
         opacityVal: 0,
-        sys_statusBar: getApp().ColorUi.tools.sys_statusBar,
-        sys_navBar: getApp().ColorUi.tools.sys_navBar,
         isFristPage: true
     },
     options: {

@@ -17,7 +17,7 @@ Component({
 
         },
         attached() {
-
+            
         },
         ready() {
 
@@ -31,10 +31,13 @@ Component({
     methods: {
         tapAutoThemeChange(e) {
             let val = e.currentTarget.dataset.value;
-            this.setTheme(val==='auto'?'light':'auto');
+            this.setTheme( val==='auto'?'light':'auto')
         },
         tapThemeChange(e) {
-            this.setTheme(e.currentTarget.dataset.value);
+            console.log(this)
+            // this.$cuStore.setState('theme' , e.currentTarget.dataset.value)
+            this.setTheme(e.currentTarget.dataset.value)
+            // this.setTheme(e.currentTarget.dataset.value);
         },
         /*chooseColor(val) {
             this.triggerEvent('setMain', val);

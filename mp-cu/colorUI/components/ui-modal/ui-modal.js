@@ -1,7 +1,7 @@
 Component({
     data: {
         touch: false,
-        sys_navBar: getApp().ColorUi.tools.sys_navBar,
+        showKey: false
     },
     options: {
         addGlobalClass: true,
@@ -16,6 +16,10 @@ Component({
         noNav: {
             type: Boolean,
             value: false
+        },
+        target: {
+            type: String,
+            value: ''
         },
         ui: {
             type: String,
@@ -90,6 +94,7 @@ Component({
     lifetimes: {
         created() {
             //this.opacityStatus();
+
         },
         attached() {
             /*this.setData({
@@ -101,26 +106,46 @@ Component({
         },
     },
     observers: {
-        /*'scrollTop'(res) {
-            this.opacityStatus();
-        },*/
+        show(res) {
+            if (res) {
+                this.setData({
+                    showKey : true
+                })
+                if (this.data.duration != 0) {
+                    setTimeout(() => {
+                        this.hide();
+                    }, this.data.duration);
+                }
+                setTimeout(() => {
+                    this.setData({
+                        touch: true,
+                    })
+                }, 500);
+            }else{
+                this.setData({
+                    showKey : false
+                })
+            }
+        },
     },
     methods: {
         hide() {
             if (this.data.touch) {
-                this.triggerEvent("setTarget");
                 this.setData({
-                    touch: false
+                    showKey : false
                 })
+                this.closeModal()
             }
         },
         _cancel() {
             this.hide();
-            this.triggerEvent("cancel");
+            if(typeof this.successBack == 'function') this.successBack( { 'cancel': true,'confirm': false})
+            this.triggerEvent("success", { 'cancel': true,'confirm': false });
         },
         _confirm() {
             this.hide();
-            this.triggerEvent("success");
+            if(typeof this.successBack == 'function')   this.successBack( { 'confirm': true ,'cancel': false})
+            this.triggerEvent("success", { 'confirm': true ,'cancel': false});
         },
         _catchTap() {
             //this.hide();

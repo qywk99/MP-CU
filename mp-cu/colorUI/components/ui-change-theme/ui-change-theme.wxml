@@ -1,16 +1,16 @@
 <view>
     <view class="ui-menu sm-border {{ui}}">
-        <view class="ui-menu-item" data-value="{{$state.sys_theme}}" bindtap="tapAutoThemeChange">
+        <view class="ui-menu-item" data-value="{{$cuStore.sys_theme}}" bindtap="tapAutoThemeChange">
             <view class="ui-menu-item-content">跟随系统</view>
             <view class="action">
-                <ui-switch checked="{{$state.sys_theme === 'auto'}}"/>
+                <ui-switch checked="{{$cuStore.sys_theme === 'auto'}}"/>
             </view>
         </view>
         <!-- x -->
-        <view class="ui-menu-item" wx:if="{{$state.sys_theme !== 'auto'}}">
+        <view class="ui-menu-item" wx:if="{{$cuStore.sys_theme !== 'auto'}}">
             <view class="flex flex-center py-5 text-center flex-sub">
                 <view class="pr-5">
-                    <view class="mobile-phone border {{$state.sys_theme === 'light'?'cur':''}}" data-value="light" bindtap="tapThemeChange">
+                    <view class="mobile-phone border {{$cuStore.sys_theme === 'light'?'cur':''}}" data-value="light" bindtap="tapThemeChange">
                         <view class="ui-BG-Main radius"/>
                         <view class="bg-gray radius"/>
                         <view class="bg-gray radius"/>
@@ -19,7 +19,7 @@
                     <view>浅色</view>
                 </view>
                 <view class="pl-5">
-                    <view class="mobile-phone border dark {{$state.sys_theme === 'dark'?'cur':''}}" data-value="dark" bindtap="tapThemeChange">
+                    <view class="mobile-phone border dark {{$cuStore.sys_theme === 'dark'?'cur':''}}" data-value="dark" bindtap="tapThemeChange">
                         <view class="ui-BG-Main radius"/>
                         <view class="bg-dark-4 radius"/>
                         <view class="bg-dark-4 radius"/>

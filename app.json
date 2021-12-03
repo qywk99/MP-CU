@@ -17,7 +17,9 @@
     "pages/document/grid/grid",
     "pages/document/fixed/fixed",
     "pages/document/background/background",
-    "pages/document/icon/icon"
+    "pages/document/icon/icon",
+    "pages/document/modal/modal",
+    "pages/document/toast/toast"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -41,8 +43,7 @@
     "ui-radio-group": "mp-cu/colorUI/components/ui-radio-group/ui-radio-group",
     "ui-radio": "mp-cu/colorUI/components/ui-radio/ui-radio",
     "ui-card": "mp-cu/colorUI/components/ui-card/ui-card",
-    "ui-fixed" : "mp-cu/colorUI/components/ui-fixed/ui-fixed",
-    "ui-navbar" : "mp-cu/colorUI/components/ui-navbar/ui-navbar"
+    "ui-fixed": "mp-cu/colorUI/components/ui-fixed/ui-fixed"
   },
   "tabBar": {
     "custom": true,

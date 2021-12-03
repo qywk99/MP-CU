@@ -1,3 +1,4 @@
+
 # MP CU Beta V3.2.6
 
 #### 介绍
@@ -7,10 +8,10 @@
 `colorui3.x` 默认只支持 `uni-app`，本项目中 `colorui` 框架为移植修改版。
 
 `colorui3.x` 地址： [https://github.com/weilanwl/coloruiBeta](https://github.com/Color-UI/MP-CU)
-
 内置的vuex 渲染引擎感谢 [https://github.com/xiaoyao96/wxMiniStore](https://github.com/xiaoyao96/wxMiniStore)
 
 <hr/>
+
 
 ### 准备配置
 
@@ -38,28 +39,24 @@
 
 <hr/>
 
+
 ### 框架配置
 
-在根目录的 `app.js` 文件里引入相关配置：
+您可单独设置一个config.js 里面配置相关信息，然后暴露方法给app.js 在全局引用
 
 ``` js
 
-//引入框架的方法函数库
-import ColorUI from './mp-cu/ui'
-var ColorUi = new ColorUI({
-    theme: 'light',     // 设置默认主题(light 浅色，dark 深色，auto 自动跟随系统)，默认 浅色
-// 具体配置可前往源文件 /mp-cu/ui中查看
-})
-
+import { ColorUi } from './config'
 App({  
-    ColorUi,        //将colorui主文件挂载到app上
+    ColorUi,        //挂载到app上，此步骤必须要有！
     onLaunch() {
-
+        
     },
     onShow() {
-
+        
     }
 })
+
 
 
 ```
@@ -99,7 +96,6 @@ App({
 ```
 
 <hr/>
-
 ### 其它说明
 
 `custom-tab-bar` 文件夹是不需要的，只是本框架演示demo用的自定义tabBar，实际项目中，自行考虑整合。
@@ -117,8 +113,152 @@ App({
 
 <hr/>
 
+
+<H2 style='text-align : center'>colorUI wxmapp 扩展包</H2>
+
+> 由于微信小程序无法使用vue.key来全局命名变量，导致习惯vue的用户很不习惯，而且微信内部并不存在像vuex这样的状态管理机制，为满足上述想法，colorui wxmapp 为您定制了一套自有的扩展包，你可以在全局导入变量、函数、方法，同时您也可以定义您自己的状态（` vuex `）.
+
+
+- colorui 的配置文件需要您定义成类似以下的内容
+
+```javascript
+
+//引入框架的方法函数库
+import ColorUI from './mp-cu/ui'
+var ColorUi = new ColorUI({
+    config : {
+		// colorUI的配置文件
+    },
+    data :{
+		//全局data
+    },
+    method :{
+		//全局函数
+    }
+    
+})
+
+
+```
+
+### 注意，只要您在app.js 里面挂载上colorui以后，您不需要在 `page`，`components`中获取系统信息，因为colorui 已经帮您写好在对应的data 里面了，您只需要使用就可以了
+
+- 例如在demo的home 页面中，在page的data中并没有定义sys_navBar，但是在页面和js中仍然可以使用，关键的是，这个数据是根据访问手机实施变化的！
+
+
+```javascript
+
+colorui 为您在data中事先定义好的数据
+sys_info:
+sys_statusBar: 
+sys_navBar: 
+sys_capsule : 
+
+```
+<H3 style='color : red'>同时很高兴的宣布，您在config里面配置的data数据也可以在页面的data里面访问到，colorui将配置的数据定义到$cuData属性里面中了</H3>
+
+
+> 配置的config你可以在 `page`，`components` 中通过 `this.data.$cuConfig` 获得
+>
+> 配置的data内容你可以在 `page`，`components` 中通过 `this.data.$cuData` 获得
+>
+> 配置的函数方法，都会在`page`，`components`里面注册在相应位置，您只需要调用即可
+
+
+例如：
+```javascript
+
+import ColorUI from './mp-cu/ui'
+export const ColorUi = new ColorUI({
+  config: {
+    sys_theme: 'auto',
+    theme: 'auto',
+    main: 'blue',
+    text: 1,
+    footer: true,
+    homePath: '/pages/home/home',
+    tabBar: [{
+      title: '文档',
+      icon: '/static/tab_icon/document.png',
+      curIcon: '/static/tab_icon/document_cur.png',
+      url: '/pages/home/home',
+      type: 'tab'
+    },
+    {
+      title: '模板',
+      icon: '/static/tab_icon/tpl.png',
+      curIcon: '/static/tab_icon/tpl_cur.png',
+      url: '/pages/template/home',
+      type: 'tab'
+    },
+    {
+      title: '社区',
+      icon: '/static/tab_icon/comment.png',
+      curIcon: '/static/tab_icon/comment_cur.png',
+      url: '/pages/community/home',
+      type: 'tab'
+    },
+    {
+      title: '发现',
+      icon: '/static/tab_icon/find.png',
+      curIcon: '/static/tab_icon/find_cur.png',
+      url: '/pages/find/home',
+      type: 'tab'
+    },
+    {
+      title: '我的',
+      icon: '/static/tab_icon/my.png',
+      curIcon: '/static/tab_icon/my_cur.png',
+      url: '/pages/my/home',
+      type: 'tab'
+    }],
+  },
+  data: {
+    name: 'hello'
+  },
+  methods: {
+    culog (message, ...optionalParams) {
+      if (wx.getAccountInfoSync().miniProgram.envVersion === 'develop' && message) {
+        console.log(message, ...optionalParams)
+      } else {
+        return
+      }
+    }
+  }
+
+})
+
+```
+该配置文件，在项目所有页面中，都可以直接调用`this.culog ()`,就可以调用该config 文件中的函数体，当然data和config均可以在页面中获取，为了方便您获取当前项目配置，colorui为您将配置文件也一同注册进data里面了。当您在其他页面修改后，store 内部的内容便会实时更新（包括已经打开过的页面和未打开过的页面）。
+具体可以参考colorui的主题配置。
+<span style='color : red'>注意，您设置的函数，data，等配置名称不能存在以下情况 
+   [`"data"` ,
+   ` "onLoad" `,
+   ` "onShow" `,
+   ` "onReady" `,
+   ` "onHide" `,
+   ` "onUnload" `,
+   ` "onPullDownRefresh" `,
+   ` "onReachBottom" `,
+   ` "onShareAppMessage" `,
+   ` "onPageScroll" `,
+   ` "onTabItemTap" `,
+   ` "setTheme" `,
+   ` "setMain" `,
+   ` "setText" `,
+   ` "_toHome" `,
+   ` "_backPage" `,
+   ` "sys_isFirstPage"`
+]
+</span>
+
+
+
 ## 内置方法
-- [x] 内置 vuex ，在页面调用 this.setCuData(key , data ) key 表示键名 ， data表示设定的数据,读取数据采用this.getCuData(key) , 清空数据采用this.clearCuData()
+- [x] 内置 store		[使用方法参考](#ColorUi.store)
+- [x] 内置 log	 	[使用方法参考](#ColorUi.log)
+- [x] 页面返回函数	[使用方法参考](#_backPage)
+- [x] 切换主题		[使用方法参考](#_setTheme)
 
 <hr/>
 
@@ -137,7 +277,7 @@ App({
 - [x] swiper
 - [x] switch
 - [x] tabbar
-- [x] titleå
+- [x] title
 - [x] toast
 - [x] button
 - [x] background
@@ -147,3 +287,44 @@ App({
 - [ ] input
 - [ ] list
 - [ ] input
+
+
+
+## 内置方法详解
+
+#### <span id='_backPage'>页面返回函数</span>
+> colorui 3.x微信小程序版本因为所有页面都需要包裹 `ui-sys` ，所以对于大多数返回函数都无法使用，colorui为您在所有页面注册了返回函数，在需要返回的函数里调用 `this._backPage()` 注意this 作用域的问题。
+
+
+#### <span id='_toHome'>返回首页</span>
+> colorui为您在所有页面注册了返回函数，在需要返回的函数里调用 `this._toHome()` 注意this 作用域的问题。
+
+#### <span id='_setTheme'>切换主题</span>
+
+> colorui为您在所有页面注册了切换主题函数，在需要切换主题的地方调用 `this. _setTheme()` 注意this 作用域的问题。
+
+#### ColorUi.request
+> 微信小程序为了检查安全域名，所以封装了wx.request这个方法，为了方便大家全局去配置参数，并且为了方便大家使用promise方法调用，ColorUI 为你封装好了一套request 方法，使用起来如下图所示
+
+```javascript
+
+/// 配置好 request ,建议将此文件拷贝到你的代码顶层，防止后续Colorui 主文件升级导致你的特定的拦截参数被修改。
+
+///在B.js文件里面引用
+
+B.js:
+
+import { request } from 'request.js'
+
+export const login = (data) =>{
+	return request('login' , 'post' , data , false ) //具体传参请看文件内部说明
+}
+
+
+```
+
+
+
+
+
+
