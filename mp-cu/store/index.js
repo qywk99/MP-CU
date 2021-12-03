@@ -6,7 +6,7 @@
 import diff from '../utils/diff'
 import { _typeOf, TYPE_ARRAY, TYPE_OBJECT, _deepClone } from "../utils/tools";
 
-const setData = function (obj, data) {
+const setData = (obj, data) => {
     let result = _deepClone(data);
     let origin = _deepClone(obj);
     Object.keys(origin).forEach((key) => {
@@ -14,7 +14,7 @@ const setData = function (obj, data) {
     });
     return result;
 };
-const dataHandler = function (key, result, data) {
+const dataHandler =  (key, result, data) => {
     let arr = pathHandler(key);
     let d = data;
     for (let i = 0; i < arr.length - 1; i++) {
@@ -24,7 +24,7 @@ const dataHandler = function (key, result, data) {
     d[arr[arr.length - 1]] = result;
 };
 
-const pathHandler = function (key) {
+const pathHandler =  (key) => {
     let current = "",
         keyArr = [];
     for (let i = 0, len = key.length; i < len; i++) {
@@ -41,14 +41,14 @@ const pathHandler = function (key) {
     return keyArr;
 };
 
-const cleanAndPush = function (key, arr) {
+const cleanAndPush =  (key, arr) => {
     let r = cleanKey(key);
     if (r !== "") {
         arr.push(r);
     }
 };
 
-const keyToData = function (prev, current, data) {
+const keyToData =  (prev, current, data) => {
     if (prev === "") {
         return;
     }
@@ -60,7 +60,7 @@ const keyToData = function (prev, current, data) {
     }
 };
 
-const cleanKey = function (key) {
+const cleanKey =  (key) => {
     if (key.match(/\[\S+\]/g)) {
         let result = key.replace(/\[|\]/g, "");
         if (!Number.isNaN(parseInt(result))) {
@@ -125,15 +125,6 @@ export const CUStoreInit = (config) => {
     $store.state.sys_theme = wx.getStorageSync('sys_theme') ? wx.getStorageSync('sys_theme') : config.theme
     $store.state.sys_main = wx.getStorageSync('sys_main') ? wx.getStorageSync('sys_main') : config.main
     $store.state.sys_text = wx.getStorageSync('sys_text') ? wx.getStorageSync('sys_text') : config.text
-    // const modal = {
-    //     title : '',
-    //     target : '',
-    //     content : '这是Colorui Modal的主内容',
-    //     showCancel : false,
-    //     cancelText : '取消',
-    //     confirmText : '确定',
-    //     success:()=>{},
-    // }
     const modal = {
         show:false,
 		 dialog:{

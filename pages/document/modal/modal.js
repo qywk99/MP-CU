@@ -6,6 +6,7 @@ Page({
   },
   show() {
     this.showDialog({
+      title : 'colorui弹窗',
       content: '这是一个模态弹窗',
       success: res => {
         console.log(res)

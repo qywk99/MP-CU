@@ -48,6 +48,7 @@ export const setStatusStyle = (status) => {
         });
     }
 }
+
 let baseMethod = {
     //设置主题
     setTheme(data) {
