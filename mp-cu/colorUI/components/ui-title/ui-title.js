@@ -1,22 +1,10 @@
 Component({
     options: {
         addGlobalClass: true,
-        multipleSlots: true
+        multipleSlots: true,
+        sys_navBar: getApp().ColorUi.tools.sys_navBar
     },
     properties: {
-        title: {
-            type: String,
-            value: ''
-        },
-        depth: {
-            type: Number,
-            optionalTypes: String,
-            value: 0
-        },
-        subTitle: {
-            type: String,
-            value: ''
-        },
         ui: {
             type: String,
             value: ''
@@ -25,13 +13,26 @@ Component({
             type: String,
             value: 'bg-none'
         },
-        text: {
+        title: {
             type: String,
-            value: 'text-a'
+            value: ''
         },
         desc: {
             type: String,
-            value: 'text-c'
+            value: ''
+        },
+        titleUi: {
+            type: String,
+            value: 'ui-TC'
+        },
+        descUi: {
+            type: String,
+            value: 'ui-TC-3'
+        },
+        depth: {
+            type: Number,
+            optionalTypes: String,
+            value: 0
         },
         dot: {
             type: String,

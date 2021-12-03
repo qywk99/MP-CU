@@ -7,6 +7,7 @@
 `colorui3.x` 默认只支持 `uni-app`，本项目中 `colorui` 框架为移植修改版。
 
 `colorui3.x` 地址： [https://github.com/weilanwl/coloruiBeta](https://github.com/Color-UI/MP-CU)
+
 内置的vuex 渲染引擎感谢 [https://github.com/xiaoyao96/wxMiniStore](https://github.com/xiaoyao96/wxMiniStore)
 
 <hr/>
@@ -117,8 +118,7 @@ App({
 <hr/>
 
 ## 内置方法
-- [x] 内置 store		[使用方法参考](#ColorUi.store)
-- [x] 内置 log	 	[使用方法参考](#ColorUi.log)
+- [x] 内置 vuex ，在页面调用 this.setCuData(key , data ) key 表示键名 ， data表示设定的数据,读取数据采用this.getCuData(key) , 清空数据采用this.clearCuData()
 
 <hr/>
 
@@ -137,7 +137,7 @@ App({
 - [x] swiper
 - [x] switch
 - [x] tabbar
-- [x] title
+- [x] titleå
 - [x] toast
 - [x] button
 - [x] background
@@ -147,57 +147,3 @@ App({
 - [ ] input
 - [ ] list
 - [ ] input
-
-
-
-## 内置方法详解
-
-<span style='color : red' >使用内置方法必须在页面中引入app.js ，即 `const app = getApp()` </span> 
-
-### <span id='ColorUi.store'>ColorUi.store</span>
-
-> 在vue中存在vuex，但由于微信小程序官方的缘故，不开放vuex方法，colorui 有关功能需要用到vuex，不得不在微信小程序中采用该方法，同时为了方便接下来的开发者，colorui内置了相关方法供你存储，查询，清空。 渲染引擎感谢 [https://github.com/xiaoyao96/wxMiniStore](https://github.com/xiaoyao96/wxMiniStore)
-
-```javascript
-
-//存值
-this.setCuData('name' , '234234')
-//取值
-this.getCuData("name")
-//清空
-this.clearCuData()
-
-```
-
-### <span id='ColorUi.log'>ColorUi.log </span>
-
-> 在实际开发中，会存在开发log 不想在线上版本展示的效果，很明显我们熟知的 `console.log()` 满足不了你的需求，为了满足这个需求，colorui wxmapp 特地为你添加了一个方法，其中参数和 `console.log()` 一模一样
-
-```javascript
-
-app.ColorUi.log( ...message) //注意，此段log 在线上时就不会展示！
-
-```
-
-### ColorUi.request
-> 微信小程序为了检查安全域名，所以封装了wx.request这个方法，为了方便大家全局去配置参数，并且为了方便大家使用promise方法调用，ColorUI 为你封装好了一套request 方法，使用起来如下图所示
-
-```javascript
-
-/// 配置好 request ,建议将此文件拷贝到你的代码顶层，防止后续Colorui 主文件升级导致你的特定的拦截参数被修改。
-
-///在B.js文件里面引用
-
-B.js:
-
-import { request } from 'request.js'
-
-export const login = (data) =>{
-	return request('login' , 'post' , data , false ) //具体传参请看文件内部说明
-}
-
-
-```
-
-
-

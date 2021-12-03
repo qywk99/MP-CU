@@ -1,13 +1,14 @@
+@import '../../scss/var';
+
 .ui-title {
     position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30rpx;
+    // padding: 30rpx;
     .anchor {
         pointer-events: none;
         position: absolute;
-        top: -60px;
     }
     &.line {
         padding: 0 30rpx;
@@ -37,8 +38,8 @@
             z-index: 2;
             .action-dot {
                 position: absolute;
-                width: 1.2em;
-                height: 1.2em;
+                width: 18px;
+                height: 18px;
                 border-radius: 50%;
                 top: -0.3em;
                 z-index: -1;
@@ -62,6 +63,22 @@
                 left: 0;
                 right: 0;
                 margin: auto;
+            }
+        }
+    }
+    &.right {
+        justify-content: flex-end;
+        letter-spacing: 5rpx;
+        .hasDot {
+            .action-dot {
+                left: auto;
+                right: 0;
+            }
+        }
+        .hasLine {
+            .action-line {
+                left: auto;
+                right: 0;
             }
         }
     }
@@ -89,7 +106,7 @@
                 top: -10rpx;
             }
         }
-        &.center {
+        &.center,&.right {
             position: relative;
             z-index: 1;
             .action {
@@ -101,6 +118,11 @@
                 right: 0;
                 margin: auto;
                 text-align: center;
+            }
+        }
+        &.right {
+            .action-desc {
+                text-align: right;
             }
         }
     }
@@ -208,6 +230,48 @@
         }
     }
 }
-.ui-title.heading-title {
-    padding: 0;
+
+.heading-0 {
+    padding-top: #{map-get($spacers, 4)};
+    padding-bottom: #{map-get($spacers, 4)};
+    font-size: calc(#{map-get($fontsize, xl)}rpx + var(--textSize)) !important;
+    .action-desc{
+        font-size: calc(#{map-get($fontsize, df)}rpx + var(--textSize)) !important;
+    }
+}
+
+.heading-1 {
+    padding-top: #{map-get($spacers, 5)};
+    padding-bottom: #{map-get($spacers, 4)};
+    font-size: calc(#{map-get($fontsize, xxl)}rpx + var(--textSize)) !important;
+    .action-desc{
+        font-size: calc(#{map-get($fontsize, lg)}rpx + var(--textSize)) !important;
+    }
+}
+
+.heading-2 {
+    padding-top: #{map-get($spacers, 4)};
+    padding-bottom: #{map-get($spacers, 3)};
+    font-size: calc(#{map-get($fontsize, xl)}rpx + var(--textSize)) !important;
+    .action-desc{
+        font-size: calc(#{map-get($fontsize, df)}rpx + var(--textSize)) !important;
+    }
+}
+
+.heading-3 {
+    padding-top: #{map-get($spacers, 3)};
+    padding-bottom: #{map-get($spacers, 2)};
+    font-size: calc(#{map-get($fontsize, lg)}rpx + var(--textSize)) !important;
+    .action-desc{
+        font-size: calc(#{map-get($fontsize, sm)}rpx + var(--textSize)) !important;
+    }
+}
+
+.heading-4 {
+    padding-top: #{map-get($spacers, 2)};
+    padding-bottom: #{map-get($spacers, 1)};
+    font-size: calc(#{map-get($fontsize, df)}rpx + var(--textSize)) !important;
+    .action-desc{
+        font-size: calc(#{map-get($fontsize, xs)}rpx + var(--textSize)) !important;
+    }
 }

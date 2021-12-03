@@ -1,0 +1,7 @@
+<ui-sys img="/static/img/4put2.png" tabbar>
+    <ui-navbar :back="false" opacity>
+        <!--  v-if="sys_scrollTop > sys_navBar"-->
+        <view class="flex-center flex-sub">模版</view>
+    </ui-navbar>
+
+</ui-sys>

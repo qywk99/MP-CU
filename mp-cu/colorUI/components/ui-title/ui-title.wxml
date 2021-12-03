@@ -1,5 +1,5 @@
-<view class="ui-title {{ui}} {{align}} {{tpl}} {{bg}} {{inLine?'line':''}} {{depth>0?'heading-title heading-'+depth:''}}">
-    <view class="anchor" id="title"/>
+<view class="ui-title {{ui}} {{align}} {{tpl}} {{bg}} {{inLine?'line':''}} {{depth>0?'heading-'+depth:''}}">
+    <view class="anchor" id="{{title}}" style="top:-{{sys_navBar}}px"/>
     <view class="action {{hasLine?'hasLine':''}} {{hasDot?'hasDot':''}}">
         <view class="action-icon">
             <block wx:if="{{isIcon}}">
@@ -9,7 +9,7 @@
             </block>
             <slot name="icon"/>
         </view>
-        <view class="action-title {{text}}" wx:if="{{title!=''}}">
+        <view class="action-title {{titleUi}}" wx:if="{{title!=''}}">
             <text>{{ title }}</text>
             <slot></slot>
             <view class="action-line {{line}}" wx:if="{{hasLine}}">
@@ -21,7 +21,7 @@
                 <view class="view"></view>
             </view>
         </view>
-        <view class="action-desc {{desc}}" wx:if="{{desc!=''}}">{{ subTitle }}</view>
+        <view class="action-desc {{descUi}}" wx:if="{{desc!=''}}">{{ desc }}</view>
     </view>
     <view class="more"><slot name="more"/></view>
 </view>
