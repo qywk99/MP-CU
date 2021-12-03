@@ -125,6 +125,42 @@ export const CUStoreInit = (config) => {
     $store.state.sys_theme = wx.getStorageSync('sys_theme') ? wx.getStorageSync('sys_theme') : config.theme
     $store.state.sys_main = wx.getStorageSync('sys_main') ? wx.getStorageSync('sys_main') : config.main
     $store.state.sys_text = wx.getStorageSync('sys_text') ? wx.getStorageSync('sys_text') : config.text
+    // const modal = {
+    //     title : '',
+    //     target : '',
+    //     content : '这是Colorui Modal的主内容',
+    //     showCancel : false,
+    //     cancelText : '取消',
+    //     confirmText : '确定',
+    //     success:()=>{},
+    // }
+    const modal = {
+        show:false,
+		 dialog:{
+			title:'',
+			content:'',
+			showCancel:true,
+			cancelText:'取消',
+			cancelColor:'',
+			confirmText:'确定',
+			confirmColor:'',
+			success : ()=>{}
+		 },
+		 toast:{
+			title:'', 
+			icon:'',
+			image:'',
+			duration:1500,
+			mask:false,
+			isLoading:false,
+			success:()=>{},
+		 },
+    }
+    
+    
+    $store.state.$Modal = modal
+    $store.state.$dialog = modal.dialog
+    $store.state.$toast  = modal.toast
     return $store
 
 }

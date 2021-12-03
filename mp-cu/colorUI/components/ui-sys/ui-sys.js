@@ -50,13 +50,17 @@ Component({
             
         },
         ready() {
-            // this.data.$colorui.log('hello')
+            
         },
     },
     observers: {
 
     },
     methods: {
-
+        Modalsuccess(res) {
+            // this.data.$Modal.success(res)
+            // this.ModalSuccessCallBack(res)
+           return  this.data.$cuStore.$Modal
+        }
     },
 })

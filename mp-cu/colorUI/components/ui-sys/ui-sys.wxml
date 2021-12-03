@@ -1,15 +1,29 @@
 <view class="ui-page {{'theme-' + $cuStore.sys_theme}} {{'main-' + $cuStore.sys_main}} {{'font-' + $cuStore.sys_text}}">
     <view class="page-body {{bg}} {{ui}}" style="{{styles}}">
         <view class="page-body-main">
-            <app-navbar bg="{{navBg}}" title="{{title}}" wx:if="{{title}}"/>
-            <slot/>
-            <app-footer wx:if="{{app_footer}}"/>
-            <ui-tabbar ui="shadow border-top" datas="{{$cuConfig.tabBar}}" wx:if="{{tabbar}}"/>
+            <app-navbar bg="{{navBg}}" title="{{title}}" wx:if="{{title}}" />
+            <slot />
+            <app-footer wx:if="{{app_footer}}" />
+            <ui-tabbar ui="shadow border-top" datas="{{$cuConfig.tabBar}}" wx:if="{{tabbar}}" />
             <view class="loading-body bg-blur" wx:if="{{isLoading}}">
-                <view class="_icon-loading icon-spin text-sl mb-3"/>
+                <view class="_icon-loading icon-spin text-sl mb-3" />
                 <view>加载中</view>
             </view>
         </view>
-        <image src="{{img}}" mode="aspectFill" class="page-img" wx:if="{{img}}"/>
+
+
+        <!-- <ui-modal name="sys_dialog" title="{{dialog.title}}" content="{{dialog.content}}" showCancel="{{dialog.showCancel}}" cancelText="{{dialog.cancelText}}" confirmText="{{dialog.confirmText}}" success="{{dialog.success($event)}}"></ui-modal> -->
+        <ui-modal 
+            name="sys_dialog" 
+            show="{{$cuStore.$Modal.show}}" 
+            title="{{$cuStore.$dialog.title}}" 
+            content="{{$cuStore.$dialog.content}}" 
+            showCancel="{{$cuStore.$dialog.showCancel}}" 
+            cancelText="{{$cuStore.$dialog.cancelText}}" 
+            confirmText="{{$cuStore.$dialog.confirmText}}">
+        </ui-modal>
+
+
+        <image src="{{img}}" mode="aspectFill" class="page-img" wx:if="{{img}}" />
     </view>
 </view>

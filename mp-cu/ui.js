@@ -84,6 +84,40 @@ let baseMethod = {
             }
         });
     },
+    showDialog({
+        title ,
+        content ,
+        showCancel ,
+        cancelText,
+        confirmText ,
+        success
+    }){
+        store.$p.map(item =>{
+            if(item.is.indexOf('components/ui-modal/ui-modal') > -1 ){
+                item['successBack'] = success //强制更新所有页面的successBack 为设定的success
+            }
+        })
+        store.setState({
+            '$Modal.show': true,
+            '$dialog.title' : title,
+            '$dialog.content' : content,
+            '$dialog.showCancel' : showCancel,
+            '$dialog.cancelText' : cancelText,
+            '$dialog.confirmText' : confirmText
+        });
+        
+    },
+    setToast( data) { 
+        let key ={}
+         Object.assign(key,data);
+         console.log(key)
+        // state.toast = Object.assign(state.toast,data);
+    },
+    closeModal(){
+        store.setState({
+            '$Modal.show': false,
+        });
+    },
     _backPage() {
         if (this.sys_isFirstPage) {
             this._toHome();
@@ -257,6 +291,7 @@ export default class ColorUI {
                 o.methods[key] = that.methods[key];
                 }
             });
+           
             const { lifetimes = {} } = o;
             let originCreate = lifetimes.attached || o.attached,
                 originonDestroy = lifetimes.detached || o.detached;

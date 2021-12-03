@@ -17,7 +17,8 @@
     "pages/document/grid/grid",
     "pages/document/fixed/fixed",
     "pages/document/background/background",
-    "pages/document/icon/icon"
+    "pages/document/icon/icon",
+    "pages/document/modal/modal"
   ],
   "window": {
     "backgroundTextStyle": "light",

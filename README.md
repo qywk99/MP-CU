@@ -157,9 +157,13 @@ sys_capsule :
 ```
 <H3 style='color : red'>同时很高兴的宣布，您在config里面配置的data数据也可以在页面的data里面访问到，colorui将配置的数据定义到$cuData属性里面中了</H3>
 
+
 > 配置的config你可以在 `page`，`components` 中通过 `this.data.$cuConfig` 获得
+>
 > 配置的data内容你可以在 `page`，`components` 中通过 `this.data.$cuData` 获得
+>
 > 配置的函数方法，都会在`page`，`components`里面注册在相应位置，您只需要调用即可
+
 
 例如：
 ```javascript
