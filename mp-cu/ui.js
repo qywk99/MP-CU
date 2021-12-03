@@ -85,7 +85,7 @@ let baseMethod = {
             }
         });
     },
-    showDialog({
+    $showDialog({
         title ,
         content ,
         showCancel ,
@@ -106,13 +106,63 @@ let baseMethod = {
             '$dialog.cancelText' : cancelText,
             '$dialog.confirmText' : confirmText
         });
-        
     },
     setToast( data) { 
         let key ={}
          Object.assign(key,data);
          console.log(key)
         // state.toast = Object.assign(state.toast,data);
+    },
+    $tips(title ,duration=1500){
+        store.setState({
+            '$toast.title' : title,
+            '$toast.duration' : duration
+        })
+    },
+    /**
+     * 
+     * @param title     标题
+     * @param duration  显示时间
+     */
+    $success(_,title='成功',duration=1500){
+        store.setState({
+            '$toast.title' : title,
+            '$toast.duration' : duration,
+            '$toast.icon' : '_icon-check'
+        })
+    },
+    /**
+     * 
+     * @param title     标题
+     * @param duration  显示时间
+     */
+    $error(_,title='错误',duration=1500){
+        store.setState({
+            '$toast.title' : title,
+            '$toast.duration' : duration,
+            '$toast.icon' : '_icon-warn',
+            
+        })
+    },
+    /**
+     * 
+     * @param title     标题
+     * @param duration  显示时间
+     */
+    $loading(title = '加载中' , duration = 1500){
+        store.setState({
+            '$toast.title' : title ,
+            '$toast.duration' : duration,
+            '$toast.icon' : '_icon-loading',
+            '$toast.isLoading':true
+        })
+    },
+    $hideLoading(){
+        store.setState({
+            '$toast.title' : '',
+            '$toast.icon' : '',
+            '$toast.isLoading':false
+        })
     },
     closeModal(){
         store.setState({
@@ -238,6 +288,7 @@ export default class ColorUI {
                     o[key] = baseMethod[key]
                 }
             })
+            o['setState'] = store.setState
              //注入用户设定的methods
             Object.keys(that.methods).forEach((key) => {
                 if (
@@ -278,6 +329,7 @@ export default class ColorUI {
             };
             o.methods || (o.methods = {})
             o.methods['getColor'] = tools.getColor
+            o.methods['setState'] = store.setState
             Object.keys(baseMethod).forEach(key => {
                 if (typeof baseMethod[key] === 'function') {
                     o.methods[key] = baseMethod[key]

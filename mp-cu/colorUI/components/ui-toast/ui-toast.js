@@ -47,12 +47,25 @@ Component({
 
         },
     },
-    /*observers: {
-        'scrollTop'(res) {
-            this.opacityStatus();
-        },
-    },*/
+    observers: {
+        title(val) {
+			if (val&&!this.data.isLoading) {
+                setTimeout(() => {
+                    this.hide();
+                }, this.data.duration);
+            }
+		}
+    },
     methods: {
-
+        hide(){
+            this.setState({
+                '$toast.title':'', 
+                '$toast.icon':'',
+                '$toast.image':'',
+                '$toast.duration': 0,
+                '$toast.mask':false,
+                '$toast.isLoading':false,
+            })
+        }
     }
 })

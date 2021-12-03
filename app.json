@@ -18,7 +18,8 @@
     "pages/document/fixed/fixed",
     "pages/document/background/background",
     "pages/document/icon/icon",
-    "pages/document/modal/modal"
+    "pages/document/modal/modal",
+    "pages/document/toast/toast"
   ],
   "window": {
     "backgroundTextStyle": "light",
