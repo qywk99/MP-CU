@@ -1,0 +1,9 @@
+<!--@click="_preview()" id="{{'image-'+_uid}}"-->
+<view class="ui-img-box {{ui}} {{mode}}" id="{{'image-'+_uid}}"
+      style="{{src?'background-image:'+'url(' + src +');':''}} {{imgW?'width:'+imgW+';':''}} {{imgH?'height:'+imgH+';':''}}">
+    <!-- @load="_load" @error="_error"-->
+    <image class="ui-img {{mode}}" id="{{'img-'+_uid}}" src="{{src}}" mode="aspectFill" bindload="_load" binderror="_error"/>
+    <view class="ui-img-load" wx:if="{{isLoad}}">
+        <ui-loading color size="xl"/>
+    </view>
+</view>

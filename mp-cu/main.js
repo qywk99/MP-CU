@@ -1,11 +1,10 @@
 /***
  * @author  bypanghu@163.com (https://github.com/bypanghu)
- * @author iZaizai (https://github.com/iZaiZaiA)
+ * @author iZaiZaiA (https://github.com/iZaiZaiA)
  */
-
 import tools from '/utils/tools'
 import { CUStoreInit } from '/store/index'
-import { _typeOf, _deepClone } from "./utils/tools";
+
 let pageLife = [
     "data",
     "onLoad",
@@ -278,6 +277,11 @@ export default class ColorUI {
                 sys_statusBar: tools.sys_statusBar,
                 sys_navBar: tools.sys_navBar,
                 sys_capsule: tools.sys_capsule(),
+                isArr: tools.isArr,
+                isDate: tools.isDate,
+                isObj: tools.isObj,
+                isRandom: tools.isRandom,
+                isDataType: tools.isDataType,
                 $cuData: that.data,
                 $cuConfig: that.config,
                 $cuStore: store.state
@@ -323,6 +327,11 @@ export default class ColorUI {
                 sys_statusBar: tools.sys_statusBar,
                 sys_navBar: tools.sys_navBar,
                 sys_capsule: tools.sys_capsule(),
+                isArr: tools.isArr,
+                isDate: tools.isDate,
+                isObj: tools.isObj,
+                isRandom: tools.isRandom,
+                isDataType: tools.isDataType,
                 $cuData: that.data,
                 $cuConfig: that.config,
                 $cuStore: store.state
@@ -376,5 +385,4 @@ export default class ColorUI {
             'background:transparent'
         )
     }
-
 }

@@ -1,6 +1,6 @@
 Component({
     data: {
-        cur: 0
+        //cur: 0
     },
     options: {
         addGlobalClass: true
@@ -9,6 +9,10 @@ Component({
         datas: {
             type: Array,
             value: []
+        },
+        cur: {
+            type: Number,
+            value: 0
         },
         tpl: {
             type: String,
@@ -41,6 +45,17 @@ Component({
         main: {     //主色
             type: String,
             value: 'blur'
+        },
+    },
+    lifetimes: {
+        created() {
+
+        },
+        attached() {
+
+        },
+        ready() {
+
         },
     },
     methods: {

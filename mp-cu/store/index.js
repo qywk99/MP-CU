@@ -1,14 +1,14 @@
 // 此处参考 https://github.com/xiaoyao96/wxMiniStore
 /***
  * @author  bypanghu@163.com (https://github.com/bypanghu)
- * @author iZaizai (https://github.com/iZaiZaiA)
+ * @author iZaiZaiA (https://github.com/iZaiZaiA)
  */
-import diff from '../utils/diff'
-import { _typeOf, TYPE_ARRAY, TYPE_OBJECT, _deepClone } from "../utils/tools";
+import diff from '../utils/lib/diff'
+import { isArr, isDataType } from "../utils/tools";
 
 const setData = (obj, data) => {
-    let result = _deepClone(data);
-    let origin = _deepClone(obj);
+    let result = isArr.nextArr(data);
+    let origin = isArr.nextArr(obj);
     Object.keys(origin).forEach((key) => {
         dataHandler(key, origin[key], result);
     });
@@ -52,10 +52,9 @@ const keyToData =  (prev, current, data) => {
     if (prev === "") {
         return;
     }
-    const type = _typeOf(data[prev]);
-    if (typeof current === "number" && type !== TYPE_ARRAY) {
+    if (typeof current === "number" && !isDataType.ifArray(data[prev])) {
         data[prev] = [];
-    } else if (typeof current === "string" && type !== TYPE_OBJECT) {
+    } else if (typeof current === "string" && !isDataType.ifObject(data[prev])) {
         data[prev] = {};
     }
 };
@@ -77,7 +76,7 @@ export const CUStoreInit = (config) => {
         state: {},
         $p: [],
         setState(obj, fn = () => { }) {
-            if (_typeOf(obj) !== TYPE_OBJECT) {
+            if (!isDataType.ifObject(obj)) {
                 throw new Error("setState的第一个参数须为object!");
             }
             let prev = $store.state;

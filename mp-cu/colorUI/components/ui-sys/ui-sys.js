@@ -50,11 +50,15 @@ Component({
             
         },
         ready() {
-            
+            if (this.tabbar) {
+                wx.hideTabBar()
+            }
         },
     },
     observers: {
-
+        'tabbar'(val) {
+            if (val) wx.hideTabBar()
+        },
     },
     methods: {
         Modalsuccess(res) {

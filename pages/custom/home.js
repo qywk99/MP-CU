@@ -5,6 +5,6 @@ Page({
 
     },
     onLoad() {
-        wx.setNavigationBarTitle({ title: '个人中心' });
+        //wx.setNavigationBarTitle({ title: '个人中心' });
     },
 })

@@ -2,7 +2,7 @@ Component({
     options: {
         addGlobalClass: true,
         multipleSlots: true,
-        sys_navBar: getApp().ColorUi.tools.sys_navBar
+        //sys_navBar: getApp().ColorUi.sys_navBar
     },
     properties: {
         ui: {
