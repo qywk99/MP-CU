@@ -3,6 +3,7 @@
  * @author iZaiZaiA (https://github.com/iZaiZaiA)
  */
 import tools from '/utils/tools'
+import cuLog from '/utils/log'
 import { CUStoreInit } from '/store/index'
 
 let pageLife = [
@@ -24,8 +25,8 @@ let pageLife = [
     "_backPage",
     "sys_isFirstPage"
 ]
-let store = {}
-//设置系统颜色
+let version = '3.2.6', store = {}
+//设置系统颜色 版本
 export const setStatusStyle = (status) => {
     if (status === 'light') {
         wx.setNavigationBarColor({
@@ -187,7 +188,7 @@ let baseMethod = {
 }
 
 /**
- *  ColorUi 主Js文件
+ * ColorUi 主Js文件
  * config 下
  * @param   theme               设置默认主题
  * @param   main                设置默认强调色
@@ -195,8 +196,6 @@ let baseMethod = {
  * @param   footer              显示底部colorUI版权(如果属于开源作品，请带上ColorUI版权！！！)
  * @param   homePath            设置首页路径(一些组件会用到跳回主页，请每个项目设置好！)
  * @param   tabBar              配置系统tabBar
- * 
- * 
  */
 
 export default class ColorUI {
@@ -213,7 +212,7 @@ export default class ColorUI {
         this.$cuState = {};
         this.colorUiInit()
     }
-    //colorui 主框架初始化
+    //colorUi 主框架初始化
     colorUiInit() {
         //创建时，添加组件
         const _create = function (r, o = {}) {
@@ -236,7 +235,7 @@ export default class ColorUI {
                     $cuStore: _filterKey(
                         store.$cuStore,
                         r.$cuStore.useProp,
-                        (key, usekey) => key === usekey
+                        (key, useKey) => key === useKey
                     ),
                 });
             } else {
@@ -268,10 +267,9 @@ export default class ColorUI {
         }
         const originPage = Page
         const originComponent = Component;
-        let that = this
-        App.Page = function (o = {}, ...args) {
-            //将config 和 data 组装进data 里面
-            o.data = {
+        let that = this;
+        const _objData = function (o) {
+            return {
                 ...(o.data || {}),
                 sys_info: tools.sys_info,	// 获取系统信息
                 sys_statusBar: tools.sys_statusBar,
@@ -282,11 +280,16 @@ export default class ColorUI {
                 isObj: tools.isObj,
                 isRandom: tools.isRandom,
                 isDataType: tools.isDataType,
+                cuLog: cuLog,
                 $cuData: that.data,
                 $cuConfig: that.config,
                 $cuStore: store.state
-            };
-            //注入colorui 函数体
+            }
+        };
+        App.Page = function (o = {}, ...args) {
+            //将config 和 data 组装进data 里面
+            o.data = _objData(o);
+            //注入colorUi 函数体
             Object.keys(baseMethod).forEach(key => {
                 if (typeof baseMethod[key] === 'function') {
                     o[key] = baseMethod[key]
@@ -321,21 +324,7 @@ export default class ColorUI {
         } catch (e) { }
         //重写组件
         App.Component = function (o = {}, ...args) {
-            o.data = {
-                ...(o.data || {}),
-                sys_info: tools.sys_info,	// 获取系统信息
-                sys_statusBar: tools.sys_statusBar,
-                sys_navBar: tools.sys_navBar,
-                sys_capsule: tools.sys_capsule(),
-                isArr: tools.isArr,
-                isDate: tools.isDate,
-                isObj: tools.isObj,
-                isRandom: tools.isRandom,
-                isDataType: tools.isDataType,
-                $cuData: that.data,
-                $cuConfig: that.config,
-                $cuStore: store.state
-            };
+            o.data = _objData(o);
             o.methods || (o.methods = {})
             o.methods['getColor'] = tools.getColor
             o.methods['setState'] = store.setState
@@ -361,7 +350,6 @@ export default class ColorUI {
                 _create(this, o);
                 originCreate && originCreate.apply(this, arguments);
             };
-
             const detached = function () {
                 _destroy(this);
                 originonDestroy && originonDestroy.apply(this, arguments);
@@ -378,11 +366,16 @@ export default class ColorUI {
         try {
             Component = App.Component;
         } catch (e) { }
+
+        //cuLog.log(1);
+
+        //version
         console.log(
-            `%c colorUi 主文件启动成功 %c 当前版本V3.2.6 wechat Apache%c`,
-            'background:#35495e ; padding: 1px; border-radius: 3px 0 0 3px;  color: #fff',
-            'background:#0081ff ;padding: 1px 5px; border-radius: 0 3px 3px 0;  color: #fff; font-weight: bold;',
+            `%c colorUI 启动成功 %c 当前版本V` + version + ` wechat Apache%c`,
+            'background:#0081ff; padding: 1px; border-radius: 3px 0 0 3px; color: #fff',
+            'background:#354855; padding: 1px 5px; border-radius: 0 3px 3px 0; color: #fff; font-weight: bold;',
             'background:transparent'
         )
     }
 }
+

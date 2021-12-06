@@ -322,9 +322,3 @@ export const login = (data) =>{
 
 
 ```
-
-
-
-
-
-

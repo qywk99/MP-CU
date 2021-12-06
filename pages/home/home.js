@@ -2,7 +2,7 @@ const app = getApp();
 Page({
     data: {
         sys_scrollTop: 0,
-        swiperList: [{ img: "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-2dd21fa9-731c-43b7-b092-2b6264029de8/5e1a652b-39bc-4f34-89f3-efa6117cb7fa.png" }, { img: "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-2dd21fa9-731c-43b7-b092-2b6264029de8/347cc270-d0f2-4298-b8d9-260b5f274c48.png" }, { img: "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-2dd21fa9-731c-43b7-b092-2b6264029de8/38ad5301-cfbf-45fc-9089-1bf08ab567fd.png" }],
+        swiperList: [{ img: "/static/img/mp-cu.png" }, { img: "/static/img/8v2yr.png" }, { img: "/static/img/qhgtb.png" }],
         navData: [{
             title: '基础',
             sub: [{ icon: 'cicon-set', name: 'system', title: '系统' },

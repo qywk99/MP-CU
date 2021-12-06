@@ -11,8 +11,6 @@
             </view>
         </view>
 
-
-        <!-- <ui-modal name="sys_dialog" title="{{dialog.title}}" content="{{dialog.content}}" showCancel="{{dialog.showCancel}}" cancelText="{{dialog.cancelText}}" confirmText="{{dialog.confirmText}}" success="{{dialog.success($event)}}"></ui-modal> -->
         <ui-modal 
             name="sys_dialog" 
             show="{{$cuStore.$Modal.show}}" 
@@ -20,8 +18,8 @@
             content="{{$cuStore.$dialog.content}}" 
             showCancel="{{$cuStore.$dialog.showCancel}}" 
             cancelText="{{$cuStore.$dialog.cancelText}}" 
-            confirmText="{{$cuStore.$dialog.confirmText}}">
-        </ui-modal>
+            confirmText="{{$cuStore.$dialog.confirmText}}"/>
+
         <ui-toast
             name="sys_dialog"
             title="{{$cuStore.$toast.title}}"
@@ -30,7 +28,7 @@
             isLoading="{{$cuStore.$toast.isLoading}}"
             image="{{$cuStore.$toast.image}}"
             icon="{{$cuStore.$toast.icon}}"
-        ></ui-toast>
+        />
 
         <image src="{{img}}" mode="aspectFill" class="page-img" wx:if="{{img}}" />
     </view>

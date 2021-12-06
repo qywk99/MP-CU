@@ -61,9 +61,7 @@ Component({
         },
     },
     methods: {
-        Modalsuccess(res) {
-            // this.data.$Modal.success(res)
-            // this.ModalSuccessCallBack(res)
+        modalSuccess(res) {
            return  this.data.$cuStore.$Modal
         }
     },
