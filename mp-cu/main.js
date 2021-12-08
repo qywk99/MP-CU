@@ -1,8 +1,9 @@
+import { CUStoreInit } from '/store/index'
 /**
  * @author  bypanghu@163.com (https://github.com/bypanghu)
  * @author iZaiZaiA (https://github.com/iZaiZaiA)
  */
-import { CUStoreInit } from '/store/index'
+
 let version = '3.2.6', store = {}, sys_info = wx.getSystemInfoSync();
 let baseMethod = {
     //设置主题
@@ -42,7 +43,7 @@ let baseMethod = {
             '$dialog.confirmText' : confirmText
         });
     },
-    setToast( data) { 
+    setToast( data) {
         let key ={}
          Object.assign(key,data);
          console.log(key)
@@ -66,7 +67,7 @@ let baseMethod = {
             '$toast.title' : title,
             '$toast.duration' : duration,
             '$toast.icon' : '_icon-warn',
-            
+
         })
     },
     $loading(title = '加载中' , duration = 1500){
@@ -144,15 +145,7 @@ export default class ColorUI {
             store.$p.push(r);
             if (r.$cuStore.useProp) {
                 r.setData({
-<<<<<<< HEAD
                     $cuStore: _filterKey(store.$cuStore, r.$cuStore.useProp, (key, useKey) => key === useKey),
-=======
-                    $cuStore: _filterKey(
-                        store.$cuStore,
-                        r.$cuStore.useProp,
-                        (key, useKey) => key === useKey
-                    ),
->>>>>>> 45d27de8efa3b05fcf86e82203473fa30f3b4e5d
                 });
             } else {
                 r.setData({
@@ -184,26 +177,10 @@ export default class ColorUI {
         const _objData = function (o) {
             return {
                 ...(o.data || {}),
-<<<<<<< HEAD
                 sys_info: sys_info,
                 sys_navBar: sys_info.statusBarHeight + 50,
                 sys_statusBar: sys_info.statusBarHeight,
                 sys_capsule: sys_capsule(),
-=======
-                sys_info: tools.sys_info,	// 获取系统信息
-                sys_statusBar: tools.sys_statusBar,
-                sys_navBar: tools.sys_navBar,
-                sys_capsule: tools.sys_capsule(),
-                isArr: tools.isArr,
-                isDate: tools.isDate,
-                isObj: tools.isObj,
-                isRandom: tools.isRandom,
-                isDataType: tools.isDataType,
-                cuLog: cuLog,
-<<<<<<< HEAD
->>>>>>> 45d27de8efa3b05fcf86e82203473fa30f3b4e5d
-=======
->>>>>>> 45d27de8efa3b05fcf86e82203473fa30f3b4e5d
                 $cuData: that.data,
                 $cuConfig: that.config,
                 $cuStore: store.state
@@ -237,7 +214,7 @@ export default class ColorUI {
                 _create(this, o);
                 originCreate && originCreate.apply(this, arguments);
             };
-            
+
             const originonDestroy = o.onUnload;
             o.onUnload = function () {
                 _destroy(this);
@@ -283,22 +260,8 @@ export default class ColorUI {
             Component = App.Component;
         } catch (e) { }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         console.log(
             `%c colorUI 启动成功 %c 当前版本V` + version + `%c`,
-=======
-=======
->>>>>>> 45d27de8efa3b05fcf86e82203473fa30f3b4e5d
-        //cuLog.log(1);
-
-        //version
-        console.log(
-            `%c colorUI 启动成功 %c 当前版本V` + version + ` wechat Apache%c`,
-<<<<<<< HEAD
->>>>>>> 45d27de8efa3b05fcf86e82203473fa30f3b4e5d
-=======
->>>>>>> 45d27de8efa3b05fcf86e82203473fa30f3b4e5d
             'background:#0081ff; padding: 1px; border-radius: 3px 0 0 3px; color: #fff',
             'background:#354855; padding: 1px 5px; border-radius: 0 3px 3px 0; color: #fff; font-weight: bold;',
             'background:transparent'
@@ -306,8 +269,6 @@ export default class ColorUI {
     }
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 //设置系统颜色 版本
 export const setStatusStyle = (status) => {
     if (status === 'light') {
@@ -340,7 +301,3 @@ export const sys_capsule = () => {
     }
     return capsule;
 }
-=======
->>>>>>> 45d27de8efa3b05fcf86e82203473fa30f3b4e5d
-=======
->>>>>>> 45d27de8efa3b05fcf86e82203473fa30f3b4e5d
