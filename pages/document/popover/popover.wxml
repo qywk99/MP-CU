@@ -1,0 +1,7 @@
+<ui-sys doc title="气泡框">
+    <view class="ui-container">
+        <!-- 简介 -->
+        <ui-title title="简介" depth="2" isIcon/>
+        <view class="paragraph">气泡框</view>
+    </view>
+</ui-sys>

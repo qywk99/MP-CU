@@ -27,10 +27,21 @@
         "pages/document/card/card",
         "pages/document/list/list",
         "pages/document/grid/grid",
+        "pages/document/timeline/timeline",
+        "pages/document/table/table",
+        "pages/document/popover/popover",
         "pages/document/modal/modal",
         "pages/document/toast/toast",
+        "pages/document/drawer/drawer",
+        "pages/document/collapse/collapse",
+        "pages/document/tab/tab",
+        "pages/document/swiper/swiper",
+        "pages/document/steps/steps",
+        "pages/document/input/input",
         "pages/document/radio/radio",
-        "pages/document/switch/switch"
+        "pages/document/checkbox/checkbox",
+        "pages/document/switch/switch",
+        "pages/document/picker/picker"
     ],
     "window": {
         "backgroundTextStyle": "light",
