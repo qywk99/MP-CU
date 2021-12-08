@@ -44,7 +44,7 @@
     ]
   },
   "compileType": "miniprogram",
-  "libVersion": "2.20.1",
+  "libVersion": "2.19.6",
   "appid": "wx021a1b8ecfa78ba5",
   "projectname": "MP%20CU",
   "debugOptions": {

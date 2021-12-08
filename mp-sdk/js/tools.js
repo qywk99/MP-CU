@@ -2,11 +2,6 @@ module.exports = {
     sys_info: wx.getSystemInfoSync(),	// 获取系统信息
     sys_statusBar: wx.getSystemInfoSync().statusBarHeight,
     sys_navBar: wx.getSystemInfoSync().statusBarHeight + 50,
-    //getColor 随机生成库内颜色名
-    getColor() {
-        let colorArr = ['yellow', 'orange', 'red', 'pink', 'mauve', 'purple', 'blue', 'cyan', 'green', 'olive', 'grey', 'brown'];
-        return colorArr[Math.floor(Math.random() * colorArr.length)]
-    },
     // 获取胶囊信息
     sys_capsule() {
         let capsule = wx.getMenuButtonBoundingClientRect();
@@ -18,19 +13,23 @@ module.exports = {
     },
     //数组操作
     isArr: {
-        ifItemKey(arr, item) {      //数组中是否存在
+        //数组中是否存在
+        ifItemKey(arr, item) {
             return arr.indexOf(item) !== -1;
         },
-        getItemIndex(arr,item) {    //获取数组索引
+        //获取数组索引
+        getItemIndex(arr,item) {
             return arr.indexOf(item);
         },
-        delItem(arr, item) {        //移除数组中指定元素
+        //移除数组中指定元素
+        delItem(arr, item) {
             let index = arr.indexOf(item);
             let items = [...arr];
             items.splice(index, 1);
             return [...items];
         },
-        delItemKey(arr, item) {     //移除数组中其它元素
+        //移除数组中其它元素
+        delItemKey(arr, item) {
             let index = arr.indexOf(item);
             let items = [...arr];
             for (let i = 0; i < arr.length; i++) {
@@ -38,7 +37,8 @@ module.exports = {
             }
             return [...items];
         },
-        delItemLeft(arr, item) {    //移除数组中左边的元素
+        //移除数组中左边的元素
+        delItemLeft(arr, item) {
             let index = arr.indexOf(item);
             let items = [...arr];
             for (let i = 0; i < arr.length; i++) {
@@ -47,7 +47,8 @@ module.exports = {
             }
             return [...items];
         },
-        delItemRight(arr, item) {   //移除数组中右边的元素
+        //移除数组中右边的元素
+        delItemRight(arr, item) {
             let index = arr.indexOf(item);
             let items = [...arr];
             for (let i = 0; i < arr.length; i++) {
@@ -55,7 +56,8 @@ module.exports = {
             }
             return [...items];
         },
-        replaceItem(arr, item_a, item_b) {  //替换数组中两个元素的位置
+        //替换数组中两个元素的位置
+        replaceItem(arr, item_a, item_b) {
             let index_a = arr.indexOf(item_a);
             let index_b = arr.indexOf(item_b);
             let items = [...arr];
@@ -63,8 +65,8 @@ module.exports = {
             items.splice(index_b, 0, item_a);
             return [...items];
         },
-
-        ifKey(arr, keyName ,key) {  //数组中是否存在
+        //数组中是否存在
+        ifKey(arr, keyName ,key) {
             for (let i = 0; i< arr.length; i++) {
                 if (arr[i][keyName] === key) {
                     return true;
@@ -72,7 +74,8 @@ module.exports = {
             }
             return false;
         },
-        getIndex(arr, keyName, key) {   //获取数组索引
+        //获取数组索引
+        getIndex(arr, keyName, key) {
             for (let i = 0; i< arr.length; i++) {
                 if (arr[i][keyName] === key) {
                     return i;
@@ -80,7 +83,8 @@ module.exports = {
             }
             return false;
         },
-        del(arr, keyName, key) {        //移除数组中指定元素
+        //移除数组中指定元素
+        del(arr, keyName, key) {
             let s = false, name = '', ArrData = [];
             for (let i = 0; i< arr.length; i++) {
                 if (arr[i][keyName] !== key) {
@@ -92,7 +96,8 @@ module.exports = {
             }
             return {key: name, arr: ArrData};
         },
-        delKey(arr, keyName, key) {     //移除数组中其它元素
+        //移除数组中其它元素
+        delKey(arr, keyName, key) {
             let ArrData = [];
             for (let i = 0; i < arr.length; i++) {
                 if (arr[i][keyName] === key) {
@@ -101,7 +106,8 @@ module.exports = {
             }
             return ArrData;
         },
-        delLeft(arr, keyName, key) {    //移除数组中左边的元素
+        //移除数组中左边的元素
+        delLeft(arr, keyName, key) {
             let s = false, ArrData = [];
             for (let i = 0; i< arr.length; i++) {
                 if (arr[i][keyName] === key) {
@@ -113,7 +119,8 @@ module.exports = {
             }
             return ArrData;
         },
-        delRight(arr, keyName, key) {   //移除数组中右边的元素
+        //移除数组中右边的元素
+        delRight(arr, keyName, key) {
             let s = true, ArrData = [];
             for (let i = 0; i< arr.length; i++) {
                 if (arr[i][keyName] === key) {
@@ -125,7 +132,8 @@ module.exports = {
             }
             return ArrData;
         },
-        nextArr(arr) {                  //数组或对象深拷贝
+        //数组或对象深拷贝
+        nextArr(arr) {
             return JSON.parse(JSON.stringify(arr));
         },
         isForEach(arr, fn) {
@@ -136,7 +144,8 @@ module.exports = {
                 fn(item, i, arr);
             }
         },
-        intersection(arr1, arr2) {   //得到两个数组的交集, 两个数组的元素为数值或字符串
+        //得到两个数组的交集, 两个数组的元素为数值或字符串
+        intersection(arr1, arr2) {
             let len = Math.min(arr1.length, arr2.length)
             let i = -1, res = [];
             while (++i < len) {
@@ -144,13 +153,16 @@ module.exports = {
             }
             return res
         },
-        getUnion(arr1, arr2) {      //得到两个数组的并集, 两个数组的元素为数值或字符串
+        //得到两个数组的并集, 两个数组的元素为数值或字符串
+        getUnion(arr1, arr2) {
             return Array.from(new Set([...arr1, ...arr2]));
         },
-        hasOneOf(arr1, arr2) {      //判断要查询的数组是否至少有一个元素包含在目标数组中
+        //判断要查询的数组是否至少有一个元素包含在目标数组中
+        hasOneOf(arr1, arr2) {
             return arr1.some(_ => arr2.indexOf(_) > -1);
         },
-        hasChild(arr,key = 'children') {    //判断下级数组是否为空
+        //判断下级数组是否为空
+        hasChild(arr,key = 'children') {
             return arr[key] && arr[key].length !== 0
         }
     },
@@ -248,9 +260,10 @@ module.exports = {
     //随机字符串操作
     isRandom: {
         NUM: '0123456789',
-            XEU: 'abcdefghijklmnopqrstuvwxyz',
-            DEU: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
-            getRandom(num, chars) {         //生成随机字符串,默认为全部类型
+        XEU: 'abcdefghijklmnopqrstuvwxyz',
+        DEU: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
+        //生成随机字符串,默认为全部类型
+        getRandom(num, chars) {
             if (!chars) chars = this.NUM + this.XEU + this.DEU
             let maxPos = chars.length, value = '';
             for (let i = 0; i < num; i++) {
@@ -258,25 +271,32 @@ module.exports = {
             }
             return value;
         },
-        getRandomNUM(num) {             //数字
+        //数字
+        getRandomNUM(num) {
             return this.getRandom(num, this.NUM);
         },
-        getRandomXEU(num) {             //小写字母
+        //小写字母
+        getRandomXEU(num) {
             return this.getRandom(num, this.XEU);
         },
-        getRandomDEU(num) {             //大写字母
+        //大写字母
+        getRandomDEU(num) {
             return this.getRandom(num, this.DEU);
         },
-        getRandomNUM_XEU(num) {         //数字+ 小写字母
+        //数字+ 小写字母
+        getRandomNUM_XEU(num) {
             return this.getRandom(num, this.NUM + this.XEU);
         },
-        getRandomNUM_DEU(num) {         //数字 + 大写字母
+        //数字 + 大写字母
+        getRandomNUM_DEU(num) {
             return this.getRandom(num, this.NUM + this.DEU);
         },
-        getRandomXEU_DEU(num) {         //小写字母 + 大写字母
+        //小写字母 + 大写字母
+        getRandomXEU_DEU(num) {
             return this.getRandom(num, this.XEU + this.DEU);
         },
-        getRandomFrom(lower,upper) {    //范围随机数
+        //范围随机数
+        getRandomFrom(lower,upper) {
             return Math.floor(Math.random() * (upper - lower + 1) + lower);
         }
     },
@@ -307,5 +327,4 @@ module.exports = {
             return value instanceof String || Object.prototype.toString.call(value) === '[object String]';
         }
     },
-
 }

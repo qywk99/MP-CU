@@ -1,8 +1,13 @@
-/***
+/**
  * @author  bypanghu@163.com (https://github.com/bypanghu)
  * @author iZaiZaiA (https://github.com/iZaiZaiA)
  */
+<<<<<<< HEAD
+import { CUStoreInit } from '/store/index'
+let version = '3.2.6', store = {}, sys_info = wx.getSystemInfoSync();
+=======
 import tools from '/utils/tools'
+import cuLog from '/utils/log'
 import { CUStoreInit } from '/store/index'
 
 let pageLife = [
@@ -24,8 +29,8 @@ let pageLife = [
     "_backPage",
     "sys_isFirstPage"
 ]
-let store = {}
-//设置系统颜色
+let version = '3.2.6', store = {}
+//设置系统颜色 版本
 export const setStatusStyle = (status) => {
     if (status === 'light') {
         wx.setNavigationBarColor({
@@ -48,12 +53,11 @@ export const setStatusStyle = (status) => {
     }
 }
 
+>>>>>>> 45d27de8efa3b05fcf86e82203473fa30f3b4e5d
 let baseMethod = {
     //设置主题
     setTheme(data) {
-        store.setState({
-            'sys_theme': data
-        })
+        store.setState({'sys_theme': data})
         wx.setStorageSync('sys_theme', data);
         //跟随系统
         if (data === 'auto') {
@@ -64,37 +68,19 @@ let baseMethod = {
     },
     //设置主颜色
     setMain(data) {
-        store.setState({
-            sys_main: data,
-        });
+        store.setState({sys_main: data});
         wx.setStorageSync('sys_main', data);
     },
     //设置字号等级
     setText(data) {
-        store.setState({
-            sys_text: data,
-        });
+        store.setState({sys_text: data});
         wx.setStorageSync('sys_text', data);
     },
-    _toHome() {
-        wx.switchTab({
-            url: this.data.$cuConfig.homePath,
-            fail(res) {
-                console.log(res);
-            }
-        });
-    },
-    $showDialog({
-        title ,
-        content ,
-        showCancel ,
-        cancelText,
-        confirmText ,
-        success
-    }){
+    $showDialog({title , content , showCancel , cancelText, confirmText , success}) {
         store.$p.map(item =>{
             if(item.is.indexOf('components/ui-modal/ui-modal') > -1 ){
-                item['successBack'] = success //强制更新所有页面的successBack 为设定的success
+                //强制更新所有页面的successBack 为设定的success
+                item['successBack'] = success
             }
         })
         store.setState({
@@ -118,11 +104,6 @@ let baseMethod = {
             '$toast.duration' : duration
         })
     },
-    /**
-     * 
-     * @param title     标题
-     * @param duration  显示时间
-     */
     $success(_,title='成功',duration=1500){
         store.setState({
             '$toast.title' : title,
@@ -130,11 +111,6 @@ let baseMethod = {
             '$toast.icon' : '_icon-check'
         })
     },
-    /**
-     * 
-     * @param title     标题
-     * @param duration  显示时间
-     */
     $error(_,title='错误',duration=1500){
         store.setState({
             '$toast.title' : title,
@@ -143,11 +119,6 @@ let baseMethod = {
             
         })
     },
-    /**
-     * 
-     * @param title     标题
-     * @param duration  显示时间
-     */
     $loading(title = '加载中' , duration = 1500){
         store.setState({
             '$toast.title' : title ,
@@ -168,16 +139,16 @@ let baseMethod = {
             '$Modal.show': false,
         });
     },
+    _toHome() {
+        wx.switchTab({
+            url: this.data.$cuConfig.homePath
+        });
+    },
     _backPage() {
         if (this.sys_isFirstPage) {
             this._toHome();
         } else {
-            wx.navigateBack({
-                delta: 1,
-                fail(res) {
-                    console.log(res);
-                }
-            });
+            wx.navigateBack();
         }
     },
     //实例是否为路由栈的第一个页面
@@ -186,8 +157,9 @@ let baseMethod = {
     },
 }
 
+
 /**
- *  ColorUi 主Js文件
+ * ColorUi 主Js文件
  * config 下
  * @param   theme               设置默认主题
  * @param   main                设置默认强调色
@@ -195,17 +167,10 @@ let baseMethod = {
  * @param   footer              显示底部colorUI版权(如果属于开源作品，请带上ColorUI版权！！！)
  * @param   homePath            设置首页路径(一些组件会用到跳回主页，请每个项目设置好！)
  * @param   tabBar              配置系统tabBar
- * 
- * 
  */
 
 export default class ColorUI {
-    constructor({
-        config,
-        data,
-        state,
-        methods
-    }) {
+    constructor({config, data, state, methods}) {
         this.config = config
         this.data = data
         this.methods = methods
@@ -213,31 +178,31 @@ export default class ColorUI {
         this.$cuState = {};
         this.colorUiInit()
     }
-    //colorui 主框架初始化
+    //colorUi 主框架初始化
     colorUiInit() {
         //创建时，添加组件
         const _create = function (r, o = {}) {
             r.$cuStore = {};
             const { useProp } = o;
             if (o.hasOwnProperty("useProp")) {
-                if (
-                    (useProp && typeof useProp === "string") ||
-                    Object.prototype.toString.call(useProp) === "[object Array]"
-                ) {
+                if ((useProp && typeof useProp === "string") || Object.prototype.toString.call(useProp) === "[object Array]") {
                     r.$cuStore.useProp = [].concat(useProp);
                 } else {
                     r.$cuStore.useProp = [];
                 }
             }
             store.$p.push(r);
-            
             if (r.$cuStore.useProp) {
                 r.setData({
+<<<<<<< HEAD
+                    $cuStore: _filterKey(store.$cuStore, r.$cuStore.useProp, (key, useKey) => key === useKey),
+=======
                     $cuStore: _filterKey(
                         store.$cuStore,
                         r.$cuStore.useProp,
-                        (key, usekey) => key === usekey
+                        (key, useKey) => key === useKey
                     ),
+>>>>>>> 45d27de8efa3b05fcf86e82203473fa30f3b4e5d
                 });
             } else {
                 r.setData({
@@ -253,12 +218,9 @@ export default class ColorUI {
             }
         };
         store = CUStoreInit(this.config)
-
         if (this.config.theme === 'auto') {
             wx.onThemeChange((res) => {
-                store.setState({
-                    sys_theme: 'auto'
-                })
+                store.setState({sys_theme: 'auto'})
                 wx.setStorageSync('sys_theme', 'auto');
                 setStatusStyle(wx.getSystemInfoSync().theme === 'light' ? 'dark' : 'light')
             })
@@ -268,11 +230,16 @@ export default class ColorUI {
         }
         const originPage = Page
         const originComponent = Component;
-        let that = this
-        App.Page = function (o = {}, ...args) {
-            //将config 和 data 组装进data 里面
-            o.data = {
+        let that = this;
+        const _objData = function (o) {
+            return {
                 ...(o.data || {}),
+<<<<<<< HEAD
+                sys_info: sys_info,
+                sys_navBar: sys_info.statusBarHeight + 50,
+                sys_statusBar: sys_info.statusBarHeight,
+                sys_capsule: sys_capsule(),
+=======
                 sys_info: tools.sys_info,	// 获取系统信息
                 sys_statusBar: tools.sys_statusBar,
                 sys_navBar: tools.sys_navBar,
@@ -282,27 +249,36 @@ export default class ColorUI {
                 isObj: tools.isObj,
                 isRandom: tools.isRandom,
                 isDataType: tools.isDataType,
+                cuLog: cuLog,
+>>>>>>> 45d27de8efa3b05fcf86e82203473fa30f3b4e5d
                 $cuData: that.data,
                 $cuConfig: that.config,
                 $cuStore: store.state
-            };
-            //注入colorui 函数体
+            }
+        };
+        App.Page = function (o = {}, ...args) {
+            //将config 和 data 组装进data 里面
+            o.data = _objData(o);
+            //注入colorUi 函数体
             Object.keys(baseMethod).forEach(key => {
                 if (typeof baseMethod[key] === 'function') {
                     o[key] = baseMethod[key]
                 }
             })
             o['setState'] = store.setState
-             //注入用户设定的methods
-            Object.keys(that.methods).forEach((key) => {
-                if (
-                typeof that.methods[key] === "function" &&
-                !pageLife.some((item) => item === key)
-                ) {
-                o[key] = that.methods[key];
-                }
-            });
-
+            //如果有配置methods，就注入设定的methods
+            if (that.methods) {
+                let pageLife = [
+                    "data", "onLoad", "onShow", "onReady", "onHide", "onUnload", "onPullDownRefresh",
+                    "onReachBottom", "onShareAppMessage", "onPageScroll", "onTabItemTap", "setTheme",
+                    "setMain", "setText", "_toHome", "_backPage", "sys_isFirstPage"
+                ]
+                Object.keys(that.methods).forEach((key) => {
+                    if (typeof that.methods[key] === "function" && !pageLife.some((item) => item === key)) {
+                        o[key] = that.methods[key];
+                    }
+                });
+            }
             const originCreate = o.onLoad;
             o.onLoad = function () {
                 _create(this, o);
@@ -315,53 +291,28 @@ export default class ColorUI {
                 originonDestroy && originonDestroy.apply(this, arguments);
             };
             originPage(o, ...args);
+            //console.log(o)
         }
         try {
             Page = App.Page
         } catch (e) { }
+
         //重写组件
         App.Component = function (o = {}, ...args) {
-            o.data = {
-                ...(o.data || {}),
-                sys_info: tools.sys_info,	// 获取系统信息
-                sys_statusBar: tools.sys_statusBar,
-                sys_navBar: tools.sys_navBar,
-                sys_capsule: tools.sys_capsule(),
-                isArr: tools.isArr,
-                isDate: tools.isDate,
-                isObj: tools.isObj,
-                isRandom: tools.isRandom,
-                isDataType: tools.isDataType,
-                $cuData: that.data,
-                $cuConfig: that.config,
-                $cuStore: store.state
-            };
+            o.data = _objData(o);
             o.methods || (o.methods = {})
-            o.methods['getColor'] = tools.getColor
             o.methods['setState'] = store.setState
             Object.keys(baseMethod).forEach(key => {
                 if (typeof baseMethod[key] === 'function') {
                     o.methods[key] = baseMethod[key]
                 }
             })
-             //注入用户设定的methods
-             Object.keys(that.methods).forEach((key) => {
-                if (
-                typeof that.methods[key] === "function" &&
-                !pageLife.some((item) => item === key)
-                ) {
-                o.methods[key] = that.methods[key];
-                }
-            });
-           
             const { lifetimes = {} } = o;
-            let originCreate = lifetimes.attached || o.attached,
-                originonDestroy = lifetimes.detached || o.detached;
+            let originCreate = lifetimes.attached || o.attached, originonDestroy = lifetimes.detached || o.detached;
             const attached = function () {
                 _create(this, o);
                 originCreate && originCreate.apply(this, arguments);
             };
-
             const detached = function () {
                 _destroy(this);
                 originonDestroy && originonDestroy.apply(this, arguments);
@@ -378,11 +329,56 @@ export default class ColorUI {
         try {
             Component = App.Component;
         } catch (e) { }
+
+<<<<<<< HEAD
         console.log(
-            `%c colorUi 主文件启动成功 %c 当前版本V3.2.6 wechat Apache%c`,
-            'background:#35495e ; padding: 1px; border-radius: 3px 0 0 3px;  color: #fff',
-            'background:#0081ff ;padding: 1px 5px; border-radius: 0 3px 3px 0;  color: #fff; font-weight: bold;',
+            `%c colorUI 启动成功 %c 当前版本V` + version + `%c`,
+=======
+        //cuLog.log(1);
+
+        //version
+        console.log(
+            `%c colorUI 启动成功 %c 当前版本V` + version + ` wechat Apache%c`,
+>>>>>>> 45d27de8efa3b05fcf86e82203473fa30f3b4e5d
+            'background:#0081ff; padding: 1px; border-radius: 3px 0 0 3px; color: #fff',
+            'background:#354855; padding: 1px 5px; border-radius: 0 3px 3px 0; color: #fff; font-weight: bold;',
             'background:transparent'
         )
     }
 }
+
+<<<<<<< HEAD
+//设置系统颜色 版本
+export const setStatusStyle = (status) => {
+    if (status === 'light') {
+        wx.setNavigationBarColor({
+            frontColor: '#ffffff',
+            backgroundColor: '#000000',
+            animation: {
+                duration: 200,
+                timingFunc: 'easeIn'
+            }
+        });
+    } else {
+        wx.setNavigationBarColor({
+            frontColor: '#000000',
+            backgroundColor: '#ffffff',
+            animation: {
+                duration: 200,
+                timingFunc: 'easeIn'
+            }
+        });
+    }
+}
+
+//获取胶囊信息
+export const sys_capsule = () => {
+    let capsule = wx.getMenuButtonBoundingClientRect();
+    if (!capsule) {
+        console.error('getMenuButtonBoundingClientRect error');
+        capsule = { bottom: 56, height: 32, left: 278, right: 365, top: 24, width: 87 };
+    }
+    return capsule;
+}
+=======
+>>>>>>> 45d27de8efa3b05fcf86e82203473fa30f3b4e5d

@@ -3,7 +3,7 @@
         <ui-title title="简介" depth="2" isIcon/>
         <view class="paragraph">自定义顶部导航栏,适用于所有页面,小程序有返回胶囊样式可以使用。</view>
 
-        <ui-menu class="mt-4 radius border">
+        <ui-menu ui="mt-4 radius border">
             <!--@click.native="_to('/pages/parameter/parameter?component=ui-navbar')"-->
             <ui-menu-item icon="cicon-equalizer" title="参数" arrow/>
         </ui-menu>

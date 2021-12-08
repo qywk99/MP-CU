@@ -1,4 +1,4 @@
-import Prism from '../../../utils/lib/prism'
+import Prism from '../../../lib/prism'
 
 Component({
     data: {

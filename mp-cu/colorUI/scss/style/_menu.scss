@@ -1,6 +1,6 @@
 @import '../var';
 
-.ui-menu{
+.ui-menu {
     background-color: var(--ui-BG);
 }
 
@@ -57,4 +57,9 @@
     &:first-child:after{
         //display: none;
     }
+}
+
+ui-menu ui-menu-item:first-child .ui-menu-item:after {
+    display: none;
+    //border-top: 0;
 }

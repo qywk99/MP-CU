@@ -11,7 +11,20 @@
       "list": []
     },
     "miniprogram": {
-      "list": []
+      "list": [
+        {
+          "name": "导航栏",
+          "pathName": "pages/document/navbar/navbar",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "模态框",
+          "pathName": "pages/document/modal/modal",
+          "query": "",
+          "scene": null
+        }
+      ]
     }
   }
 }

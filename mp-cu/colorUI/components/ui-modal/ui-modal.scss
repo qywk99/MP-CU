@@ -1,4 +1,7 @@
 .ui-modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: fixed;
     top: 0;
     right: 0;
@@ -13,9 +16,6 @@
     perspective: 2000rpx;
     transition: 0.3s;
     pointer-events: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     .ui-dialog {
         position: relative;
         display: inline-block;
@@ -30,7 +30,7 @@
         text-align: left;
         color: var(--ui-TC);
         .ui-modal-title {
-            padding-top: 20rpx;
+            // padding-top: 20rpx;
         }
         .ui-modal-content {
             padding: 10rpx 50rpx 50rpx;

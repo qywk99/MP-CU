@@ -13,7 +13,6 @@
 
 const API_BASE_URL = ''
 
-
 const request = (url, method, data, hasCheck = false) => {
     let _url = API_BASE_URL + url
     wx.showLoading({

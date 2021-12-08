@@ -6,20 +6,21 @@
         "pages/test/home",
         "pages/my/home",
         "pages/document/system/system",
-        "pages/document/menu/menu",
-        "pages/document/button/button",
-        "pages/document/loading/loading",
-        "pages/document/avatar/avatar",
         "pages/document/theme/theme",
-        "pages/document/switch/switch",
-        "pages/document/radio/radio",
-        "pages/document/card/card",
-        "pages/document/grid/grid",
-        "pages/document/fixed/fixed",
+        "pages/document/navbar/navbar",
         "pages/document/background/background",
         "pages/document/icon/icon",
+        "pages/document/avatar/avatar",
+        "pages/document/button/button",
+        "pages/document/loading/loading",
+        "pages/document/menu/menu",
+        "pages/document/fixed/fixed",
+        "pages/document/card/card",
+        "pages/document/grid/grid",
         "pages/document/modal/modal",
-        "pages/document/toast/toast"
+        "pages/document/toast/toast",
+        "pages/document/radio/radio",
+        "pages/document/switch/switch"
     ],
     "window": {
         "backgroundTextStyle": "light",
@@ -43,7 +44,10 @@
         "ui-radio-group": "mp-cu/colorUI/components/ui-radio-group/ui-radio-group",
         "ui-radio": "mp-cu/colorUI/components/ui-radio/ui-radio",
         "ui-card": "mp-cu/colorUI/components/ui-card/ui-card",
-        "ui-fixed": "mp-cu/colorUI/components/ui-fixed/ui-fixed"
+        "ui-fixed": "mp-cu/colorUI/components/ui-fixed/ui-fixed",
+        "ui-img": "mp-cu/colorUI/components/ui-img/ui-img",
+        "ui-navbar": "/mp-cu/colorUI/components/ui-navbar/ui-navbar",
+        "ui-swiper": "/mp-cu/colorUI/components/ui-swiper/ui-swiper"
     },
     "tabBar": {
         "color": "#aaaaaa",

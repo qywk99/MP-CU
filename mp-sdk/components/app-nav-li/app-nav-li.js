@@ -5,11 +5,6 @@ Component({
     options: {
         addGlobalClass: true
     },
-    methods:{
-        log(){
-            console.log("123")
-        }
-    },
     properties: {
         data: {
             type: Object,
@@ -22,6 +17,13 @@ Component({
             this.setData({
                 colorName: this.getColor()
             });
+        }
+    },
+    methods:{
+        //随机生成库内颜色名
+        getColor() {
+            let colorArr = ['yellow', 'orange', 'red', 'pink', 'mauve', 'purple', 'blue', 'cyan', 'green', 'olive', 'grey', 'brown'];
+            return colorArr[Math.floor(Math.random() * colorArr.length)]
         }
     },
 })

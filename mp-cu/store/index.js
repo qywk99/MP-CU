@@ -1,22 +1,47 @@
-// 此处参考 https://github.com/xiaoyao96/wxMiniStore
+import diff from '../lib/diff'
+
 /***
  * @author  bypanghu@163.com (https://github.com/bypanghu)
  * @author iZaiZaiA (https://github.com/iZaiZaiA)
+ * 此处参考 https://github.com/xiaoyao96/wxMiniStore
  */
-import diff from '../utils/lib/diff'
-import { isArr, isDataType } from "../utils/tools";
+
+/**
+ * 数组或对象深拷贝
+ * @param data
+ * @returns {any}
+ */
+const nextArr = (data) => {
+    return JSON.parse(JSON.stringify(data));
+};
+
+/**
+ * 判断是否为数组
+ * @param value
+ * @returns {boolean}
+ */
+const ifArray = (value) => {
+    return value instanceof Array || Object.prototype.toString.call(value) === '[object Array]';
+};
+
+/**
+ * 判断是否为对象
+ * @param value
+ * @returns {boolean}
+ */
+const ifObject = (value) => {
+    return Object.prototype.toString.call(value) === '[object Object]';
+};
 
 const setData = (obj, data) => {
-    let result = isArr.nextArr(data);
-    let origin = isArr.nextArr(obj);
+    let result = nextArr(data), origin = nextArr(obj);
     Object.keys(origin).forEach((key) => {
         dataHandler(key, origin[key], result);
     });
     return result;
 };
 const dataHandler =  (key, result, data) => {
-    let arr = pathHandler(key);
-    let d = data;
+    let arr = pathHandler(key),d = data;
     for (let i = 0; i < arr.length - 1; i++) {
         keyToData(arr[i], arr[i + 1], d);
         d = d[arr[i]];
@@ -25,8 +50,7 @@ const dataHandler =  (key, result, data) => {
 };
 
 const pathHandler =  (key) => {
-    let current = "",
-        keyArr = [];
+    let current = "", keyArr = [];
     for (let i = 0, len = key.length; i < len; i++) {
         if (key[0] === "[") {
             throw new Error("key值不能以[]开头");
@@ -52,9 +76,9 @@ const keyToData =  (prev, current, data) => {
     if (prev === "") {
         return;
     }
-    if (typeof current === "number" && !isDataType.ifArray(data[prev])) {
+    if (typeof current === "number" && !ifArray(data[prev])) {
         data[prev] = [];
-    } else if (typeof current === "string" && !isDataType.ifObject(data[prev])) {
+    } else if (typeof current === "string" && !ifObject(data[prev])) {
         data[prev] = {};
     }
 };
@@ -76,7 +100,7 @@ export const CUStoreInit = (config) => {
         state: {},
         $p: [],
         setState(obj, fn = () => { }) {
-            if (!isDataType.ifObject(obj)) {
+            if (!ifObject(obj)) {
                 throw new Error("setState的第一个参数须为object!");
             }
             let prev = $store.state;
@@ -93,16 +117,13 @@ export const CUStoreInit = (config) => {
                     });
                     let pros = $store.$p.map((r) => {
                         if (r.$cuStore.hasOwnProperty("useProp")) {
-                            let useprops = _filterKey(
-                                newObj,
-                                r.$cuStore.useProp,
-                                (key, useKey) =>
-                                    key === "$cuStore." + useKey ||
-                                    !!key.match(new RegExp("^[$]cuStore." + useKey + "[.|[]", "g"))
+                            let useProps = _filterKey(newObj, r.$cuStore.useProp,
+                                (key, useKey) => key === "$cuStore." + useKey ||
+                                !!key.match(new RegExp("^[$]cuStore." + useKey + "[.|[]", "g"))
                             );
-                            if (Object.keys(useprops).length > 0) {
+                            if (Object.keys(useProps).length > 0) {
                                 return new Promise((resolve) => {
-                                    r.setData(useprops, resolve);
+                                    r.setData(useProps, resolve);
                                 });
                             } else {
                                 return Promise.resolve();
@@ -126,31 +147,11 @@ export const CUStoreInit = (config) => {
     $store.state.sys_text = wx.getStorageSync('sys_text') ? wx.getStorageSync('sys_text') : config.text
     const modal = {
         show:false,
-		 dialog:{
-			title:'',
-			content:'',
-			showCancel:true,
-			cancelText:'取消',
-			cancelColor:'',
-			confirmText:'确定',
-			confirmColor:'',
-			success : ()=>{}
-		 },
-		 toast:{
-			title:'', 
-			icon:'',
-			image:'',
-			duration:1500,
-			mask:false,
-			isLoading:false,
-			success:()=>{},
-		 },
+        dialog:{title:'', content:'', showCancel:true, cancelText:'取消', cancelColor:'', confirmText:'确定', confirmColor:'', success : ()=>{}},
+        toast:{title:'', icon:'', image:'', duration:1500, mask:false, isLoading:false, success:()=>{}},
     }
-    
-    
     $store.state.$Modal = modal
     $store.state.$dialog = modal.dialog
     $store.state.$toast  = modal.toast
     return $store
-
 }
