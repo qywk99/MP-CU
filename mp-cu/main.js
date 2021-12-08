@@ -2,58 +2,8 @@
  * @author  bypanghu@163.com (https://github.com/bypanghu)
  * @author iZaiZaiA (https://github.com/iZaiZaiA)
  */
-<<<<<<< HEAD
 import { CUStoreInit } from '/store/index'
 let version = '3.2.6', store = {}, sys_info = wx.getSystemInfoSync();
-=======
-import tools from '/utils/tools'
-import cuLog from '/utils/log'
-import { CUStoreInit } from '/store/index'
-
-let pageLife = [
-    "data",
-    "onLoad",
-    "onShow",
-    "onReady",
-    "onHide",
-    "onUnload",
-    "onPullDownRefresh",
-    "onReachBottom",
-    "onShareAppMessage",
-    "onPageScroll",
-    "onTabItemTap",
-    "setTheme",
-    "setMain",
-    "setText",
-    "_toHome",
-    "_backPage",
-    "sys_isFirstPage"
-]
-let version = '3.2.6', store = {}
-//设置系统颜色 版本
-export const setStatusStyle = (status) => {
-    if (status === 'light') {
-        wx.setNavigationBarColor({
-            frontColor: '#ffffff',
-            backgroundColor: '#000000',
-            animation: {
-                duration: 200,
-                timingFunc: 'easeIn'
-            }
-        });
-    } else {
-        wx.setNavigationBarColor({
-            frontColor: '#000000',
-            backgroundColor: '#ffffff',
-            animation: {
-                duration: 200,
-                timingFunc: 'easeIn'
-            }
-        });
-    }
-}
-
->>>>>>> 45d27de8efa3b05fcf86e82203473fa30f3b4e5d
 let baseMethod = {
     //设置主题
     setTheme(data) {
@@ -250,6 +200,9 @@ export default class ColorUI {
                 isRandom: tools.isRandom,
                 isDataType: tools.isDataType,
                 cuLog: cuLog,
+<<<<<<< HEAD
+>>>>>>> 45d27de8efa3b05fcf86e82203473fa30f3b4e5d
+=======
 >>>>>>> 45d27de8efa3b05fcf86e82203473fa30f3b4e5d
                 $cuData: that.data,
                 $cuConfig: that.config,
@@ -331,14 +284,20 @@ export default class ColorUI {
         } catch (e) { }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         console.log(
             `%c colorUI 启动成功 %c 当前版本V` + version + `%c`,
 =======
+=======
+>>>>>>> 45d27de8efa3b05fcf86e82203473fa30f3b4e5d
         //cuLog.log(1);
 
         //version
         console.log(
             `%c colorUI 启动成功 %c 当前版本V` + version + ` wechat Apache%c`,
+<<<<<<< HEAD
+>>>>>>> 45d27de8efa3b05fcf86e82203473fa30f3b4e5d
+=======
 >>>>>>> 45d27de8efa3b05fcf86e82203473fa30f3b4e5d
             'background:#0081ff; padding: 1px; border-radius: 3px 0 0 3px; color: #fff',
             'background:#354855; padding: 1px 5px; border-radius: 0 3px 3px 0; color: #fff; font-weight: bold;',
@@ -347,6 +306,7 @@ export default class ColorUI {
     }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 //设置系统颜色 版本
 export const setStatusStyle = (status) => {
@@ -380,5 +340,7 @@ export const sys_capsule = () => {
     }
     return capsule;
 }
+=======
+>>>>>>> 45d27de8efa3b05fcf86e82203473fa30f3b4e5d
 =======
 >>>>>>> 45d27de8efa3b05fcf86e82203473fa30f3b4e5d
