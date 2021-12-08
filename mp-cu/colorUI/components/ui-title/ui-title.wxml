@@ -1,4 +1,4 @@
-<view class="ui-title {{ui}} {{align}} {{tpl}} {{bg}} {{inLine?'line':''}} {{depth>0?'heading-'+depth:''}}">
+<view class="ui-title {{ui}} {{align}} {{tpl}} {{bg}} {{inLine?'line':''}} heading-{{depth}}">
     <view class="anchor" id="{{title}}" style="top:-{{sys_navBar}}px"/>
     <view class="action {{hasLine?'hasLine':''}} {{hasDot?'hasDot':''}}">
         <view class="action-icon">

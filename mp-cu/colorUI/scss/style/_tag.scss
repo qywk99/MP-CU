@@ -1,5 +1,4 @@
 @import '../var';
-
 .ui-tag {
     font-size: .85714286em;
     vertical-align: middle;
@@ -13,7 +12,7 @@
     background-color: var(--ui-BG-3);
     border-radius: $radius;
     line-height: 1;
-    margin: 0 .14286em;
+    margin: .14286em;
     &.sm {
         transform: scale(0.8);
         margin: 0 0.02em 0 0;
@@ -79,7 +78,7 @@
     }
 
     &:empty:not([class*='icon']) {
-        padding: 0;
+        padding: 0px;
         width: 1.2em;
         height: 1.2em;
     }
