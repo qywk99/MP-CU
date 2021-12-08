@@ -23,6 +23,12 @@
           "pathName": "pages/document/modal/modal",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "文本",
+          "pathName": "pages/document/text/text",
+          "query": "",
+          "scene": null
         }
       ]
     }

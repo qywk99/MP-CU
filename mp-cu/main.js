@@ -119,9 +119,16 @@ let baseMethod = {
  * @param   homePath            设置首页路径(一些组件会用到跳回主页，请每个项目设置好！)
  * @param   tabBar              配置系统tabBar
  */
-
 export default class ColorUI {
     constructor({config, data, state, methods}) {
+        //默认配置，防止没自定义配置时，出问题。
+        config.theme = config.theme||'auto'
+        config.main = config.main||'blue'
+        config.text = config.text||1
+        config.footer = config.footer||true
+        config.homePath = config.homePath||'/pages/index/index'
+        config.tabBar = config.tabBar||[]
+        //处理数据
         this.config = config
         this.data = data
         this.methods = methods

@@ -2,7 +2,7 @@
     <view class="ui-modal {{align}} {{tpl}} {{ showKey ?'show':'hide'}} {{mask||mask=='80'?'bg-mask-80':''}} {{mask == '20'?'bg-mask-20':''}} {{mask == '40'?'bg-mask-40':''}}" style="{{'top:'+(noNav?0:sys_navBar + top)+'px'}}" bindtap="_cancel">
         <view class="ui-dialog {{transparent?'bg-none':''}} {{ui}}" style="{{dialog}}" catchtap="_catchTap">
             <view class="ui-modal-title border-bottom" wx:if="{{title != ''}}">
-                <ui-title title="{{title}}" align="center" text="text-xl"/>
+                <ui-title title="{{title}}" align="center" text="text-xl" ui="heading-0"/>
             </view>
             <slot wx:if="{{name != 'sys_dialog'}}"></slot>
             <view class="ui-modal-content" wx:if="{{content != ''}}">{{ content }}</view>

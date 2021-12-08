@@ -9,6 +9,7 @@
         "pages/document/theme/theme",
         "pages/document/navbar/navbar",
         "pages/document/background/background",
+        "pages/document/text/text",
         "pages/document/icon/icon",
         "pages/document/avatar/avatar",
         "pages/document/button/button",
@@ -47,7 +48,8 @@
         "ui-fixed": "mp-cu/colorUI/components/ui-fixed/ui-fixed",
         "ui-img": "mp-cu/colorUI/components/ui-img/ui-img",
         "ui-navbar": "/mp-cu/colorUI/components/ui-navbar/ui-navbar",
-        "ui-swiper": "/mp-cu/colorUI/components/ui-swiper/ui-swiper"
+        "ui-swiper": "/mp-cu/colorUI/components/ui-swiper/ui-swiper",
+        "ui-text-size": "/mp-cu/colorUI/components/ui-text-size/ui-text-size"
     },
     "tabBar": {
         "color": "#aaaaaa",

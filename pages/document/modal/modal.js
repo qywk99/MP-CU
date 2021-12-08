@@ -4,7 +4,7 @@ Page({
     },
     show() {
         this.$showDialog({
-            //title : 'colorui弹窗',
+            title : 'colorUI弹窗',
             content: '这是一个模态弹窗',
             success: res => {
                 console.log(res)
@@ -20,6 +20,25 @@ Page({
                 }
             }
         })
+    },
+    show2() {
+        this.$showDialog({
+            content: '这是一个模态弹窗',
+            showCancel: false,
+            success: res => {
+                console.log(res);
+            }
+        });
+    },
+    show3() {
+        this.$showDialog({
+            content: '您好',
+            cancelText: '再见',
+            confirmText: '好的',
+            success: res => {
+                console.log(res);
+            }
+        });
     },
     success(res){
         const { detail} = res

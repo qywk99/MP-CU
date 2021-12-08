@@ -8,7 +8,7 @@
         <button class="ui-btn" bindtap="showCustomizeModal" data-key='customize'>modal</button>
     </view>
 
-    <ui-modal show="{{target === 'customize'}}" dialog="width:auto" :option="{{false}}">
+    <ui-modal show="{{target === 'customize'}}" dialog="width:auto" option="{{false}}">
         <view class="p-4">
             <ui-loading color img="/static/logo.png"/>
         </view>
@@ -26,11 +26,11 @@
         </view>
     </ui-modal>
 
-    <!--view class="ui-container">
-              <ui-title depth="2" title="不显示取消" isIcon/>
-              <button class="ui-btn" bindtap="$Modal.show('btn1')">modal</button>
-              <button class="ui-btn" bindtap="show2()">系统调用</button>
-          </view-->
+    <view class="ui-container">
+        <ui-title depth="2" title="不显示取消" isIcon/>
+        <button class="ui-btn" bindtap="showCustomizeModal" data-key='btn1'>modal</button>
+        <button class="ui-btn" bindtap="show2">系统调用</button>
+    </view>
 
     <ui-modal show="{{target === 'btn1'}}" showCancel="{{false}}">
         <view class="p-5 flex-center">
@@ -38,11 +38,11 @@
         </view>
     </ui-modal>
 
-    <!--view class="ui-container">
+    <view class="ui-container">
         <ui-title depth="2" title="更改文字" isIcon/>
-        <button class="ui-btn" bindtap="$Modal.show('text1')">modal</button>
-        <button class="ui-btn" bindtap="show3()">系统调用</button>
-    </view-->
+        <button class="ui-btn" bindtap="showCustomizeModal" data-key='text1'>modal</button>
+        <button class="ui-btn" bindtap="show3">系统调用</button>
+    </view>
 
     <ui-modal show="{{target === 'text1'}}" cancelText="再见" confirmText="好的">
         <view class="p-5 flex-center">
