@@ -2,85 +2,94 @@
     <view class="ui-container">
         <!-- 简介 -->
         <ui-title title="简介" depth="2" isIcon/>
-        <view class="paragraph">标签</view>
+        <view class="paragraph">标签组件</view>
         <ui-title title="默认标签" depth="2" isIcon/>
-        <view class="p-4">
-            <view class="ui-tag">30</view>
+        <view class="p-4 ui-BG radius border">
+            <ui-tag info="30"/>
         </view>
+        <ui-code tag="pre" lang="html" title content="{{code1}}"/>
+
+        <ui-title title="标签形状" depth="2" isIcon/>
+        <view class="paragraph">
+            <ui-code>ui="round"</ui-code>
+        </view>
+        <view class="p-4 ui-BG border">
+            <ui-tag ui="" info="春风"/>
+            <ui-tag ui="round" info="秋日"/>
+        </view>
+
         <ui-title title="标签大小" depth="2" isIcon/>
-        <view class="p-4">
-            <view class="ui-tag img sm">sm</view>
-            <view class="ui-tag img">df</view>
-            <view class="ui-tag img lg">lg</view>
-            <view class="ui-tag img xl">xl</view>
-            <view class="ui-tag img xxl">xxl</view>
-            <view class="ui-tag img sl">sl</view>
+        <view class="paragraph">
+            <ui-code>ui="{size}"</ui-code>
+        </view>
+        <view class="p-4 ui-BG radius border">
+            <ui-tag ui="sm" info="sm"/>
+            <ui-tag ui="" info="df"/>
+            <ui-tag ui="lg" info="lg"/>
+            <ui-tag ui="xl" info="xl"/>
+            <ui-tag ui="xxl" info="xxl"/>
         </view>
         <ui-title title="标签带图片" depth="2" isIcon/>
-        <view class="p-4">
-            <view class="ui-tag img lg">
-                <image src="/static/avatar/1001.jpg" mode="aspectFill" class="tag-img"/>
-                lg
-            </view>
-            <view class="ui-tag img xl">
-                <image src="/static/avatar/1002.jpg" mode="aspectFill" class="tag-img"/>
-                xl
-            </view>
-            <view class="ui-tag img xxl">
-                <image src="/static/avatar/1003.jpg" mode="aspectFill" class="tag-img"/>
-                xxl
-            </view>
-            <view class="ui-tag img sl">
-                <image src="/static/avatar/1004.jpg" mode="aspectFill" class="tag-img"/>
-                sl
-            </view>
+        <view class="paragraph">
+            <ui-code>src="{src}"</ui-code>
         </view>
+        <view class="p-4 ui-BG radius border">
+            <ui-tag info="糖果炸弹" src="/static/avatar/1004.jpg"/>
+        </view>
+        <ui-code tag="pre" lang="html" title content="{{code2}}"/>
+
         <ui-title title="标签背景" depth="2" isIcon/>
-        <view class="p-4">
-            <view class="ui-tag bg-red img">
-                <image src="/static/avatar/1002.jpg" mode="aspectFill" class="tag-img"/>
-                bg-red
-            </view>
-            <view class="ui-tag ui-BG-Main">ui-BG-Main</view>
-            <view class="ui-tag bg-mask-50">
-                <text>bg-mask-50</text>
-            </view>
-            <view class="ui-tag bg-red-gradient">bg-red-gradient</view>
-            <view class="ui-tag bg-red-thin">bg-red-thin</view>
-            <view class="ui-tag bg-red-light">bg-red-light</view>
+        <view class="paragraph">
+            <ui-code>bg="{bg}"</ui-code>
+        </view>
+        <view class="p-4 ui-BG radius border">
+            <ui-tag info="bg-red" bg="bg-red" src="/static/avatar/1001.jpg"/>
+            <ui-tag bg="ui-BG-Main" info="ui-BG-Main"/>
+            <ui-tag bg="bg-mask-50" info="bg-mask-50"/>
+            <ui-tag bg="bg-red-gradient" info="bg-red-gradient"/>
+            <ui-tag bg="bg-red-thin" info="bg-red-thin"/>
+            <ui-tag bg="bg-red-light" info="bg-red-light"/>
         </view>
         <ui-title title="浮动标签" depth="2" isIcon/>
+        <view class="paragraph">
+            <ui-code>badge="{direction: tl(左上) / tr(右上) / bl(左下) / br(右下)}"</ui-code>
+        </view>
+
+        <view class="blockquote text-sm">info置空并且不设置插槽的情况下设置badge,标签默认为小红点</view>
         <view class="p-4 ui-grid ui-cols-5">
             <view class="ui-item">
-                <ui-avatar ui="radius xl" src="/static/avatar/1001.jpg">
-                    <view class="ui-tag badge">3</view>
+                <ui-avatar ui="radius xl" src="/static/avatar/1002.jpg">
+                    <ui-tag badge/>
                 </ui-avatar>
             </view>
             <view class="ui-item">
                 <ui-avatar ui="round xl">
-                    As<view class="ui-tag badge bg-blue">vip</view>
+                    <text>As</text>
+                    <ui-tag badge bg="bg-blue" isSlot>vip</ui-tag>
                 </ui-avatar>
             </view>
             <view class="ui-item">
                 <ui-avatar ui="round xl bg-blue">
-                    Bf<view class="ui-tag shadow badge badge-br bg-white">
+                    <text>Bf</text>
+                    <ui-tag badge="br" icon bg="shadow bg-white" isSlot>
                         <text class="cicon-male text-blue"/>
-                    </view>
+                    </ui-tag>
                 </ui-avatar>
             </view>
             <view class="ui-item">
                 <ui-avatar ui="round xl bg-pink">
-                    Cv<view class="ui-tag shadow badge badge-bl bg-white">
+                    <text>Cv</text>
+                    <ui-tag badge="bl" bg="shadow bg-white" isSlot>
                         <text class="cicon-female text-pink"/>
-                    </view>
+                    </ui-tag>
                 </ui-avatar>
             </view>
             <view class="ui-item">
                 <ui-avatar ui="round xl bg-blue-thin borders border-blue">
-                    Jx<view class="ui-tag badge badge-tl bg-blue-light borders border-blue shadow-blue">user</view>
+                    <text>Jx</text>
+                    <ui-tag badge="tl" ui="borders border-blue shadow-blue" bg="bg-blue-light" isSlot>user</ui-tag>
                 </ui-avatar>
             </view>
         </view>
-
     </view>
 </ui-sys>

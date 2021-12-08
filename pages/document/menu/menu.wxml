@@ -16,11 +16,8 @@
 
             <ui-menu-item arrow title="标签" icon="cicon-tag text-orange" isAction>
                 <view slot="action">
-                    <view class="ui-tag bg-red img">
-                        <image src="/static/avatar/1001.jpg" mode="aspectFill" class="tag-img"/>
-                        <text>bg-red</text>
-                    </view>
-                    <view class="ui-tag bg-red-thin sm">bg-red-thin</view>
+                    <ui-tag bg="bg-red" info="bg-red" src="/static/avatar/1001.jpg"/>
+                    <ui-tag bg="bg-red-thin" info="bg-red-thin" ui="sm"/>
                 </view>
             </ui-menu-item>
             <ui-menu-item arrow title="头像组" icon="cicon-tag text-orange" isAction>
@@ -46,11 +43,8 @@
 
         <ui-menu-item arrow title="标签" icon="cicon-tag text-orange" isAction>
             <view slot="action">
-                <view class="ui-tag bg-red img">
-                    <image src="/static/avatar/1001.jpg" mode="aspectFill" class="tag-img"/>
-                    <text>bg-red</text>
-                </view>
-                <view class="ui-tag bg-red-thin sm">bg-red-thin</view>
+                <ui-tag bg="bg-red" info="bg-red" src="/static/avatar/1001.jpg"/>
+                <ui-tag bg="bg-red-thin" info="bg-red-thin" ui="sm"/>
             </view>
         </ui-menu-item>
         <ui-menu-item arrow title="头像组" icon="cicon-tag text-orange" isAction>

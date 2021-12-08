@@ -17,10 +17,15 @@
         "pages/document/title/title",
         "pages/document/tag/tag",
         "pages/document/button/button",
+        "pages/document/image/image",
+        "pages/document/code/code",
+        "pages/document/progress/progress",
         "pages/document/loading/loading",
+        "pages/document/flex/flex",
         "pages/document/menu/menu",
         "pages/document/fixed/fixed",
         "pages/document/card/card",
+        "pages/document/list/list",
         "pages/document/grid/grid",
         "pages/document/modal/modal",
         "pages/document/toast/toast",
@@ -53,7 +58,9 @@
         "ui-img": "mp-cu/colorUI/components/ui-img/ui-img",
         "ui-navbar": "/mp-cu/colorUI/components/ui-navbar/ui-navbar",
         "ui-swiper": "/mp-cu/colorUI/components/ui-swiper/ui-swiper",
-        "ui-text-size": "/mp-cu/colorUI/components/ui-text-size/ui-text-size"
+        "ui-text-size": "/mp-cu/colorUI/components/ui-text-size/ui-text-size",
+        "ui-tag": "/mp-cu/colorUI/components/ui-tag/ui-tag",
+        "ui-progress": "/mp-cu/colorUI/components/ui-progress/ui-progress"
     },
     "tabBar": {
         "color": "#aaaaaa",

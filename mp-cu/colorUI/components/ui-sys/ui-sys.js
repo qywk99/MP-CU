@@ -50,7 +50,7 @@ Component({
             
         },
         ready() {
-            if (this.tabbar) {
+            if (this.data.tabbar) {
                 wx.hideTabBar()
             }
         },

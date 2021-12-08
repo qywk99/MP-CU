@@ -117,23 +117,23 @@
         <view class="p-3">
             <button class="ui-btn block">
                 <text>按钮</text>
-                <text class="cicon-ellipse"/>
+                <text class="_icon-add-round"/>
             </button>
         </view>
         <view class="p-3">
             <button class="ui-btn block">
                 <text>按钮</text>
-                <text class="cicon-ellipse"/>
+                <text class="_icon-add-round"/>
             </button>
         </view>
         <view class="p-3">
             <button class="ui-btn xl">
                 <text>按钮</text>
-                <text class="cicon-ellipse"/>
+                <text class="_icon-add-round"/>
             </button>
             <button class="ui-btn xxl">
                 <text>按钮</text>
-                <text class="cicon-ellipse"/>
+                <text class="_icon-add-round"/>
             </button>
         </view>
         <view class="p-3">
@@ -151,7 +151,7 @@
         <view class="p-3">
             <button class="ui-btn block">
                 <text>按钮</text>
-                <text class="cicon-loader-fill icon-spin"/>
+                <text class="_icon-loader icon-spin"/>
             </button>
         </view>
         <view class="p-3">
@@ -164,11 +164,11 @@
         <view class="p-3">
             <button class="ui-btn xl">
                 <text>按钮</text>
-                <text class="cicon-loader-fill icon-spin"/>
+                <text class="_icon-loader icon-spin"/>
             </button>
             <button class="ui-btn xxl">
                 <text>按钮</text>
-                <text class="cicon-loader-fill icon-spin"/>
+                <text class="_icon-loader icon-spin"/>
             </button>
         </view>
 

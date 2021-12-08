@@ -1,0 +1,15 @@
+<ui-sys doc title="图片">
+    <view class="ui-container">
+        <!-- 简介 -->
+        <ui-title title="简介" depth="2" isIcon/>
+        <view class="paragraph">图片</view>
+        <ui-menu ui="radius border mt-4">
+            <!--@click.native="_to('/pages/parameter/parameter?component=ui-img')"-->
+            <ui-menu-item icon="cicon-equalizer" title="参数" arrow />
+        </ui-menu>
+        <ui-menu ui="radius border mt-4">
+            <!-- @click.native="_to('/pages/demo/wallpaper')"-->
+            <ui-menu-item icon="cicon-pic" title="壁纸"/>
+        </ui-menu>
+    </view>
+</ui-sys>

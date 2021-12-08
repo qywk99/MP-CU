@@ -7,8 +7,8 @@ Page({
             { class: 'text-lg', size: 16, info: '页面三级标题，首要层级显示内容', desc: 'ColorUI组件库' },
             { class: 'text-xl', size: 18, info: '页面二级标题，用于结果页等单一信息页', desc: '您的订单已提交成功！' },
             { class: 'text-xxl', size: 22, info: '页面一级标题,或者用于金额数字等信息', price: '80.00' },
-            { class: 'text-sl', size: 40, info: '用于较大图标、数字等较大显示', icon: 'text-red cui-close-round' },
-            { class: 'text-xsl', size: 60, info: '用于超大图标、数字等特大显示', icon: 'text-green cui-check-round' }
+            { class: 'text-sl', size: 40, info: '用于较大图标、数字等较大显示', icon: 'text-red _icon-check-round-o' },
+            { class: 'text-xsl', size: 60, info: '用于超大图标、数字等特大显示', icon: 'text-green _icon-check-round-o' }
         ],
         color: [
             { name: 'yellow', value: 'fbbd08' },
