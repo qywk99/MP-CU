@@ -5,6 +5,16 @@ Page({
 
     },
     onLoad() {
-        //wx.setNavigationBarTitle({ title: '实验' });
+        
     },
+    goToFictitiousList(){
+        wx.navigateTo({
+          url: '/pages/test-page/list/fictitious-list/index',
+        })
+    },
+    goToOldList(){
+        wx.navigateTo({
+          url: '/pages/test-page/list/old-list/index',
+        })
+    }
 })

@@ -1,0 +1,42 @@
+
+.container{
+  padding: 20rpx;
+  margin-top: 200rpx;
+}
+
+.test-list{
+  &-items{
+    margin-bottom: 20rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 10rpx;
+    font-size: 30rpx;
+    background-image: url("https://vkceyugu.cdn.bspapp.com/VKCEYUGU-2dd21fa9-731c-43b7-b092-2b6264029de8/ebefd126-74b4-4928-9fee-fbb2dbd5499a.png");
+    background-size: 160rpx;
+    background-position: 121px -2px;
+    background-repeat: no-repeat;
+    &:active{
+      background-size : 200rpx;
+      background-position: 100px -2px;
+    }
+  }
+  &-item{
+    min-width: 50vw;
+    height: 150rpx;
+    transform: skew(-15deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow:inset -2px 1px 20px 0px rgba(0,0,0,.08);
+    backdrop-filter: blur(10px);
+    &.active{
+      box-shadow: 1px -1px 20px 1px rgba(0,0,0,.2);
+      
+    }
+    &:active.active{
+      transform: scale(1.2) skew(-15deg);
+    }
+  }
+}

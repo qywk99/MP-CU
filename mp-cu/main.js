@@ -92,7 +92,7 @@ let baseMethod = {
     },
     _toHome() {
         wx.switchTab({
-            url: this.data.$cuConfig.homePath
+            url: this.data.$cuStore.sys_home_page
         });
     },
     _backPage() {

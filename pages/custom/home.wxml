@@ -1,4 +1,4 @@
-<ui-sys img="/static/img/4put2.png" tabbar>
+<ui-sys img="/static/img/4put2.png" tabbar tabbarIndex="{{2}}">
     <ui-navbar :back="false" opacity>
         <!--  v-if="sys_scrollTop > sys_navBar"-->
         <view class="flex-center flex-sub">定制</view>

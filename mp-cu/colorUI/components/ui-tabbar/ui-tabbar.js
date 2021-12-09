@@ -65,6 +65,9 @@ Component({
                 wx.switchTab({
                     url: item.url
                 });
+                this.setState({
+                    sys_home_page : item.url
+                })
             } else if (item.type === 'nav') {
                 wx.navigateTo({
                     url: item.url

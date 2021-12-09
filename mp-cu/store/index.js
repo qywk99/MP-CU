@@ -145,6 +145,7 @@ export const CUStoreInit = (config) => {
     $store.state.sys_theme = wx.getStorageSync('sys_theme') ? wx.getStorageSync('sys_theme') : config.theme
     $store.state.sys_main = wx.getStorageSync('sys_main') ? wx.getStorageSync('sys_main') : config.main
     $store.state.sys_text = wx.getStorageSync('sys_text') ? wx.getStorageSync('sys_text') : config.text
+    $store.state.sys_home_page = config.homePath
     const modal = {
         show:false,
         dialog:{title:'', content:'', showCancel:true, cancelText:'取消', cancelColor:'', confirmText:'确定', confirmColor:'', success : ()=>{}},

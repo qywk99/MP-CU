@@ -1,0 +1,22 @@
+.item{
+  display: flex;
+  align-items: center;
+  // justify-content: flex-start;
+  padding: 20rpx;
+  &-img{
+    width: 240rpx ;
+    height: 120rpx ;
+    margin: 0;
+    padding: 0;
+    border-radius: 6px;
+    overflow: hidden;
+    display: block;
+  }
+  &-view{
+    margin-left: 20rpx;
+  }
+  &-time{
+    font-size: 24rpx;
+    color: #666;
+  }
+}

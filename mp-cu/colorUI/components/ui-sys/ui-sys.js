@@ -40,6 +40,10 @@ Component({
         tabbar: {
             type: Boolean,
             value: false
+        },
+        tabbarIndex :{
+            type : Number,
+            value : 0
         }
     },
     lifetimes: {

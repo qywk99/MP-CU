@@ -11,7 +11,26 @@
       "list": []
     },
     "miniprogram": {
-      "list": []
+      "list": [
+        {
+          "name": "tabbar 实验",
+          "pathName": "pages/test/home",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "实验-list-触底",
+          "pathName": "pages/test-page/list/old-list/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "实验-list-虚拟",
+          "pathName": "pages/test-page/list/fictitious-list/index",
+          "query": "",
+          "scene": null
+        }
+      ]
     }
   }
 }

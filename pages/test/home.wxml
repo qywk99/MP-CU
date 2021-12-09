@@ -1,7 +1,26 @@
-<ui-sys img="/static/img/4put2.png" tabbar>
+<ui-sys img="/static/img/4put2.png" tabbar tabbarIndex="{{3}}">
     <ui-navbar :back="false" opacity>
-        <!--  v-if="sys_scrollTop > sys_navBar"-->
         <view class="flex-center flex-sub">实验</view>
     </ui-navbar>
 
+    <view class="container">
+        <view class="test-list">
+            <view class="test-list-items">
+                <view class="test-list-item bg-yellow-thin" bindtap="goToOldList">触底加载</view>
+                <view class="test-list-item active bg-yellow-gradient" bindtap="goToFictitiousList">虚拟加载</view>
+            </view>
+            <view class="test-list-items">
+                <view class="test-list-item bg-green-thin">触底加载</view>
+                <view class="test-list-item active bg-green-gradient">虚拟加载</view>
+            </view>
+            <view class="test-list-items">
+                <view class="test-list-item bg-blue-thin">触底加载</view>
+                <view class="test-list-item active bg-blue-gradient">虚拟加载</view>
+            </view>
+            <view class="test-list-items">
+                <view class="test-list-item bg-red-thin">触底加载</view>
+                <view class="test-list-item active bg-red-gradient">虚拟加载</view>
+            </view>
+        </view>
+    </view>
 </ui-sys>
