@@ -9,12 +9,12 @@ Page({
     },
     goToFictitiousList(){
         wx.navigateTo({
-          url: '/pages/test-page/list/fictitious-list/index',
+          url: '/packageB/list/fictitious-list/index',
         })
     },
     goToOldList(){
         wx.navigateTo({
-          url: '/pages/test-page/list/old-list/index',
+          url: '/packageB/list/old-list/index',
         })
     }
 })

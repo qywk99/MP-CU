@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "ui-tab-item": "../ui-tab-item/ui-tab-item"
+  }
+}

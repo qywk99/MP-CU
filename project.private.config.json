@@ -29,6 +29,12 @@
           "pathName": "pages/test-page/list/fictitious-list/index",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "选项卡",
+          "pathName": "pages/document/tab/tab",
+          "query": "",
+          "scene": null
         }
       ]
     }

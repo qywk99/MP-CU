@@ -1,5 +1,5 @@
-<ui-sys img="/static/img/4put2.png" tabbar tabbarIndex="{{1}}">
-    <ui-navbar :back="false" opacity>
+<ui-sys img="/static/img/4put2.png" tabbar>
+    <ui-navbar back="{{false}}" opacity>
         <!--  v-if="sys_scrollTop > sys_navBar"-->
         <view class="flex-center flex-sub">模版</view>
     </ui-navbar>

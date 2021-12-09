@@ -1,7 +1,12 @@
 <ui-sys doc title="选项卡">
     <view class="ui-container">
         <!-- 简介 -->
-        <ui-title title="简介" depth="2" isIcon/>
-        <view class="paragraph">选项卡</view>
+        <ui-title title="简介" depth="2" isIcon ui="mx-4"/>
+        <view class="paragraph mx-4" ui="sm">选项卡</view>
+
+        <ui-title title="默认" depth="2" isIcon ui="mx-4"/>
+        <ui-tab tab="{{['选项卡1','选项卡2','选项卡3']}}" ui="sm"/>
+
+
     </view>
 </ui-sys>

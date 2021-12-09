@@ -1,6 +1,7 @@
 Component({
     data: {
         isLoading: false,
+        tabBarIndex: 0,
     },
     options: {
         // 表示页面 wxss 样式将影响到自定义组件，但自定义组件 wxss 中指定的样式不会影响页面；
@@ -40,10 +41,6 @@ Component({
         tabbar: {
             type: Boolean,
             value: false
-        },
-        tabbarIndex :{
-            type : Number,
-            value : 0
         }
     },
     lifetimes: {
@@ -56,6 +53,7 @@ Component({
         ready() {
             if (this.data.tabbar) {
                 wx.hideTabBar()
+                this._onPage();
             }
         },
     },
@@ -65,8 +63,20 @@ Component({
         },
     },
     methods: {
-        modalSuccess(res) {
-           return  this.data.$cuStore.$Modal
-        }
+        _onPage() {
+            let _this = this;
+            let page = getCurrentPages();
+            let url = page[page.length - 1].route
+            this.data.$cuConfig.tabBar.map((item,index)=>{
+                if(item.url === '/'+url) {
+                    _this.setData({
+                        tabBarIndex: index
+                    })
+                }
+            })
+        },
+        modalSuccess() {
+           return this.data.$cuStore.$Modal
+        },
     },
 })
