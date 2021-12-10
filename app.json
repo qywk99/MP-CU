@@ -89,7 +89,8 @@
         "ui-tag": "/mp-cu/colorUI/components/ui-tag/ui-tag",
         "ui-progress": "/mp-cu/colorUI/components/ui-progress/ui-progress",
         "ui-tab": "/mp-cu/colorUI/components/ui-tab/ui-tab",
-        "ui-tab-item": "/mp-cu/colorUI/components/ui-tab-item/ui-tab-item"
+        "ui-tab-item": "/mp-cu/colorUI/components/ui-tab-item/ui-tab-item",
+        "ui-popover" : "/mp-cu/colorUI/components/ui-popover/ui-popover"
     },
     "tabBar": {
         "color": "#aaaaaa",

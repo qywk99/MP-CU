@@ -1,7 +1,17 @@
 <ui-sys doc title="气泡框">
     <view class="ui-container">
         <!-- 简介 -->
-        <ui-title title="简介" depth="2" isIcon/>
-        <view class="paragraph">气泡框</view>
+        <ui-title title="简介" depth="2" isIcon />
+        <view class="paragraph">
+            气泡框组件可以对目标元素进行更多的操作或者简要的介绍与提示。
+            <view>气泡框的主体会根据目标元素在屏幕的上下半部分来显示在上面或者下面。</view>
+        </view>
+        <!-- 文字提示 -->
+        <ui-title title="文字提示" depth="2" isIcon></ui-title>
+        <view class="paragraph">文字提示会自动关闭。</view>
+        <view class="text-center">
+            <ui-popover tips="这里是提示文本"><button class="ui-btn">点击</button></ui-popover>
+        </view>
+        <ui-code tag="pre" lang="html" content="{{code1}}"></ui-code>
     </view>
 </ui-sys>
