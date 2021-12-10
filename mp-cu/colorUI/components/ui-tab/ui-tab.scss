@@ -39,7 +39,7 @@
             color: var(--ui-BG-Main);
             height: 100%;
             &.ui-btn {
-                text {
+                .text {
                     opacity: 0;
                 }
             }
@@ -172,6 +172,30 @@
                 height: calc(100% - 2px);
                 width: calc(100% - 2px);
                 border-radius: #{$radius - 2};
+            }
+        }
+    }
+    .ui-tab-item {
+        display: inline-flex;
+        align-items: center;
+        padding: 0 1em;
+        min-height: 1.5em;
+        line-height: 1.5em;
+        position: relative;
+        z-index: 1;
+        opacity: .6;
+        transition: opacity 0.3s;
+        .ui-tab-icon{
+            margin: 0 .25em;
+            font-size: 120%;
+        }
+        &.cur {
+            opacity: 1;
+        }
+        &.btn{
+            .ui-tab-text{
+                transform: scale(.9);
+                transition: color 0.3s;
             }
         }
     }

@@ -8,10 +8,13 @@ Page({
     onLoad() {
 
     },
-    tabChange(data) {
-        console.log(data)
-        let change = JSON.stringify(data);
-        console.log(change)
+    tabNavChange(e) {
+        this.setData({
+            NavCur: e.detail.index
+        })
+    },
+    tabChange(e) {
+        let change = JSON.stringify(e.detail);
         this.setData({
             change: change
         })

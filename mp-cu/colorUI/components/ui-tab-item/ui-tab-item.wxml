@@ -1,5 +1,0 @@
-<view id="tab-{{index}}" class="ui-tab-item {{cur===index?'cur':''}} {{tpl}}">
-    <view class="ui-tab-icon {{data.icon}}" wx:if="{{data.icon}}"/>
-    <view class="ui-tab-text {{cur===index?curColor:''}}">{{ name }}</view>
-    <view class="ui-tag badge ml-2" wx:if="{{data.tag != null}}">{{ data.tag }}</view>
-</view>

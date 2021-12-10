@@ -89,8 +89,11 @@
         "ui-tag": "/mp-cu/colorUI/components/ui-tag/ui-tag",
         "ui-progress": "/mp-cu/colorUI/components/ui-progress/ui-progress",
         "ui-tab": "/mp-cu/colorUI/components/ui-tab/ui-tab",
-        "ui-tab-item": "/mp-cu/colorUI/components/ui-tab-item/ui-tab-item",
-        "ui-popover" : "/mp-cu/colorUI/components/ui-popover/ui-popover"
+        "ui-popover" : "/mp-cu/colorUI/components/ui-popover/ui-popover",
+        "ui-steps" : "/mp-cu/colorUI/components/ui-steps/ui-steps",
+        "ui-form" : "/mp-cu/colorUI/components/ui-form/ui-form",
+        "ui-form-group" : "/mp-cu/colorUI/components/ui-form-group/ui-form-group",
+        "ui-input-box" : "/mp-cu/colorUI/components/ui-input-box/ui-input-box"
     },
     "tabBar": {
         "color": "#aaaaaa",

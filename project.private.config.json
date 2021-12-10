@@ -35,6 +35,24 @@
           "pathName": "pages/document/tab/tab",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "轮播",
+          "pathName": "pages/document/swiper/swiper",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "步骤条",
+          "pathName": "pages/document/steps/steps",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "输入框",
+          "pathName": "pages/document/input/input",
+          "query": "",
+          "scene": null
         }
       ]
     }

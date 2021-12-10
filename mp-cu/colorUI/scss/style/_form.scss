@@ -55,9 +55,9 @@
     }
     picker::after,
     .arrow::after {
-        font-family: 'ui', serif;
+        font-family: 'colorui';
         display: block;
-        content: '\e605';
+        content: '\e601';
         position: absolute;
         font-size: 34rpx;
         color: #8799a3;
@@ -117,4 +117,22 @@
 .disabled {
     opacity: 0.6;
     cursor: not-allowed !important;
+}
+
+ui-form ui-form-group:first-child .ui-form-group:after {
+    display: none;
+    //border-top: 0;
+}
+ui-form ui-form-group ui-input-box {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    input {
+        flex: 1;
+    }
+    textarea {
+        flex: 1;
+        width: 100%;
+    }
 }
