@@ -258,7 +258,7 @@ export const colorUI = new ColorUI({
 
 ### 鸣谢
 
-感谢 `文晓港（colorui作者 / [@weilanwl](https://github.com/weilanwl)）` , `胖虎（[@bypanghu](https://github.com/bypanghu)）` 
+> 感谢 文晓港（colorui作者 / [@weilanwl](https://github.com/weilanwl)） , 胖虎（[@bypanghu](https://github.com/bypanghu)）
 
 <hr/>
 
