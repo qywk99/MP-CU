@@ -1,5 +1,6 @@
 let button = {}
 Component({
+    name : 'UiPopover',
     data: {
         popover: false,
         BoxStyle: '',
@@ -71,9 +72,6 @@ Component({
                 this._computedQuery(wx.getSystemInfoSync().windowWidth, wx.getSystemInfoSync().windowHeight);
             })
         },
-        ready() {
-
-        },
     },
     observers: {
         'popover'(val) {
@@ -89,17 +87,33 @@ Component({
                         this.data.time == 0 ? 3000 : this.data.time
                     );
                 }
+                this.setData({
+                    zIndex : this.data.zIndex + 100
+                })
+            }else{
+                this.setData({
+                    zIndex : this.data.zIndex + 100
+                })
             }
             // this.$emit('update:show', val);
         },
+        'show'(val) {
+            this.setData({
+                popover : val
+            })
+        }
     },
     methods: {
+        closePopover(){
+            this.setData({
+                popover : false
+            })
+        },
         _computedQuery(w, h) {
             wx.createSelectorQuery()
                 .in(this)
                 .select('#popover-button-' + this.data._uid)
                 .boundingClientRect(res => {
-                    console.log(res)
                     if (res != null) {
                         button = res;
                     } else {
@@ -113,7 +127,6 @@ Component({
                             this.setData({
                                 content: content
                             })
-                            console.log(button)
                             let contentStyle = '';
                             let arrowStyle = '';
                             this.setData({
@@ -153,8 +166,6 @@ Component({
                                 arrowStyle: arrowStyle + `z-index:${this.data.zIndex  + 1};`,
                                 contentStyle: contentStyle + `z-index:${this.data.zIndex + 2};`
                             })
-                            // this.arrowStyle = arrowStyle + `z-index:${this.data.index + this.data.sys_layer + 1};`;
-                            // this.contentStyle = contentStyle + `z-index:${this.data.index + this.data.sys_layer + 2};`;
                         } else {
                             console.log('popover-content-' + this.data._uid + ' data error');
                         }
@@ -163,10 +174,10 @@ Component({
                 .exec()
         },
         popoverClick() {
-            if (this.isChange) {
+            if (this.data.isChange) {
                 return false
             }
-            if (this.tips == '') {
+            if (this.data.tips == '') {
                 this.setData({
                     popover: !this.data.popover
                 })

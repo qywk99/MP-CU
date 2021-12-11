@@ -1,8 +1,8 @@
 <view class="ui-popover {{popover ? 'show' : 'hide'}} ">
     <view class="ui-popover-button {{ui}}" id="popover-button-{{_uid}}" style="{{zIndex?'z-index:' + zIndex  + ';':''}}"
           bindtap="popoverClick">
-        <!--@mouseleave="mouseleave" @mouseover="mouseover"-->
     <slot></slot>
+    
 </view>
 <view class="ui-popover-box" style="{{BoxStyle}}">
     <view class="ui-popover-content-box" id="popover-content-{{_uid}}" style="{{contentStyle}}">
@@ -15,7 +15,6 @@
         <view class="ui-popover-arrow {{bg}}" style="{{arrowStyle}}"/>
     </view>
 </view>
-<view class="ui-popover-mask {{mask?'bg-mask-50':''}}" style="{{zIndex?'z-index:' +  (zIndex  -1) + ';':''}}"
-      wx:if="{{(popover && tips == '' && time == 0) || mask}}"/>
-      <!--@tap="popover = false" -->
+<view class="ui-popover-mask {{mask?'bg-mask-50':''}}" style="{{'z-index:' +  (zIndex  - 1) + ';'}}"
+ wx:if="{{(popover && tips == '' && time == 0) || mask}}" bindtap="closePopover"></view>
 </view>
