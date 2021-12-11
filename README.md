@@ -3,8 +3,10 @@
 <p><a href="update.md">更新日志(Beta V3.2.6)</a> | 在线文档（开发中...）</p>
 
 
-<img width="80px" src="https://github.com/iZaiZaiA/iZaiZaiA/blob/img/mp-cu/mp-cu.jpg" />
+<img width="100px" src="https://github.com/iZaiZaiA/iZaiZaiA/blob/img/mp-cu/mp-cu.jpg" />
 
+
+<h6 style="width: 100%; height: 1px; background: #eeeeee"></h6>
 
 #### 介绍
 
@@ -246,7 +248,7 @@ export const colorUI = new ColorUI({
 
 ``` json
 
-"darkmode": true'
+"darkmode": true
 
 ```
 
