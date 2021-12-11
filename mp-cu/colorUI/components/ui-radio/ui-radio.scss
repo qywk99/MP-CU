@@ -34,10 +34,6 @@
             transition: $transition-base;
         }
     }
-
-    &:last-child {
-        margin: 0 0.14286em;
-    }
     &.check {
         .ui-radio-input {
             &::before {
@@ -114,13 +110,12 @@
             }
         }
         .ui-radio-img {
-            // position: absolute;
+            position: relative;
             width: 40px;
             height: 40px;
             display: block;
             overflow: hidden;
             border-radius: 10px;
-            // opacity: 0.2;
         }
     }
     &.card {

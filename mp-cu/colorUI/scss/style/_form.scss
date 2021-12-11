@@ -119,9 +119,10 @@
     cursor: not-allowed !important;
 }
 
+//小程序的组件元素结构与uni-app不一样，在处理首个或最后一个元素的特定样式时，需要特殊处理
+
 ui-form ui-form-group:first-child .ui-form-group:after {
     display: none;
-    //border-top: 0;
 }
 ui-form ui-form-group ui-input-box {
     width: 100%;
@@ -135,4 +136,8 @@ ui-form ui-form-group ui-input-box {
         flex: 1;
         width: 100%;
     }
+}
+
+ui-radio:last-child .ui-radio:not(.card) {
+    margin: 0 0.14286em;
 }

@@ -1,16 +1,12 @@
 Component({
     relations: {
-        '../ui-radio-group/ui-radio-group': {
+        '../ui-checkbox-group/ui-checkbox-group': {
             type: 'parent'
         }
     },
     data: {
         currentValue: null,
-        isGroup: null,
-        isDisabled: null,
-        isClearable: null,
-        isChecked: null,
-        hasUiCard: null
+        isIndeterminate:false,
     },
     options: {
         addGlobalClass: true
@@ -21,11 +17,6 @@ Component({
             value: ''
         },
         value: {
-            type: String,
-            optionalTypes: [Number, Boolean],
-            value: ''
-        },
-        label: {
             type: String,
             optionalTypes: [Number, Boolean],
             value: ''
@@ -42,15 +33,11 @@ Component({
             type: String,
             value: 'borderss'
         },
-        src: {
-            type: String,
-            value: ''
-        },
-        clearable: {
+        indeterminate: {
             type: Boolean,
             value: false
         },
-        none: {
+        all: {
             type: Boolean,
             value: false
         }
@@ -70,7 +57,7 @@ Component({
     },
     methods: {
         _nodesSetValue() {
-            let radioNodes = this.getRelationNodes('../ui-radio-group/ui-radio-group');
+            let radioNodes = this.getRelationNodes('../ui-checkbox-group/ui-checkbox-group');
             if (Array.isArray(radioNodes) && radioNodes.length > 0) {
                 return radioNodes[0];
             } else {
