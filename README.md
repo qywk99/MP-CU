@@ -7,7 +7,7 @@
 
 <hr/>
 
-#### 介绍
+### 介绍
 
 本项目为 `colorUI3.x` 微信小程序原生版。
 
@@ -106,7 +106,7 @@ App({
 <hr/>
 
 
-<H2 style='text-align : center'>colorUI MP-CU 扩展包</H2>
+### colorUI MP-CU 扩展包
 
 > 由于微信小程序无法使用vue.key来全局命名变量，导致习惯vue的用户很不习惯，而且微信内部并不存在像vuex这样的状态管理机制，为满足上述想法，colorUI  MP-CU 为您定制了一套自有的扩展包，你可以在全局导入变量、函数、方法，同时您也可以定义您自己的状态（` vuex `）.
 
@@ -131,7 +131,7 @@ export const colorUI = new ColorUI({
 
 ```
 
-### 注意，只要您在app.js 里面挂载上colorUI以后，您不需要在 `page`，`components` 中获取系统信息，因为colorUI 已经帮您写好在对应的data 里面了，您只需要使用就可以了
+#### 注意，只要您在app.js 里面挂载上colorUI以后，您不需要在 `page`，`components` 中获取系统信息，因为colorUI 已经帮您写好在对应的data 里面了，您只需要使用就可以了
 
 - 例如在demo的home 页面中，在page的data中并没有定义sys_navBar，但是在页面和js中仍然可以使用，关键的是，这个数据是根据访问手机实施变化的！
 
@@ -146,7 +146,7 @@ sys_capsule
 ```
 
 
-<H3 style='color : red'>您在config里面配置的data数据也可以在页面的data里面访问到，colorUI将配置的数据定义到$cuData属性里面中了</H3>
+#### 您在config里面配置的data数据也可以在页面的data里面访问到，colorUI将配置的数据定义到$cuData属性里面中了
 
 
 > 配置的config你可以在 `page`，`components` 中通过 `this.data.$cuConfig` 获得
@@ -157,6 +157,7 @@ sys_capsule
 
 
 例如：
+
 ```javascript
 
 import ColorUI from './mp-cu/main'
@@ -208,7 +209,7 @@ export const colorUI = new ColorUI({
 </span>
 
 
-## 内置方法
+### 内置方法
 - [x] 内置 store		[使用方法参考](#ColorUi.store)
 - [x] 页面返回函数	[使用方法参考](#_backPage)
 - [x] 切换主题		[使用方法参考](#_setTheme)
@@ -218,7 +219,7 @@ export const colorUI = new ColorUI({
 <hr/>
 
 
-## 内置方法详解
+### 内置方法详解
 
 #### <span id='_backPage'>页面返回函数</span>
 > colorui 3.x微信小程序版本因为所有页面都需要包裹 `ui-sys` ，所以对于大多数返回函数都无法使用，ColorUI为您在所有页面注册了返回函数，在需要返回的函数里调用 `this._backPage()` 注意this 作用域的问题。
@@ -257,11 +258,16 @@ export const colorUI = new ColorUI({
 
 ### 鸣谢
 
-> 感谢 `文晓港（colorui作者 / @weilanwl）` , `胖虎（@bypanghu）` 
+> 感谢 `文晓港（colorui作者 / [@weilanwl](https://github.com/weilanwl)）` , `胖虎（[@bypanghu](https://github.com/bypanghu)）` 
 
 <hr/>
 
 
-## License
+[![Stargazers repo roster for @Color-UI/MP-CU](https://reporoster.com/stars/Color-UI/MP-CU)](https://github.com/Color-UI/MP-CU/stargazers)
+
+
+<hr/>
+
+### License
 
 MIT © [MP CU](https://github.com/Color-UI/MP-CU)
