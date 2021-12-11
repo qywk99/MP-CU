@@ -6,7 +6,7 @@
 <img width="100px" src="https://github.com/iZaiZaiA/iZaiZaiA/blob/img/mp-cu/mp-cu.jpg" />
 
 
-<h6 style="width: 100%; height: 1px; background: #eeeeee"></h6>
+<h4 style="width: 100%; height: 1px; background: #eeeeee"></h4>
 
 #### 介绍
 
