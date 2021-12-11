@@ -78,16 +78,17 @@ Component({
             }
         },
         isComputed() {
+            let {disabled, clearable, label, currentValue, ui} = this.data;
             let parent = this._nodesSetValue();
             let isGroup = !!parent;
             //isDisabled
-            let isDisabled = isGroup?parent.data.disabled:this.data.disabled;
+            let isDisabled = isGroup?parent.data.disabled:disabled;
             //isClearable
-            let isClearable = isGroup?parent.data.clearable:this.data.clearable;
+            let isClearable = isGroup?parent.data.clearable:clearable;
             //isChecked
-            let isChecked = (isGroup && parent.data.value == this.data.label) || (!isGroup && this.data.currentValue == this.data.label);
+            let isChecked = (isGroup && parent.data.value == label) || (!isGroup && currentValue == label);
             //_has
-            let hasUiCard = this.data.ui.indexOf('card') != -1;
+            let hasUiCard = ui.indexOf('card') !== -1;
             //设置数据
             this.setData({
                 isGroup: isGroup,
@@ -108,9 +109,8 @@ Component({
             }
         },
         _choose() {
-            let value = this.data.currentValue, label = this.data.label;
-            let isGroup = this.data.isGroup, isClearable = this.data.isClearable;
-            if (value != label) {
+            let {currentValue, label, isGroup, isClearable} = this.data;
+            if (currentValue != label) {
                 this.setData({currentValue: label});
                 this.triggerEvent('input', label);
                 this.triggerEvent('change', label);

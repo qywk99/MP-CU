@@ -51,8 +51,7 @@
             支持所有基础色到基础色的渐变。
         </view>
         <ui-menu ui="radius border">
-            <!--@click.native="_to('/pages/demo/background')"-->
-            <ui-menu-item icon="cicon-paint" title="浏览全部背景色" arrow/>
+            <ui-menu-item icon="cicon-paint" title="浏览全部背景色" arrow bindtap="toDemoBackground"/>
         </ui-menu>
 
         <view class="paragraph p-3">

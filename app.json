@@ -41,7 +41,14 @@
         "pages/document/radio/radio",
         "pages/document/checkbox/checkbox",
         "pages/document/switch/switch",
-        "pages/document/picker/picker"
+        "pages/document/picker/picker",
+        "pages/document/text-color/text-color",
+        "pages/document/iconfont/iconfont",
+        "pages/demo/system/system",
+        "pages/demo/navbar/navbar",
+        "pages/demo/background/background",
+        "pages/demo/avatar/avatar",
+        "pages/demo/wallpaper/wallpaper"
     ],
     "subpackages": [
         {
@@ -93,7 +100,10 @@
         "ui-steps" : "/mp-cu/colorUI/components/ui-steps/ui-steps",
         "ui-form" : "/mp-cu/colorUI/components/ui-form/ui-form",
         "ui-form-group" : "/mp-cu/colorUI/components/ui-form-group/ui-form-group",
-        "ui-input-box" : "/mp-cu/colorUI/components/ui-input-box/ui-input-box"
+        "ui-input-box" : "/mp-cu/colorUI/components/ui-input-box/ui-input-box",
+        "ui-checkbox" : "/mp-cu/colorUI/components/ui-checkbox/ui-checkbox",
+        "ui-checkbox-group" : "/mp-cu/colorUI/components/ui-checkbox-group/ui-checkbox-group",
+        "ui-parameter" : "/mp-sdk/components/ui-parameter/ui-parameter"
     },
     "tabBar": {
         "color": "#aaaaaa",

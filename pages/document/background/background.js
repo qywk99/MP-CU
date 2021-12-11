@@ -67,5 +67,10 @@ Page({
                 })
             },
         });
-    }
+    },
+    toDemoBackground() {
+        wx.navigateTo({
+            url: '/pages/demo/background/background'
+        })
+    },
 })

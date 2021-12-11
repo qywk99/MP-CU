@@ -56,11 +56,12 @@ Component({
     },
     methods: {
         _deepSetValue() {
+            let _this = this;
             let nodes = this.getRelationNodes('../ui-radio/ui-radio');
             if (Array.isArray(nodes)) {
                 nodes.forEach((child) => {
                     if (typeof child._setValue == 'function') {
-                        child._setValue(this.data.value)
+                        child._setValue(_this.data.value)
                     }
                 });
             }

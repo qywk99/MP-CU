@@ -41,8 +41,7 @@
             <ui-code>.text-{color}</ui-code>
         </view>
         <ui-menu ui="mt-4 radius border">
-            <!-- @click.native="_to('/pages/document/text-color')"-->
-            <ui-menu-item icon="cicon-palette-o" title="所有颜色" arrow/>
+            <ui-menu-item icon="cicon-palette-o" title="所有颜色" arrow bindtap="toDemoTextColor"/>
         </ui-menu>
 
         <!-- 截断 -->

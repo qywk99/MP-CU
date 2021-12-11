@@ -1,8 +1,7 @@
-<view class="ui-radio {{isDisabled?'disabled':''}} {{src?'img':''}} {{ui}}" bindtap="_onRadioClick">
-    <view class="ui-radio-input {{isChecked?'cur '+bg:unbg}} {{src?'radius':'round'}}" wx:if="{{!none}}"/>
-    <image class="ui-radio-img radius" src="{{src}}" mode="aspectFill" wx:if="{{src}}"/>
-    <view class="ui-radio-content" wx:else>
+<view class="ui-checkbox {{isDisabled?'disabled':''}} {{ui}}" bindtap="_onCheckboxClick">
+    <view class="ui-checkbox-input radius {{isChecked?'cur '+bg:unbg}} {{isIndeterminate?'indeterminate '+bg:unbg}}"/>
+    <view class="ui-checkbox-content">
         <slot></slot>
     </view>
-    <view class="ui-radio-bg round {{isChecked?'cur '+bg:''}}" wx:if="{{hasUiCard}}"/>
+    <view class="ui-checkbox-bg radius {{isChecked?'cur '+bg:''}} {{isIndeterminate?'indeterminate '+bg:''}}" wx:if="{{hasUiCard}}"/>
 </view>

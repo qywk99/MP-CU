@@ -7,9 +7,14 @@ Component({
     data: {
         currentValue: null,
         isIndeterminate:false,
+        isGroup: null,
+        isDisabled: null,
+        isChecked: null,
+        hasUiCard: null
     },
     options: {
-        addGlobalClass: true
+        addGlobalClass: true,
+        multipleSlots: true
     },
     properties: {
         ui: {
@@ -52,7 +57,16 @@ Component({
     },
     observers: {
         'value'(val) {
-            this._setValue(val);
+            this.setData({
+                currentValue: val
+            });
+            this.isComputed();
+        },
+        'indeterminate'(val) {
+            this.setData({
+                isIndeterminate: val
+            });
+            this.isComputed();
         }
     },
     methods: {
@@ -65,59 +79,64 @@ Component({
             }
         },
         isComputed() {
+            let {disabled, currentValue, value, ui} = this.data;
             let parent = this._nodesSetValue();
+            //isGroup
             let isGroup = !!parent;
             //isDisabled
-            let isDisabled = isGroup?parent.data.disabled:this.data.disabled;
-            //isClearable
-            let isClearable = isGroup?parent.data.clearable:this.data.clearable;
+            let isDisabled = isGroup?parent.data.disabled:disabled;
             //isChecked
-            let isChecked = (isGroup && parent.data.value == this.data.label) || (!isGroup && this.data.currentValue == this.data.label);
+            let isChecked;
+            if (typeof currentValue == 'boolean') {
+                isChecked = currentValue;
+            } else {
+                isChecked = isGroup && parent.data.group.indexOf(value) !== -1;
+            }
             //_has
-            let hasUiCard = this.data.ui.indexOf('card') != -1;
+            let hasUiCard = ui.indexOf('card') !== -1;
+
+            //isAllChecked="{{isAllChecked}}"
+            //isIndeterminate="{{isIndeterminate}}"
+
             //设置数据
             this.setData({
                 isGroup: isGroup,
                 isDisabled: isDisabled,
-                isClearable: isClearable,
                 isChecked: isChecked,
                 hasUiCard: hasUiCard
             });
         },
-        _onRadioClick() {
-            let {isGroup, isDisabled, label} = this.data;
+        _onCheckboxClick() {
+            let {isGroup, isDisabled, isChecked} = this.data;
             if (isGroup && !isDisabled) {
                 this._choose();
             }
             if (!isGroup && !isDisabled) {
-                this.triggerEvent('input', label);
-                this.triggerEvent('change', label);
+                this.triggerEvent('input', !isChecked);
+                this.triggerEvent('change', !isChecked);
             }
         },
         _choose() {
-            let value = this.data.currentValue, label = this.data.label;
-            let isGroup = this.data.isGroup, isClearable = this.data.isClearable;
-            if (value != label) {
-                this.setData({currentValue: label});
-                this.triggerEvent('input', label);
-                this.triggerEvent('change', label);
-                if (isGroup) {
-                    let parent = this._nodesSetValue();
-                    parent._onRadioChange(label);
+            let {isGroup, isChecked, value, all} = this.data;
+            this.triggerEvent('input', !isChecked);
+            this.triggerEvent('change', !isChecked);
+            if (isGroup) {
+                let parent = this._nodesSetValue();
+                if(all) {
+                    parent._onCheckboxAll(!isChecked);
+                } else {
+                    parent._onCheckboxChange(value);
                 }
-            } else if (isClearable) {
-                this.setData({currentValue: null});
-                this.triggerEvent('input', null);
-                this.triggerEvent('change', null);
-                if (isGroup) {
-                    let parent = this._nodesSetValue();
-                    parent._onRadioChange(null);
-                }
+            } else {
+                this.setData({
+                    isIndeterminate: false
+                });
             }
         },
-        _setValue(groupValue) {
+        _setValue(val) {
+            let value = this.data.value;
             this.setData({
-                currentValue: groupValue
+                currentValue: val.indexOf(value) !== -1
             });
             this.isComputed();
         },

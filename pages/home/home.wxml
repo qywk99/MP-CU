@@ -1,5 +1,5 @@
 <ui-sys img="/static/img/4put2.png" tabbar>
-    <ui-navbar back="{{false}}" opacity scrollTop="{{sys_scrollTop}}">
+    <ui-navbar back="{{false}}" isSlot opacity scrollTop="{{sys_scrollTop}}">
         <view class="flex-bar p-3" wx:if="{{sys_scrollTop > sys_navBar}}">
             <image src="/static/img/hapm8.png" mode="aspectFill" style="width: 200rpx;height: 56rpx;"/>
         </view>

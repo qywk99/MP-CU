@@ -76,5 +76,9 @@ Page({
             { class: 'text-price', info: '人民币价格文本', desc: '80.00' }
         ]
     },
-
+    toDemoTextColor() {
+        wx.navigateTo({
+            url: '/pages/document/text-color/text-color'
+        })
+    },
 })

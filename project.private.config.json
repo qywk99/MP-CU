@@ -11,62 +11,7 @@
       "list": []
     },
     "miniprogram": {
-      "list": [
-        {
-          "name": "tabbar 实验",
-          "pathName": "pages/test/home",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "实验-list-触底",
-          "pathName": "pages/test-page/list/old-list/index",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "实验-list-虚拟",
-          "pathName": "pages/test-page/list/fictitious-list/index",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "选项卡",
-          "pathName": "pages/document/tab/tab",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "轮播",
-          "pathName": "pages/document/swiper/swiper",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "步骤条",
-          "pathName": "pages/document/steps/steps",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "输入框",
-          "pathName": "pages/document/input/input",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "单选框",
-          "pathName": "pages/document/radio/radio",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "复选框",
-          "pathName": "pages/document/checkbox/checkbox",
-          "query": "",
-          "scene": null
-        }
-      ]
+      "list": []
     }
   }
 }

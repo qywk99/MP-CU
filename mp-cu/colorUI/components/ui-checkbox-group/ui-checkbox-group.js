@@ -20,7 +20,8 @@ Component({
         isIndeterminate:false
     },
     options: {
-        addGlobalClass: true
+        addGlobalClass: true,
+        multipleSlots: true
     },
     properties: {
         ui: {
@@ -47,7 +48,7 @@ Component({
     },
     lifetimes: {
         ready() {
-            //this._deepSetValue()
+            this._deepSetValue()
         },
     },
     observers: {
@@ -110,8 +111,13 @@ Component({
             this._onChangeEvent(group);
         },
         _onChangeEvent(val) {
+            let {isAllChecked, isIndeterminate} = this.data;
             this.triggerEvent('input', val);
             this.triggerEvent('change', val);
+            this.triggerEvent('all', {
+                value: isAllChecked,
+                indeterminate: isIndeterminate
+            });
         },
     }
 })

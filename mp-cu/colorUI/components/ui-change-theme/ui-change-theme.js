@@ -1,6 +1,7 @@
 Component({
     data: {
         color: ['red', 'orange', 'yellow', 'olive', 'green', 'cyan', 'blue', 'purple', 'mauve', 'pink', 'brown', 'grey'],
+        target: '',
     },
     options: {
         addGlobalClass: true,
@@ -23,24 +24,21 @@ Component({
 
         },
     },
-    observers: {
-        /*'scrollTop'(res) {
-            this.opacityStatus();
-        },*/
-    },
     methods: {
         tapAutoThemeChange(e) {
             let val = e.currentTarget.dataset.value;
-            this.setTheme( val==='auto'?'light':'auto')
+            this.setTheme( val === 'auto'?'light':'auto')
         },
         tapThemeChange(e) {
-            console.log(this)
-            // this.$cuStore.setState('theme' , e.currentTarget.dataset.value)
             this.setTheme(e.currentTarget.dataset.value)
-            // this.setTheme(e.currentTarget.dataset.value);
         },
-        /*chooseColor(val) {
-            this.triggerEvent('setMain', val);
-        }*/
+        tapColorPicker() {
+            this.setData({
+                target: 'colorPicker'
+            })
+        },
+        tapChooseColor(e) {
+            this.setMain(e.currentTarget.dataset.value)
+        },
     }
 })

@@ -31,21 +31,20 @@
         </view>
         <view class="ui-menu-item">
             <view class="ui-menu-item-content">强调色</view>
-            <!-- @tap="$Modal.show('ColorPicker')"-->
-            <view class="action">
-                <!--ui-radio :bg="`bg-${sys_main} shadow-${sys_main} shadow-sm`"></ui-radio-->
+            <view class="action" bindtap="tapColorPicker">
+                <ui-radio bg="{{'bg-' + $cuStore.sys_main}} {{'shadow-' + $cuStore.sys_main}} shadow-sm" value="1" label="1"/>
             </view>
         </view>
     </view>
 
-    <ui-modal name="ColorPicker">
+    <ui-modal name="ColorPicker" show="{{target === 'colorPicker'}}">
         <view class="ui-grid ui-cols-6 p-3">
-            <!--@tap="chooseColor(item)"-->
-            <view class="text-center ui-item py-2 my-2" wx:for="{{color}}" wx:key="index">
-                <text class="bg-{{item}} shadow-{{item}} shadow-sm"></text>
-                <!--ui-radio :value="sys_main" :label="item" :bg="`bg-${item} shadow-${item} shadow-sm`"
-                    :unbg="`bg-${item} shadow-${item} shadow-sm`"></ui-radio-->
+            <view class="text-center ui-item py-2 my-2" wx:for="{{color}}" wx:key="index" data-value="{{item}}" bindtap="tapChooseColor">
+                <text class="bg-{{item}} shadow-{{item}} shadow-sm"/>
+                <ui-radio value="{{$cuStore.sys_main}}" label="{{item}}" bg="{{'bg-'+item}} {{'shadow-'+item}} shadow-sm"
+                          unbg="{{'bg-'+item}} {{'shadow-'+item}} shadow-sm"/>
             </view>
         </view>
     </ui-modal>
+
 </view>

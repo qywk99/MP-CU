@@ -99,7 +99,9 @@ let baseMethod = {
         if (this.sys_isFirstPage) {
             this._toHome();
         } else {
-            wx.navigateBack();
+            wx.navigateBack({
+                delta: 1
+            });
         }
     },
     //实例是否为路由栈的第一个页面

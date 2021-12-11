@@ -73,5 +73,10 @@ Page({
                 })
             },
         });
-    }
+    },
+    toIconfont() {
+        wx.navigateTo({
+            url: '/pages/document/iconfont/iconfont'
+        })
+    },
 })

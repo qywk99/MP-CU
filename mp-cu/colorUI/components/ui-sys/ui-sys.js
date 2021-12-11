@@ -44,12 +44,6 @@ Component({
         }
     },
     lifetimes: {
-        created() {
-            
-        },
-        attached() {
-            
-        },
         ready() {
             if (this.data.tabbar) {
                 wx.hideTabBar()

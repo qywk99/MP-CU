@@ -33,6 +33,8 @@ Page({
         })
     },
     tapAvatar() {
-        //'/pages/demo/avatar'
+        wx.navigateTo({
+            url: '/pages/demo/avatar/avatar'
+        })
     },
 })

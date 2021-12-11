@@ -1,3 +1,3 @@
-<ui-navbar back bg="{{navBg}}" isSlot="{{false}}" isCenter>
+<ui-navbar bg="{{navBg}}" isCenter>
     <text slot="center">{{ title }}</text>
 </ui-navbar>

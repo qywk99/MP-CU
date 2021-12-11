@@ -53,35 +53,35 @@
         <view class="p-4 ui-grid ui-cols-5">
             <view class="ui-item">
                 <ui-avatar ui="radius xl" src="/static/avatar/1001.jpg">
-                    <view class="ui-tag badge">3</view>
+                    <ui-tag badge isSlot>3</ui-tag>
                 </ui-avatar>
             </view>
             <view class="ui-item">
                 <ui-avatar ui="round xl">
                     <text>As</text>
-                    <view class="ui-tag badge bg-blue">vip</view>
+                    <ui-tag badge bg="bg-blue" isSlot>vip</ui-tag>
                 </ui-avatar>
             </view>
             <view class="ui-item">
                 <ui-avatar ui="round xl bg-blue">
                     <text>Bf</text>
-                    <view class="ui-tag shadow badge badge-br bg-white">
+                    <ui-tag badge="br" bg="shadow bg-white" isSlot>
                         <text class="cicon-male text-blue"/>
-                    </view>
+                    </ui-tag>
                 </ui-avatar>
             </view>
             <view class="ui-item">
                 <ui-avatar ui="round xl bg-pink">
                     <text>Cv</text>
-                    <view class="ui-tag shadow badge badge-bl bg-white">
+                    <ui-tag badge="bl" bg="shadow bg-white" isSlot>
                         <text class="cicon-female text-pink"/>
-                    </view>
+                    </ui-tag>
                 </ui-avatar>
             </view>
             <view class="ui-item">
                 <ui-avatar ui="round xl bg-blue-thin borders border-blue">
                     <text>Jx</text>
-                    <view class="ui-tag badge badge-tl bg-blue-light borders border-blue shadow-blue">user</view>
+                    <ui-tag badge="tl" ui="borders border-blue shadow-blue" bg="bg-blue-light" isSlot>user</ui-tag>
                 </ui-avatar>
             </view>
         </view>

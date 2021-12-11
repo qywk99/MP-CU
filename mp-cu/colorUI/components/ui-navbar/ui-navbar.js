@@ -82,7 +82,7 @@ Component({
         },
         isSlot: {
             type: Boolean,
-            value: true
+            value: false
         },
         isCenter: {
             type: Boolean,
