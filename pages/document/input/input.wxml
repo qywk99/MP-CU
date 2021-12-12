@@ -73,7 +73,9 @@
     <ui-form ui="ui-BG">
         <ui-form-group title="短信验证" isAction>
             <ui-input-box><input class="ui-input-wrapper" placeholder="请输入短信验证码"/></ui-input-box>
-            <block slot="action"><button class="ui-btn bg-blue-gradient sm">发送验证码</button></block>
+            <view slot="action">
+                <button class="ui-btn bg-blue-gradient sm">发送验证码</button>
+            </view>
         </ui-form-group>
     </ui-form>
 
@@ -121,9 +123,11 @@
         </ui-form-group>
         <ui-form-group icon="cicon-numcode" isAction>
             <ui-input-box><input class="ui-input-wrapper" placeholder="请输入验证码"/></ui-input-box>
-            <block slot="action"><button class="ui-btn bg-blue-gradient sm">发送验证码</button></block>
+            <view slot="action">
+                <button class="ui-btn bg-blue-gradient sm">发送验证码</button>
+            </view>
         </ui-form-group>
-
     </ui-form>
+
 
 </ui-sys>

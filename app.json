@@ -48,7 +48,9 @@
         "pages/demo/navbar/navbar",
         "pages/demo/background/background",
         "pages/demo/avatar/avatar",
-        "pages/demo/wallpaper/wallpaper"
+        "pages/demo/wallpaper/wallpaper",
+        "pages/demo/login/login",
+        "pages/demo/set/set"
     ],
     "subpackages": [
         {
@@ -103,6 +105,7 @@
         "ui-input-box" : "/mp-cu/colorUI/components/ui-input-box/ui-input-box",
         "ui-checkbox" : "/mp-cu/colorUI/components/ui-checkbox/ui-checkbox",
         "ui-checkbox-group" : "/mp-cu/colorUI/components/ui-checkbox-group/ui-checkbox-group",
+        "ui-change-theme": "/mp-cu/colorUI/components/ui-change-theme/ui-change-theme",
         "ui-parameter" : "/mp-sdk/components/ui-parameter/ui-parameter"
     },
     "tabBar": {

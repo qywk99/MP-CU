@@ -41,7 +41,11 @@ Component({
         tabbar: {
             type: Boolean,
             value: false
-        }
+        },
+        footer: {
+            type: Boolean,
+            value: true
+        },
     },
     lifetimes: {
         ready() {

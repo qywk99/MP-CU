@@ -1,7 +1,7 @@
 const app = getApp();
 Page({
     data: {
-        sys_scrollTop: 0,
+        scrollTop: 0,
         swiperList: [{ img: "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-2dd21fa9-731c-43b7-b092-2b6264029de8/5e1a652b-39bc-4f34-89f3-efa6117cb7fa.png" }, { img: "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-2dd21fa9-731c-43b7-b092-2b6264029de8/347cc270-d0f2-4298-b8d9-260b5f274c48.png" }, { img: "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-2dd21fa9-731c-43b7-b092-2b6264029de8/38ad5301-cfbf-45fc-9089-1bf08ab567fd.png" }],
         navData: [{
             title: '基础',
@@ -70,7 +70,7 @@ Page({
         // 注意：请避免在 onPageScroll 中过于频繁的执行 setData 等引起逻辑层-渲染层通信的操作。尤其是每次传输大量数据，会影响通信耗时。
         // https://developers.weixin.qq.com/miniprogram/dev/reference/api/Page.html#onPageScroll-Object-object
         this.setData({
-            sys_scrollTop: e.scrollTop
+            scrollTop: e.scrollTop
         })
     },
 })

@@ -11,7 +11,14 @@
       "list": []
     },
     "miniprogram": {
-      "list": []
+      "list": [
+        {
+          "name": "定制",
+          "pathName": "pages/custom/home",
+          "query": "",
+          "scene": null
+        }
+      ]
     }
   }
 }

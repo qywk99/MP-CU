@@ -2,10 +2,6 @@
     <view class="ui-container">
         <ui-title title="简介" depth="2" isIcon/>
         <view class="paragraph">标题组件可以快速构建一个等级标题。包含多种样式。</view>
-        <ui-menu ui="mt-4 radius border">
-            <!--@click.native="_to('/pages/parameter/parameter?component=ui-navbar')"-->
-            <ui-menu-item icon="cicon-equalizer" title="参数" arrow/>
-        </ui-menu>
 
         <ui-title title="默认" depth="2" isIcon/>
         <view class="ui-BG radius px-3 border">
@@ -25,9 +21,7 @@
         </view>
         <view class="ui-BG radius px-3 border mt-3">
             <ui-title title="自定义图标" desc="icon">
-                <block slot="icon">
-                    <text class="text-red cicon-whatshot"/>
-                </block>
+                <text slot="icon" class="text-red cicon-whatshot"/>
             </ui-title>
         </view>
         <ui-code tag="pre" lang="html" title content="{{code3}}"/>
@@ -110,5 +104,9 @@
         <view class="ui-BG radius mt-3 px-3 border">
             <ui-title title="猜你喜欢" titleColor="text-red" tpl="center-column" hasLine/>
         </view>
+
+        <!--参数-->
+        <ui-parameter data="{{parameter}}" slots="{{slots}}"/>
+
     </view>
 </ui-sys>
