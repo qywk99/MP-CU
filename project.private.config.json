@@ -17,6 +17,12 @@
           "pathName": "pages/custom/home",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "悬浮工具栏",
+          "pathName": "packageB/fixed-tools/index",
+          "query": "",
+          "scene": null
         }
       ]
     }

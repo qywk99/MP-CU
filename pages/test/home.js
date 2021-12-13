@@ -6,6 +6,8 @@ Page({
             title: '触底加载', text: '数据列表触底加载实验', name: '@胖虎', icon: 'list', url: 'list/old-list/index'
         }, {
             title: '虚拟加载', text: '数据列表虚拟加载实验', name: '@胖虎', icon: 'list1', url: 'list/fictitious-list/index'
+        }, {
+            title: '悬浮工具栏', text: '右下角悬浮工具栏', name: '@iZaiZaiA', icon: 'top', url: 'fixed-tools/index'
         }],
     },
     onLoad() {

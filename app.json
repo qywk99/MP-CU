@@ -64,7 +64,8 @@
             "name": "packTest",
             "pages": [
                 "list/fictitious-list/index",
-                "list/old-list/index"
+                "list/old-list/index",
+                "fixed-tools/index"
             ]
         }
     ],
