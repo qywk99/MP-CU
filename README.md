@@ -13,7 +13,7 @@
 
 `colorUI3.x` 默认只支持 `uni-app`，本项目中 `colorUI` 框架为移植修改版。
 
-`colorUI3.x` 地址： [https://github.com/weilanwl/coloruiBeta](https://github.com/Color-UI/MP-CU)
+`colorUI3.x` 地址： [https://github.com/weilanwl/coloruiBeta](https://github.com/weilanwl/coloruiBeta)
 
 内置的vuex 渲染引擎参考了 [https://github.com/xiaoyao96/wxMiniStore](https://github.com/xiaoyao96/wxMiniStore) 的项目。
 
