@@ -13,7 +13,9 @@
 
     <view class="ui-container">
         <ui-title title="定制服务" depth="2" isIcon/>
-        <view class="paragraph">下方仅为项目演示，由于目前移植适配到原生小程序的事情较多，暂不接受定制，如有uni的定制需要，可联系QQ：1273753708（ColorUI作者）</view>
+        <view class="paragraph">
+            下方仅为演示，不是真实价格，由于目前移植适配到原生小程序的事情较多，暂不接受定制，如有模板或组件的定制需要，可联系QQ：1273753708（ColorUI作者）
+        </view>
     </view>
     <ui-radio-group bg="bg-red-thin" value="{{radio}}" clearable bind:change="radioChange">
         <ui-radio label="1" ui="card lg shadow-lg">
@@ -37,7 +39,7 @@
                 </view>
             </view>
         </ui-radio>
-        <ui-radio label="3" ui="card lg line shadow-lg">
+        <ui-radio label="3" ui="card lg line shadow-lg" bg="bg-green">
             <view class="flex-bar flex-sub w-100">
                 <view class="flex-sub">
                     <view class="text-xl">套餐三</view>
@@ -49,7 +51,7 @@
                 </view>
             </view>
         </ui-radio>
-        <ui-radio label="4" ui="card lg line shadow-lg" none>
+        <ui-radio label="4" ui="card lg line shadow-lg" none bg="bg-yellow">
             <view class="flex-bar flex-sub w-100">
                 <view class="flex-sub">
                     <view class="text-xl">套餐四</view>
@@ -64,7 +66,9 @@
     </ui-radio-group>
 
     <view class="ui-container">
-        <view class="my-3">我已阅读并接受</view>
+        <view class="mt-5">
+            <ui-checkbox value="{{check}}" bind:change="checkChange">我已阅读并接受</ui-checkbox>
+        </view>
         <view class="mt-5">
             <button class="ui-btn bg-blue-gradient radius lg block shadow-blue">提交定制需求</button>
         </view>

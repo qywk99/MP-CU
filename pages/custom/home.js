@@ -2,7 +2,7 @@ const app = getApp();
 
 Page({
     data: {
-        scrollTop: 0, radio: 1,
+        scrollTop: 0, radio: 1, check: false
     },
     onLoad() {
 
@@ -10,6 +10,11 @@ Page({
     radioChange(e) {
         this.setData({
             radio: e.detail
+        })
+    },
+    checkChange(e) {
+        this.setData({
+            check: e.detail
         })
     },
     // 监听用户滑动页面事件。

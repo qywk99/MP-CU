@@ -4,7 +4,9 @@ import { CUStoreInit } from '/store/index'
  * @author iZaiZaiA (https://github.com/iZaiZaiA)
  */
 
-let version = '3.2.6', store = {}, sys_info = wx.getSystemInfoSync();
+let version = '3.2.6';
+
+let store = {}, sys_info = wx.getSystemInfoSync();
 let baseMethod = {
     //设置主题
     setTheme(data) {
@@ -190,6 +192,7 @@ export default class ColorUI {
                 sys_navBar: sys_info.statusBarHeight + 50,
                 sys_statusBar: sys_info.statusBarHeight,
                 sys_capsule: sys_capsule(),
+                version: version,
                 $cuData: that.data,
                 $cuConfig: that.config,
                 $cuStore: store.state
