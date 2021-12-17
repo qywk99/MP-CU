@@ -16,7 +16,7 @@
                 </navigator>
             </ui-title>
         </view>
-        <ui-img src="/static/img/ozgly.jpg" ui="radius border"/>
+        <ui-img src="/static/img/ozgly.jpg" ui="radius border" local/>
         <ui-code tag="pre" lang="html" title content="{{code1}}"/>
         <!-- 自定义返回文本 -->
         <view class="paragraph">
@@ -26,7 +26,7 @@
                 </navigator>
             </ui-title>
         </view>
-        <ui-img src="/static/img/i4ux8.jpg" ui="radius border"/>
+        <ui-img src="/static/img/i4ux8.jpg" ui="radius border" local/>
         <ui-code tag="pre" lang="html" title content="{{code2}}"/>
 
         <!-- 有阴影 -->
@@ -37,7 +37,7 @@
                 </navigator>
             </ui-title>
         </view>
-        <ui-img src="/static/img/7i87w.jpg" ui="radius border"/>
+        <ui-img src="/static/img/7i87w.jpg" ui="radius border" local/>
         <ui-code tag="pre" lang="html" title content="{{code3}}"/>
 
         <!--参数-->

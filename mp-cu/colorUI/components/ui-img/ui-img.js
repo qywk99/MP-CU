@@ -43,6 +43,11 @@ Component({
             type: Number,
             value: -1
         },
+        //加载本地图片
+        local: {
+            type: Boolean,
+            value: false
+        },
     },
     lifetimes: {
         ready() {
@@ -77,8 +82,9 @@ Component({
                     .select('#image-' + _this.data._uid)
                     .boundingClientRect(data => {
                         if (data != null) {
-                            let imgH = (data.width * is_height) / is_width + 'px';
-                            _this.setData({imgH: imgH})
+                            //let imgH = (data.width * is_height) / is_width + 'px';
+                            //console.log(data.height,is_height,is_width)
+                            _this.setData({imgH: data.height + 'px'})
                         } else {
                             console.log('image-' + _this.data._uid + ' data error');
                         }

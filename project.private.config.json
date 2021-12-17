@@ -23,6 +23,12 @@
           "pathName": "packageB/fixed-tools/index",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "导航栏",
+          "pathName": "pages/document/navbar/navbar",
+          "query": "",
+          "scene": null
         }
       ]
     }

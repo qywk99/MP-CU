@@ -4,7 +4,7 @@ import { CUStoreInit } from '/store/index'
  * @author iZaiZaiA (https://github.com/iZaiZaiA)
  */
 
-let version = '3.2.6';
+let version = '3.2.7';
 
 let store = {}, sys_info = wx.getSystemInfoSync();
 let baseMethod = {
@@ -132,6 +132,8 @@ export default class ColorUI {
         config.footer = config.footer||true
         config.homePath = config.homePath||'/pages/index/index'
         config.tabBar = config.tabBar||[]
+        config.share = config.share||false
+        config.shareTitle = config.shareTitle||''
         //处理数据
         this.config = config
         this.data = data
@@ -221,6 +223,7 @@ export default class ColorUI {
                     }
                 });
             }
+
             const originCreate = o.onLoad;
             o.onLoad = function () {
                 _create(this, o);
@@ -232,6 +235,31 @@ export default class ColorUI {
                 _destroy(this);
                 originonDestroy && originonDestroy.apply(this, arguments);
             };
+
+            //开启全局分享
+            if (that.config.share) {
+                //分享到朋友
+                //const onShareApp = o.onShareAppMessage;
+                o.onShareAppMessage = function () {
+                    return {
+                        title: that.config.shareTitle,
+                        path: that.config.homePath
+                    }
+                    //_create(this, o);
+                    //onShareApp && onShareApp.apply(this, arguments);
+                };
+                //分享到朋友圈
+                //const onShareTime = o.onShareTimeline;
+                o.onShareTimeline = function () {
+                    return {
+                        title: that.config.shareTitle,
+                        query: that.config.homePath
+                    }
+                    //_create(this, o);
+                    //onShareTime && onShareTime.apply(this, arguments);
+                };
+            }
+
             originPage(o, ...args);
             //console.log(o)
         }

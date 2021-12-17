@@ -23,7 +23,12 @@ Page({
             info: "开启图片点击预览",
             name: "preview",
             type: "Boolean"
-        },]
+        },{
+            default: "false",
+            info: "是否为本地图片",
+            name: "local",
+            type: "Boolean"
+        }]
     },
     onLoad() {
         let list = [];

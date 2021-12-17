@@ -5,7 +5,9 @@
         <scroll-view scroll-y="{{true}}" id="scroll" style="height: 480px;" bindscroll="onScorll">
             <view style="padding-top: {{beforeHeight}}px;padding-bottom: {{afterHeight}}px;">
                 <view class="item" wx:for="{{windowsShowList}}" wx:key="index">
-                    <view class="item-img" style="background-image: url({{item.image}});"></view>
+                    <view class="item-img">
+                        <ui-img src="{{item.image}}" ui="radius border" local/>
+                    </view>
                     <view class="item-view">
                         <view class="item-title">{{item.title}}</view>
                         <view class="item-time">{{item.passtime}}</view>

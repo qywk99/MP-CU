@@ -5,6 +5,8 @@ export const colorUI = new ColorUI({
         main: 'blue',
         text: 1,
         footer: true,
+        share: true,
+        shareTitle: 'MP CU（ ColorUI3.x 原生小程序版）',
         homePath: '/pages/home/home',
         tabBar: [{
             title: '文档',

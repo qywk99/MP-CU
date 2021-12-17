@@ -1,6 +1,6 @@
 # MP CU
 
-<p><a href="update.md">更新日志(Beta V3.2.6)</a> | 在线文档（开发中...）</p>
+<p><a href="update.md">更新日志(Beta V3.2.7)</a> | 在线文档（开发中...）</p>
 
 
 <img width="120px" src="https://github.com/iZaiZaiA/iZaiZaiA/blob/img/mp-cu/mp-cu.jpg" />
@@ -24,7 +24,7 @@
 需要先升级小程序开发工具到 `2021-10-11` 之后的版本,
 然后，检查根目录下，`project.config.json` 配置文件内的 `"setting"` 节点下，是否配置了：
 
-``` json
+```json
 
 "useCompilerPlugins": [
     "sass"
@@ -37,7 +37,7 @@
 由于小程序默认开启了 `v2` 的样式，在v2模式下，`colorUI` 部分样式会失效。
 完整 `colorUI` 样式，需要在 `app.json` 文件内，删除 `"style": "v2"` 即可
 
-``` json
+```json
 
 "style": "v2"
 
@@ -50,7 +50,7 @@
 
 您可单独设置一个 `config.js` 里面配置相关信息，然后暴露方法给 `app.js` 在全局引用
 
-``` js
+```javascript
 
 import { ColorUi } from './config'
 App({  
@@ -65,7 +65,7 @@ App({
 然后在根目录的 `app.scss` 文件里引入相关框架的css文件。
 
 
-``` css
+```css
 
 @import './mp-cu/colorUI/scss/ui';
 
@@ -78,7 +78,8 @@ App({
 
 相关文件路径：
 
-``` js
+```
+
 /mp-cu         // ColorUi主框架的文件夹，不建议修改这里面的文件，以免后续升级时，被覆盖。
 /mp-sdk        // ColorUi框架的辅助文件夹，封装了一些常用的方法函数、扩展图标库等，按需使用，如不需要，可删除此文件夹。
 /packageA      // 项目演示demo的分包，此包为模板包路径
@@ -94,7 +95,7 @@ App({
 
 挂载组件，在 `app.json` 或 `xxx.json` 文件里配置
 
-``` json
+```json
 
 "usingComponents": {
   "ui-sys": "mp-cu/colorUI/components/ui-sys/ui-sys"
@@ -167,6 +168,8 @@ export const colorUI = new ColorUI({
       main: 'blue',
       text: 1,
       footer: true,
+      share: true,
+      shareTitle: 'MP CU（ ColorUI3.x 原生小程序版）',
       homePath: '/pages/home/home',
       tabBar: [],
    },
@@ -226,27 +229,27 @@ export const colorUI = new ColorUI({
 
 
 #### <span id='_toHome'>返回首页</span>
-> ColorUI为您在所有页面注册了返回函数，在需要返回的函数里调用 `this._toHome()` 注意this 作用域的问题。
+> 在需要返回的函数里调用 `this._toHome()` 注意this 作用域的问题。
 
 #### <span id='_setTheme'>切换主题</span>
 
-> ColorUI为您在所有页面注册了切换主题函数，在需要切换主题的地方调用 `this. _setTheme()` 注意this 作用域的问题。
+> 在需要切换主题的地方调用 `this. _setTheme()` 注意this 作用域的问题。
 
 #### <span id='setMain'>设置主颜色</span>
 
-> ColorUI为您在所有页面注册了设置主颜色函数，在需要设置主颜色的地方调用 `this. _setMain()` 注意this 作用域的问题。
+> 在需要设置主颜色的地方调用 `this. _setMain()` 注意this 作用域的问题。
 
 #### <span id='setText'>设置字号等级</span>
 
-> ColorUI为您在所有页面注册了设置字号等级函数，在需要设置字号等级的地方调用 `this. _setText()` 注意this 作用域的问题。
+> 在需要设置字号等级的地方调用 `this. _setText()` 注意this 作用域的问题。
 
 <hr/>
 
 ### 其它说明
 
-自动跟随系统主题，切换主题功能，在 `app.json` 文件里配置
+#### 自动跟随系统主题，切换主题功能，在 `app.json` 文件里配置
 
-``` json
+```json
 
 "darkmode": true
 
@@ -254,7 +257,26 @@ export const colorUI = new ColorUI({
 
 开启自动跟随后，在安卓机端切换主题时，会重载小程序，具体原因，参考微信官方说明：[https://developers.weixin.qq.com/community/develop/doc/000a88c66f00183d414c9879451400](https://developers.weixin.qq.com/community/develop/doc/000a88c66f00183d414c9879451400)
 
+
+
+#### 开启全局分享功能，分享给朋友、分享到朋友圈
+
+```javascript
+
+import ColorUI from './mp-cu/main'
+export const colorUI = new ColorUI({
+   config: {
+      share: true,  //开启全局分享
+      shareTitle: 'MP CU（ ColorUI3.x 原生小程序版）',  //分享标题
+      homePath: '/pages/home/home', //分享的路径，也是首页
+   }
+})
+
+```
+
+
 <hr/>
+
 
 ### 鸣谢
 
