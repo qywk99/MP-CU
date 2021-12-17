@@ -1,3 +1,8 @@
+.idea
+.idea/
+.temp/
+.cache/
+
 # Windows
 [Dd]esktop.ini
 Thumbs.db
@@ -12,7 +17,4 @@ $RECYCLE.BIN/
 
 # Node.js
 node_modules/
-
-
-.idea
-.idea/
+yarn.lock
