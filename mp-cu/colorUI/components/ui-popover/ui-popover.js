@@ -88,11 +88,11 @@ Component({
                     );
                 }
                 this.setData({
-                    zIndex : this.data.zIndex + 100
+                    zIndex : this.data.zIndex + 600
                 })
             }else{
                 this.setData({
-                    zIndex : this.data.zIndex + 100
+                    zIndex : this.data.zIndex + 600
                 })
             }
             // this.$emit('update:show', val);

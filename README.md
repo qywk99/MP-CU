@@ -1,7 +1,6 @@
 # MP CU
 
-<p><a href="update.md">更新日志(Beta V3.2.7)</a> | 在线文档（开发中...）</p>
-
+<p><a href="update.md">更新日志(Beta V3.2.7)</a> | <a href="http://mp.color-ui.com/">在线文档</a>（开发中...）</p>
 
 <img width="120px" src="https://github.com/iZaiZaiA/iZaiZaiA/blob/img/mp-cu/mp-cu.jpg" />
 

@@ -29,6 +29,12 @@
           "pathName": "pages/document/navbar/navbar",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "气泡框",
+          "pathName": "pages/document/popover/popover",
+          "query": "",
+          "scene": null
         }
       ]
     }

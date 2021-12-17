@@ -2,9 +2,14 @@
 
 Beta V3.2.7
 
-<p><a href="https://github.com/Color-UI/MP-CU">MP CU</a> | 更新日志 | 在线文档（开发中...）</p>
+<p><a href="https://github.com/Color-UI/MP-CU">MP CU</a> | 更新日志 | <a href="http://mp.color-ui.com/">在线文档</a>（开发中...）</p>
 
 <hr/>
+
+#### Beta v3.2.7  2021-12-17 21:32
+
+> - 修复气泡框(ui-popover)点击层的问题
+
 
 #### Beta v3.2.7  2021-12-17 11:20
 
