@@ -51,17 +51,28 @@ let baseMethod = {
          console.log(key)
         // state.toast = Object.assign(state.toast,data);
     },
-    $tips(title ,duration=1500){
-        store.setState({
-            '$toast.title' : title,
-            '$toast.duration' : duration
-        })
+    $tips(res, duration = 1500, mask = false, icon=  '') {
+        if(_object(res)) {
+            store.setState({
+                '$toast.title': res.title || '',
+                '$toast.duration': res.duration || duration,
+                '$toast.icon': res.icon || icon,
+                '$toast.mask': res.mask || mask
+            })
+        } else {
+            store.setState({
+                '$toast.title': res,
+                '$toast.duration': duration,
+                '$toast.icon': icon,
+                '$toast.mask': mask,
+            })
+        }
     },
     $success(_,title='成功',duration=1500){
         store.setState({
-            '$toast.title' : title,
-            '$toast.duration' : duration,
-            '$toast.icon' : '_icon-check'
+            '$toast.title': title,
+            '$toast.duration': duration,
+            '$toast.icon': '_icon-check'
         })
     },
     $error(_,title='错误',duration=1500){
@@ -111,6 +122,11 @@ let baseMethod = {
         return getCurrentPages().length === 1
     },
 }
+
+//是否为对象
+const _object = function (value) {
+    return Object.prototype.toString.call(value) === '[object Object]';
+};
 
 
 /**

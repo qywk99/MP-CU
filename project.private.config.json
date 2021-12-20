@@ -35,6 +35,18 @@
           "pathName": "pages/document/popover/popover",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "模态框",
+          "pathName": "pages/document/toast/toast",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "选项卡",
+          "pathName": "pages/document/tab/tab",
+          "query": "",
+          "scene": null
         }
       ]
     }

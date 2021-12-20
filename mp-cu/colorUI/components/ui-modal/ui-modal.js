@@ -9,7 +9,6 @@ Component({
     },
     properties: {
         show: {
-            //是否返回上一页
             type: Boolean,
             value: false
         },
