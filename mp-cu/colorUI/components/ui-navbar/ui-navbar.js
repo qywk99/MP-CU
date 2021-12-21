@@ -21,17 +21,16 @@ Component({
             type: String,
             value: ''
         },
+        ui: {
+            type: String,
+            value: ''
+        },
         bg: {
             type: String,
             value: 'bg-blur'
         },
         status: {
             //状态栏颜色 可以选择light dark/其他字符串视为黑色
-            type: String,
-            value: ''
-        },
-        img: {
-            //如果bg == bg-img 则加载对应的图片
             type: String,
             value: ''
         },
@@ -55,10 +54,6 @@ Component({
             type: Boolean,
             value: false
         },
-        ui: {
-            type: String,
-            value: ''
-        },
         capsule: {
             //是否开启胶囊返回
             type: Boolean,
@@ -71,14 +66,6 @@ Component({
         placeholder: {
             type: Boolean,
             value: true
-        },
-        statusBar: {
-            type: Number,
-            value: 0
-        },
-        navBar: {
-            type: Number,
-            value: 0
         },
         isSlot: {
             type: Boolean,
@@ -118,14 +105,14 @@ Component({
     },
     methods: {
         opacityStatus() {
-            let top = this.data.scrollTop;
-            let val = top > this.data.sys_navBar ? 1 : top * 0.01;
+            let {scrollTop, sys_navBar} = this.data;
+            let val = scrollTop > sys_navBar ? 1 : top * 0.01;
             this.setData({
                 opacityVal: val
             })
         },
         _navBack() {
-            if (this.stopBack) {
+            if (this.data.stopBack) {
                 this.triggerEvent("navback");
             } else {
                 this._backPage();

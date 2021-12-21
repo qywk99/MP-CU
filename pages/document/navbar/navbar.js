@@ -2,117 +2,126 @@ const app = getApp();
 
 Page({
     data: {
-        code1: '<ui-navbar> </ui-navbar>',
-        code2: '<ui-navbar backtext="text"> </ui-navbar>',
-        code3: '<ui-navbar shadow> </ui-navbar> \n<ui-navbar shadow="sm"> </ui-navbar> \n<ui-navbar shadow="lg"> </ui-navbar>',
-        parameter: [], slots: [],
+        text: '返回', ui: '', isText: '', back: true, bg: 'bg-blur', isBg: false, status: '', scrollTop: 0, opacity: false, opacityChange: false,
+        opacityBg: false, noFixed: false, capsule: false, stopBack: false, isSlot: false, isLeft: false, isCenter: false, isRight: false,
     },
-    onLoad() {
+    //是否返回上一页
+    isBackChange(e) {
         this.setData({
-            parameter: [
-                {
-                    "name": "back",
-                    "type": "Boolean",
-                    "default": "true",
-                    "info": "是否显示返回"
-                },
-                {
-                    "name": "backtext",
-                    "type": "String",
-                    "default": "/",
-                    "info": "返回文本"
-                },
-                {
-                    "name": "status",
-                    "type": "String",
-                    "default": "/",
-                    "info": "状态栏文本颜色,light / dark （其他字符串视为黑色）"
-                },
-                {
-                    "name": "opacity",
-                    "type": "Boolean",
-                    "default": "false",
-                    "info": "开启滑动渐变后 文本样式是否翻转"
-                },
-                {
-                    "name": "opacityBg",
-                    "type": "Boolean",
-                    "default": "false",
-                    "info": "开启滑动渐变后 返回按钮是否添加背景"
-                },
-                {
-                    "name": "fixed",
-                    "type": "Boolean",
-                    "default": "false",
-                    "info": "是否浮动占位,为true时浮动不占位"
-                },
-                {
-                    "name": "shadow",
-                    "type": "Boolean,String",
-                    "default": "/",
-                    "info": "是否开启阴影,true / false / 'sm' / 'lg'"
-                },
-                {
-                    "name": "capsule",
-                    "type": "Boolean",
-                    "default": "false",
-                    "info": "是否开启胶囊返回"
-                },
-                {
-                    "name": "bg",
-                    "type": "String",
-                    "default": "box-bg",
-                    "info": "背景颜色"
-                },
-                {
-                    "name": "img",
-                    "type": "String",
-                    "default": "box-bg",
-                    "info": "背景图片"
-                },
-                {
-                    "name": "isSlot",
-                    "type": "Boolean",
-                    "default": "true",
-                    "info": "开启slot默认插槽"
-                },
-                {
-                    "name": "isCenter",
-                    "type": "Boolean",
-                    "default": "false",
-                    "info": "开启slot中间插槽"
-                },
-                {
-                    "name": "isRight",
-                    "type": "Boolean",
-                    "default": "false",
-                    "info": "开启slot右边插槽"
-                },
-                {
-                    "name": "scrollTop",
-                    "type": "Number",
-                    "default": "0",
-                    "info": "滚动条位置"
-                },
-            ],
-            slots: [
-                {
-                    "name": "无",
-                    "info": "自定义整条bar,需要将参数custom设置为true"
-                },
-                {
-                    "name": "left",
-                    "info": "自定义bar的左边内容(默认带有back的部分,完全自定义左边部分请将参数back设置为false)"
-                },
-                {
-                    "name": "center",
-                    "info": "自定义bar的中间内容"
-                },
-                {
-                    "name": "right",
-                    "info": "自定义bar的右边内容,排序从右开始的弹性布局,小程序端会自动生成胶囊的安全区域。做小程序及跨端的时候right表现的不是很理想，请以项目实际情况自定义right部分"
-                }
-            ]
+            back: e.detail
+        })
+    },
+    //仅图标
+    isTextChange(e) {
+        let text = '返回';
+        if (e.detail) {
+            text = '';
+        }
+        this.setData({
+            text: text,
+            isText: e.detail
+        })
+    },
+    // 标题栏背景色
+    isNavBgChange(e) {
+        let bg = 'bg-blur';
+        if (e.detail) {
+            bg = 'bg-red';
+        }
+        this.setData({
+            isBg: e.detail,
+            bg: bg
+        })
+    },
+    //状态栏颜色
+    isStatusChange(e) {
+        this.setData({
+            status: e.detail
+        })
+    },
+    //开启滑动渐变
+    isOpacityChange(e) {
+        this.setData({
+            opacity: e.detail
+        })
+    },
+    //文本样式翻转
+    isOpacityChangeChange(e) {
+        this.setData({
+            opacityChange: e.detail
+        })
+    },
+    //返回按钮背景
+    isOpacityBgChange(e) {
+        this.setData({
+            opacityBg: e.detail
+        })
+    },
+    //是否浮动
+    isNoFixedChange(e) {
+        this.setData({
+            noFixed: e.detail
+        })
+    },
+    //阴影
+    isShadowChange(e) {
+        this.setData({
+            ui: e.detail
+        })
+    },
+    //重定向
+    tapSetNavbar() {
+        wx.reLaunch({
+            url: '/pages/document/navbar/navbar'
+        })
+    },
+    //开启胶囊返回
+    isCapsuleChange(e) {
+        this.setData({
+            capsule: e.detail
+        })
+    },
+    //返回事件
+    isStopBackChange(e) {
+        this.setData({
+            stopBack: e.detail
+        })
+    },
+    //isSlot
+    isSlotChange(e) {
+        this.setData({
+            isSlot: e.detail
+        })
+    },
+    //isLeft
+    isLeftChange(e) {
+        this.setData({
+            isLeft: e.detail
+        })
+    },
+    //isCenter
+    isCenterChange(e) {
+        this.setData({
+            isCenter: e.detail
+        })
+    },
+    //isRight
+    isRightChange(e) {
+        this.setData({
+            isRight: e.detail
+        })
+    },
+    //点击了返回
+    navback() {
+        this.$tips('点击了返回')
+    },
+    // 监听用户滑动页面事件。
+    onPageScroll(e) {
+        // 注意：请只在需要的时候才在 page 中定义此方法，不要定义空方法。以减少不必要的事件派发对渲染层-逻辑层通信的影响。
+        // 注意：请避免在 onPageScroll 中过于频繁的执行 setData 等引起逻辑层-渲染层通信的操作。尤其是每次传输大量数据，会影响通信耗时。
+        // https://developers.weixin.qq.com/miniprogram/dev/reference/api/Page.html#onPageScroll-Object-object
+        this.setData({
+            scrollTop: e.scrollTop
         })
     },
 })

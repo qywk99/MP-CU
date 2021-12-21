@@ -4,7 +4,7 @@
           style="{{'padding-top:'+sys_statusBar+'px;'}} {{'height: '+sys_navBar+'px'}}">
         <view class="ui-bar {{status===''?'text-a':status==='light'?'text-white':'text-black'}}"
               style="{{'height:'+(sys_navBar-sys_statusBar)+'px'}}">
-            <block wx:if="{{isSlot}}"> <slot/> </block>
+            <block wx:if="{{isSlot}}"> <slot></slot> </block>
             <block wx:else>
                 <view class="left">
                     <view class="back" wx:if="{{back && !capsule}}" bindtap="_navBack">
@@ -19,7 +19,7 @@
                             <text class="icon-fw text-xl {{isFristPage?'_icon-home':'_icon-home-o'}}"/>
                         </view>
                     </view>
-                    <slot name="left"/>
+                    <slot name="left"></slot>
                 </view>
                 <view class="center" wx:if="{{isCenter}}">
                     <slot name="center"/>
@@ -27,7 +27,7 @@
                 <view class="right" wx:if="{{isCenter && !isRight}}"/>
                 <view class="right" wx:if="{{isRight}}">
                     <view class="right-content">
-                        <slot name="right"/>
+                        <slot name="right"></slot>
                     </view>
                     <view style="{{capsuleStyle}}"/>
                 </view>

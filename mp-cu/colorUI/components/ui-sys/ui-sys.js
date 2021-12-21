@@ -4,15 +4,9 @@ Component({
         tabBarIndex: 0,
     },
     options: {
-        // 表示页面 wxss 样式将影响到自定义组件，但自定义组件 wxss 中指定的样式不会影响页面；
         addGlobalClass: true,
-        //multipleSlots: true  //多插槽
     },
     properties: {
-        styles: {   //样式
-            type: String,
-            value: ''
-        },
         bg: {       //背景颜色
             type: String,
             value: 'ui-BG-2'
@@ -25,18 +19,22 @@ Component({
             type: String,
             value: ''
         },
+        title: {
+            type: String,
+            value: ''
+        },
         navBg: {
             type: String,
             value: 'bg-blur'
+        },
+        styles: {   //样式
+            type: String,
+            value: ''
         },
         loading: {  //是否加载
             type: String,
             optionalTypes: Boolean,
             default: 'auto'
-        },
-        title: {
-            type: String,
-            value: ''
         },
         tabbar: {
             type: Boolean,
@@ -49,15 +47,28 @@ Component({
     },
     lifetimes: {
         ready() {
-            if (this.data.tabbar) {
-                wx.hideTabBar()
+            let {tabbar, loading} = this.data;
+            if (tabbar) {
+                wx.hideTabBar();
                 this._onPage();
             }
+            this.setData({
+                isLoading: loading
+            })
+            this.setLoading();
         },
     },
     observers: {
         'tabbar'(val) {
-            if (val) wx.hideTabBar()
+            if (val) {
+                wx.hideTabBar();
+            }
+        },
+        'loading'(val) {
+            this.setData({
+                isLoading: val
+            })
+            this.setLoading();
         },
     },
     methods: {
@@ -72,6 +83,16 @@ Component({
                     })
                 }
             })
+        },
+        setLoading() {
+            let _this = this;
+            setTimeout(() => {
+                if (_this.data.loading === 'auto') {
+                    _this.setData({
+                        isLoading: false
+                    })
+                }
+            }, 800);
         },
         modalSuccess() {
            return this.data.$cuStore.$Modal
