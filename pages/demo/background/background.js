@@ -16,18 +16,9 @@ Page({
             { name: 'brown', value: 'a5673f', desc: '棕褐' }
         ]
     },
-    onLoad(e) {
-
-    },
     bgCopy(e) {
         wx.setClipboardData({
             data: e.currentTarget.dataset.value,
-            success: function() {
-                wx.showToast({
-                    title: '复制成功！',
-                    icon: 'none'
-                })
-            },
             fail: function() {
                 wx.showToast({
                     title: '复制失败！',

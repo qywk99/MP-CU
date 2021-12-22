@@ -2,15 +2,6 @@
     <view class="ui-container">
 
         <ui-title title="系统图标" depth="2" isIcon/>
-        <view class="paragraph">Colorui自带的图标,不可移除。
-            <ui-code>._icon-{name}</ui-code>
-        </view>
-        <view class="blockquote">
-            你也可以按照 <ui-code>@/icon/doc</ui-code> 中的
-            <ui-code>coloricon</ui-code>模板。
-            引入自己的图标库。
-        </view>
-
         <view class="ui-icon-list ui-grid ui-cols-4 mt-3">
             <view class="ui-item" wx:for="{{list}}" wx:key="index">
                 <view class="py-4 border radius ui-BG" style="height: 100%;" data-value="{{'_icon-' + item}}" bindtap="bgCopy">

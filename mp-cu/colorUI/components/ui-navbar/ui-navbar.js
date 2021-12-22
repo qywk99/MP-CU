@@ -4,7 +4,7 @@ Component({
         capsuleStyle: {},
         capsuleBack: {},
         opacityVal: 0,
-        isFristPage: true
+        isFirstPage: true
     },
     options: {
         addGlobalClass: true,
@@ -85,35 +85,26 @@ Component({
         },
     },
     lifetimes: {
-        created() {
-            this.opacityStatus();
-        },
-        attached() {
-            const page = this.sys_isFirstPage();
-            this.setData({
-                isFristPage: page
-            });
-        },
         ready() {
-
+            const page = this.sys_isFirstPage();
+            this.setData({isFirstPage: page});
+            this.opacityStatus();
         },
     },
     observers: {
-        'scrollTop'(res) {
+        'scrollTop'() {
             this.opacityStatus();
         },
     },
     methods: {
         opacityStatus() {
             let {scrollTop, sys_navBar} = this.data;
-            let val = scrollTop > sys_navBar ? 1 : top * 0.01;
-            this.setData({
-                opacityVal: val
-            })
+            let val = scrollTop > sys_navBar ? 1 : scrollTop * 0.01;
+            this.setData({opacityVal: val})
         },
         _navBack() {
             if (this.data.stopBack) {
-                this.triggerEvent("navback");
+                this.triggerEvent("navBack");
             } else {
                 this._backPage();
             }

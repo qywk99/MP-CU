@@ -2,8 +2,6 @@ const app = getApp();
 
 Page({
     data: {
-        loading: false,
-        grid: true,
         list: [
             'home',
             'home-o',
@@ -45,27 +43,11 @@ Page({
             'forward',
             'drop-down',
             'drop-up',
-        ],
-        tagList: [
-            {
-                title: '箭头',
-                name: 'arrow'
-            }
-        ],
-        page: 0
-    },
-    onLoad() {
-
+        ]
     },
     bgCopy(e) {
         wx.setClipboardData({
             data: e.currentTarget.dataset.value,
-            success: function() {
-                wx.showToast({
-                    title: '复制成功！',
-                    icon: 'none'
-                })
-            },
             fail: function() {
                 wx.showToast({
                     title: '复制失败！',

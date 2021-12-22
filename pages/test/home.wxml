@@ -44,9 +44,6 @@
                         <view class="text-sm mt-3 text">{{item.text}}</view>
                         <view class="text-sm name">{{item.name}}</view>
                     </view>
-                    <view class="bg-icon">
-                        <image src="/static/img/{{item.icon}}.png"/>
-                    </view>
                 </view>
             </view>
         </view>

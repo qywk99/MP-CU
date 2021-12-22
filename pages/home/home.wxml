@@ -12,17 +12,19 @@
             </view>
         </view>
         <view class="flex-bar">
-            <view style="{{'width:'+ (sys_capsule.width + 10)+'px; height:'+sys_capsule.height+'px'}}"/>
+            <view style="{{'width:'+ (sys_capsule.width + 10)+'px; height:' + sys_capsule.height+'px'}}"/>
         </view>
     </ui-navbar>
     <ui-swiper info="{{swiperList}}" height="48vw" dotStyle="line" dotCur="ui-BG-Main"/>
     <view class="ui-container">
-        <block wx:for="{{navData}}" wx:for-item="nav" wx:key="index">
-            <ui-title title="{{nav.title}}" depth="2" isIcon ui="ml-3"/>
+        <block wx:for="{{navData}}" wx:key="index">
+            <ui-title title="{{item.title}}" depth="2" isIcon ui="ml-3"/>
             <view class="ui-grid ui-cols-2">
-                <view class="ui-item p-3" wx:for="{{nav.sub}}" wx:for-index="sub_index" wx:key="sub_index">
-                    <app-nav-li data="{{item}}"/>
-                </view>
+                <block wx:for="{{item.sub}}" wx:for-index="sub_index" wx:key="sub_index">
+                    <view class="ui-item p-3">
+                        <app-nav-li data="{{item}}"/>
+                    </view>
+                </block>
             </view>
         </block>
     </view>

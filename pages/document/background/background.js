@@ -1,10 +1,6 @@
 const app = getApp();
-
 Page({
     data: {
-        demo: true,
-        loading: true,
-        isShow: false,
         color: [
             { name: 'yellow', value: 'fbbd08', desc: '明黄' },
             { name: 'orange', value: 'f37b1d', desc: '橘橙' },
@@ -19,7 +15,10 @@ Page({
             { name: 'grey', value: '8799a3', desc: '玄灰' },
             { name: 'brown', value: 'a5673f', desc: '棕褐' }
         ],
-        themeColor: [{ name: 'a', value: '0081ff' }, { name: 'b', value: '2ca5f9' }, { name: 'c', value: '2ccbf9' }, { name: 'd', value: 'b2d4fe' }],
+        themeColor: [
+            { name: 'a', value: '0081ff' }, { name: 'b', value: '2ca5f9' },
+            { name: 'c', value: '2ccbf9' }, { name: 'd', value: 'b2d4fe' }
+        ],
         level: ['page', 'box', 'menu'],
         gray: [
             { name: 'white', value: 'ffffff' },
@@ -41,25 +40,12 @@ Page({
             { name: 'dark-2', value: '222222' },
             { name: 'dark-1', value: '111111' },
             { name: 'black', value: '000000' }
-        ]
-    },
-    onLoad() {
-
-    },
-    setColor(color) {
-        this.setData({
-            curColor: color
-        })
+        ],
+        image: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg'
     },
     bgCopy(e) {
         wx.setClipboardData({
             data: e.currentTarget.dataset.value,
-            success: function() {
-                wx.showToast({
-                    title: '复制成功！',
-                    icon: 'none'
-                })
-            },
             fail: function() {
                 wx.showToast({
                     title: '复制失败！',

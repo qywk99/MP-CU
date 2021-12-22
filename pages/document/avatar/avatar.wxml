@@ -5,10 +5,6 @@
         <view class="paragraph">头像组件,可以适配文字,图片以及图标。</view>
 
         <ui-title title="形状" depth="2" isIcon/>
-        <view class="paragraph">
-            <ui-code>radius,round,ellipse</ui-code>
-            <text>提供圆角,圆形,和超椭圆形状。</text>
-        </view>
         <view class="mt-4">
             <ui-avatar ui="radius"/>
             <ui-avatar ui="round"/>
@@ -50,7 +46,7 @@
         </view>
 
         <ui-title title="角标" depth="2" isIcon/>
-        <view class="p-4 ui-grid ui-cols-5">
+        <view class="ui-grid ui-cols-5">
             <view class="ui-item">
                 <ui-avatar ui="radius xl" src="/static/avatar/1001.jpg">
                     <ui-tag badge isSlot>3</ui-tag>
@@ -87,14 +83,14 @@
         </view>
 
         <ui-title title="多头像层叠" depth="2" isIcon/>
-        <view class="p-5 flex align-center">
+        <view class="flex align-center">
             <ui-avatar-stack>
                 <ui-avatar ui="round xl" src="/static/avatar/1001.jpg" stack first/>
                 <ui-avatar ui="round xl" src="/static/avatar/1002.jpg" stack/>
                 <ui-avatar ui="round xl" src="/static/avatar/1003.jpg" stack/>
             </ui-avatar-stack>
         </view>
-        <view class="p-5 flex align-center">
+        <view class="mt-4 flex align-center">
             <ui-avatar-stack reverse>
                 <ui-avatar ui="round xl" bg="ui-BG-2" src="/static/avatar/1001.jpg" stack reverse first/>
                 <ui-avatar ui="round xl" bg="ui-BG-2" src="/static/avatar/1002.jpg" stack reverse/>
@@ -103,14 +99,14 @@
         </view>
 
         <ui-title title="头像组" depth="2" isIcon/>
-        <view class="p-3 flex align-center">
+        <view class="flex align-center">
             <ui-avatar ui="sl" srcs="{{srcData1}}"/>
             <ui-avatar ui="sl" srcs="{{srcData2}}"/>
             <ui-avatar ui="sl" srcs="{{srcData3}}"/>
             <ui-avatar ui="sl" srcs="{{srcData4}}"/>
             <ui-avatar ui="sl" srcs="{{srcData5}}"/>
         </view>
-        <view class="p-3 flex align-center">
+        <view class="mt-4 flex align-center">
             <ui-avatar ui="sl" srcs="{{srcData6}}"/>
             <ui-avatar ui="sl" srcs="{{srcData7}}"/>
             <ui-avatar ui="sl" srcs="{{srcData8}}"/>

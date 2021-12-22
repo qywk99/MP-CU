@@ -4,7 +4,7 @@ import { CUStoreInit } from '/store/index'
  * @author iZaiZaiA (https://github.com/iZaiZaiA)
  */
 
-let version = '3.2.7';
+let version = '3.2.8';
 
 let store = {}, sys_info = wx.getSystemInfoSync();
 let baseMethod = {
@@ -109,7 +109,7 @@ let baseMethod = {
         });
     },
     _backPage() {
-        if (this.sys_isFirstPage) {
+        if (this.sys_isFirstPage()) {
             this._toHome();
         } else {
             wx.navigateBack({

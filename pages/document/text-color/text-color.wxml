@@ -8,7 +8,7 @@
                 </view>
             </view>
             <view class="ui-table-body">
-                <view class="ui-table-tr" wx:for="{{color}}" wx:key="index">
+                <view class="ui-table-tr" wx:for="{{color}}" wx:key="index" data-value=".text-{{ item.name }}" bindtap="bgCopy">
                     <view class="ui-table-td">
                         <view>.text-{{ item.name }}</view>
                     </view>
@@ -17,7 +17,7 @@
                         #{{ item.value }}
                     </view>
                 </view>
-                <view class="ui-table-tr" wx:for="{{themeColor}}" wx:key="index">
+                <view class="ui-table-tr" wx:for="{{themeColor}}" wx:key="index" data-value=".text-main-{{ item.name }}" bindtap="bgCopy">
                     <view class="ui-table-td">
                         <view>.text-main-{{ item.name }}</view>
                     </view>
@@ -26,7 +26,7 @@
                         var(--text-main-{{ item.name }})
                     </view>
                 </view>
-                <view class="ui-table-tr" wx:for="{{themetext}}" wx:key="index">
+                <view class="ui-table-tr" wx:for="{{themeText}}" wx:key="index" data-value=".text-{{ item.name }}" bindtap="bgCopy">
                     <view class="ui-table-td">
                         <view>.text-{{ item.name }}</view>
                     </view>
@@ -35,7 +35,7 @@
                         var(--text-{{ item.name }})
                     </view>
                 </view>
-                <view class="ui-table-tr bg-dark-3" wx:for="{{gray}}" wx:key="index">
+                <view class="ui-table-tr bg-dark-3" wx:for="{{gray}}" wx:key="index" data-value=".text-{{ item.name }}" bindtap="bgCopy">
                     <view class="ui-table-td">
                         <view>.text-{{ item.name }}</view>
                     </view>
@@ -44,7 +44,7 @@
                         #{{ item.value }}
                     </view>
                 </view>
-                <view class="ui-table-tr bg-white" wx:for="{{dark}}" wx:key="index">
+                <view class="ui-table-tr bg-white" wx:for="{{dark}}" wx:key="index" data-value=".text-{{ item.name }}" bindtap="bgCopy">
                     <view class="ui-table-td">
                         <view>.text-{{ item.name }}</view>
                     </view>

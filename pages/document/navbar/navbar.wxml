@@ -1,25 +1,27 @@
 <ui-sys>
-    <ui-navbar backtext="{{text}}" ui="{{ui}}" back="{{back}}" bg="{{bg}}" status="{{status}}" opacity="{{opacity}}" opacityChange="{{opacityChange}}"
-               opacityBg="{{opacityBg}}" noFixed="{{noFixed}}" capsule="{{capsule}}" scrollTop="{{scrollTop}}" stopBack="{{stopBack}}"
-               isSlot="{{isSlot}}" isCenter="{{isCenter}}" isRight="{{isRight}}" bind:navback="navback">
+    <ui-navbar backtext="{{text}}" ui="{{ui}}" back="{{back}}" bg="{{bg}}" status="{{status}}" opacity="{{opacity}}" scrollTop="{{scrollTop}}"
+               opacityChange="{{opacityChange}}" opacityBg="{{opacityBg}}" noFixed="{{noFixed}}" capsule="{{capsule}}" stopBack="{{stopBack}}"
+               isSlot="{{isSlot}}" isCenter="{{isCenter}}" isRight="{{isRight}}" bind:navBack="navBack">
 
-        <view class="flex-bar p-3" wx:if="{{scrollTop > sys_navBar}}">
-            <image src="/static/img/hapm8.png" mode="aspectFill" style="width: 200rpx;height: 56rpx;"/>
-        </view>
-        <view class="p-3 flex-bar flex-sub" wx:if="{{scrollTop > sys_navBar}}">
-            <view url="/pages/search/search" class="flex-sub flex-bar">
-                <view class="p-2 bg-blur-1 w-100 round border flex-center" style="height: 35px;">
-                    <text class="cicon-search-line mx-2"/>
-                    <view class="text-c text-sm">键入类名搜索释义</view>
+        <block wx:if="{{isSlot}}">
+            <view class="flex-bar p-3" wx:if="{{scrollTop > sys_navBar}}">
+                <image src="/static/img/hapm8.png" mode="aspectFill" style="width: 200rpx;height: 56rpx;"/>
+            </view>
+            <view class="p-3 flex-bar flex-sub" wx:if="{{scrollTop > sys_navBar}}">
+                <view url="/pages/search/search" class="flex-sub flex-bar">
+                    <view class="p-2 bg-blur-1 w-100 round border flex-center" style="height: 35px;">
+                        <text class="cicon-search-line mx-2"/>
+                        <view class="text-c text-sm">键入类名搜索释义</view>
+                    </view>
                 </view>
             </view>
-        </view>
-        <view class="flex-bar">
-            <view style="{{'width:'+ (sys_capsule.width + 10)+'px; height:'+sys_capsule.height+'px'}}"/>
-        </view>
+            <view class="flex-bar">
+                <view style="{{'width:'+ (sys_capsule.width + 10)+'px; height:'+sys_capsule.height+'px'}}"/>
+            </view>
+        </block>
         <text slot="left" wx:if="{{isLeft}}">isLeft</text>
-        <text slot="center">isCenter</text>
-        <text slot="right">isRight</text>
+        <text slot="center" wx:if="{{isCenter}}">isCenter</text>
+        <text slot="right" wx:if="{{isRight}}">isRight</text>
     </ui-navbar>
 
     <view class="ui-container">

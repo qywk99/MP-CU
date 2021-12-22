@@ -64,7 +64,7 @@
         position: relative;
         border-radius: 24rpx;
         padding: 30rpx;
-        height: 300rpx;
+        height: 260rpx;
         .content {
             position: relative;
             height: 100%;
@@ -72,20 +72,6 @@
             .name {
                 position: absolute;
                 bottom: 0;
-            }
-        }
-        .bg-icon {
-            position: absolute;
-            width: 150rpx;
-            height: 150rpx;
-            z-index: 1;
-            bottom: 10rpx;
-            right: 10rpx;
-            image {
-                width: 100%;
-                height: 100%;
-                z-index: 0;
-                opacity: 9;
             }
         }
     }

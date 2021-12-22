@@ -1,6 +1,6 @@
 Page({
     data: {
-        loading: true, size: [
+        size: [
             { class: 'text-xs', size: 10, info: '说明文本，标签文字或关注度低的文字', tag: '组件库' },
             { class: 'text-sm', size: 12, info: '页面辅助信息，次级内容等', desc: '@weilanwl.com by:color-ui.com' },
             { class: 'text-df', size: 14, info: '页面默认字号，用于摘要或阅读文本', desc: '专注视觉的小程序组件库' },
@@ -32,7 +32,11 @@ Page({
             { name: 'd', value: 'b2d4fe' },
             { name: 'e', value: 'ffffff' }
         ],
-        themetext: [{ name: 'a', value: '' }, { name: 'b', value: '' }, { name: 'c', value: '' }, { name: 'd', value: '' }, { name: 'e', value: '' }],
+        themetext: [
+            { name: 'a', value: '' }, { name: 'b', value: '' },
+            { name: 'c', value: '' }, { name: 'd', value: '' },
+            { name: 'e', value: '' }
+        ],
         gray: [
             { name: 'white', value: 'ffffff' },
             { name: 'gray-f', value: 'f8f9fa' },
@@ -56,9 +60,6 @@ Page({
         ],
         longText: '发光的翅萤在暮色中翩翩起舞，身后留下夜光残影，但女孩重重地将它们从面前拍走，毫不在意这转瞬即逝的优雅。她双眼垂向地面，踢开一块石头，任其在盘错的树根间跳跃，毫不理会茂密华盖间透过的夕阳。紫夜貂的花瓣缓缓张开，向温润的暮色吐出微光的花粉，但匆匆路过的她却顺手将花茎扭断。',
         sorttext: '我的潜能无穷无尽。休想压住我。',
-        code1: '<view class="... text-cut">...</view> ',
-        code2: '<view class="... text-linecut">...</view> \n<view class="... text-linecut-3">...</view> \n<view class="... text-linecut" style="-webkit-line-clamp: 5;">...</view>',
-        code3: '<view class="... text-left">...</view> \n<view class="... text-center">...</view> \n<view class="... text-right" >...</view> \n<view class="... text-justify" >...</view> \n<view class="... text-justify-line" >...</view>',
         util: [
             { class: 'text-light', info: '细文本', desc: '《赛博朋克2077》' },
             { class: 'text-lighter', info: '超细文本', desc: '《赛博朋克2077》' },
@@ -75,6 +76,17 @@ Page({
             { class: 'text-nowrap', info: '不自动换行', nowrap: 'ABC to abc ' },
             { class: 'text-price', info: '人民币价格文本', desc: '80.00' }
         ]
+    },
+    bgCopy(e) {
+        wx.setClipboardData({
+            data: e.currentTarget.dataset.value,
+            fail: function() {
+                wx.showToast({
+                    title: '复制失败！',
+                    icon: 'none'
+                })
+            },
+        });
     },
     toDemoTextColor() {
         wx.navigateTo({

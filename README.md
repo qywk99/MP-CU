@@ -1,6 +1,6 @@
 # MP CU
 
-<p><a href="update.md">更新日志(Beta V3.2.7)</a> | <a href="http://mp.color-ui.com/">在线文档</a>（开发中...）</p>
+<p><a href="update.md">更新日志(Beta V3.2.8)</a> | <a href="http://mp.color-ui.com/">在线文档</a>（开发中...）</p>
 
 <img width="120px" src="https://github.com/iZaiZaiA/iZaiZaiA/blob/img/mp-cu/mp-cu.jpg" />
 
@@ -124,7 +124,7 @@ export const colorUI = new ColorUI({
    data: {
       //全局data
    },
-   method: {
+   methods: {
       //全局函数
    }
 })
@@ -144,7 +144,6 @@ sys_statusBar
 sys_capsule
 
 ```
-
 
 #### 您在config里面配置的data数据也可以在页面的data里面访问到，colorUI将配置的数据定义到$cuData属性里面中了
 

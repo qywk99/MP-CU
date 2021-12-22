@@ -1,10 +1,17 @@
 ### MP CU 更新日志
 
-Beta V3.2.7
+Beta V3.2.8
 
 <p><a href="https://github.com/Color-UI/MP-CU">MP CU</a> | 更新日志 | <a href="http://mp.color-ui.com/">在线文档</a>（开发中...）</p>
 
 <hr/>
+
+#### Beta v3.2.8  2021-12-22 22:40
+
+> - 修复返回上页的问题
+> - 更改部分页面的演示效果
+> - 修复一些记不清的小bug
+
 
 #### Beta v3.2.7  2021-12-17 21:32
 

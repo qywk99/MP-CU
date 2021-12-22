@@ -11,20 +11,7 @@
       "list": []
     },
     "miniprogram": {
-      "list": [
-        {
-          "name": "导航栏",
-          "pathName": "pages/document/navbar/navbar",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "背景色",
-          "pathName": "pages/document/background/background",
-          "query": "",
-          "scene": null
-        }
-      ]
+      "list": []
     }
   }
 }
