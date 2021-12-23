@@ -1,6 +1,6 @@
 # MP CU
 
-<p><a href="http://mp.color-ui.com/update/">更新日志(Beta V3.2.8)</a> | <a href="http://mp.color-ui.com/">在线文档</a>（完善中...）</p>
+<p><a href="https://mp.color-ui.com/update/">更新日志(Beta V3.2.8)</a> | <a href="https://mp.color-ui.com/">在线文档</a>（完善中...）</p>
 
 <img width="120px" src="https://github.com/iZaiZaiA/iZaiZaiA/blob/img/mp-cu/mp-cu.jpg" />
 
@@ -13,6 +13,12 @@
 `colorUI3.x` 默认只支持 `uni-app`，本项目中 `colorUI` 框架为移植修改版。
 
 `colorUI3.x` 地址： [https://github.com/weilanwl/coloruiBeta](https://github.com/weilanwl/coloruiBeta)
+
+
+在线文档：[https://mp.color-ui.com/](https://mp.color-ui.com/) （主地址，挂在Github上的）
+
+备用在线文档：[https://mp-cu.izaizai.cn/](https://mp-cu.izaizai.cn/) （防止Github抽风，挂在vercel.com上的，建议收藏下）
+
 
 内置的vuex 渲染引擎参考了 [https://github.com/xiaoyao96/wxMiniStore](https://github.com/xiaoyao96/wxMiniStore) 的项目。
 

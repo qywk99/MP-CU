@@ -1,6 +1,6 @@
 # MP CU
 
-<p><a href="http://mp.color-ui.com/update/">更新日志</a> | <a href="http://mp.color-ui.com/">在线文档</a></p>
+<p><a href="https://mp.color-ui.com/update/">更新日志</a> | <a href="https://mp.color-ui.com/">在线文档</a></p>
 
 <hr/>
 
@@ -10,7 +10,9 @@
 
 `colorui3.x` 默认只支持 `uni-app`，本项目中 `colorui` 框架为移植修改版。
 
-在线文档地址：[http://mp.color-ui.com/](http://mp.color-ui.com/)
+在线文档：[https://mp.color-ui.com/](https://mp.color-ui.com/) （主地址，挂在Github上的）
+
+备用在线文档：[https://mp-cu.izaizai.cn/](https://mp-cu.izaizai.cn/) （防止Github抽风，挂在vercel.com上的，建议收藏下）
 
 本项目地址：[https://github.com/Color-UI/MP-CU](https://github.com/Color-UI/MP-CU)
 
