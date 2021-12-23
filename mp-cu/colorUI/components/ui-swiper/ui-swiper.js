@@ -57,15 +57,19 @@ Component({
     },
     methods: {
         swiperChange(e) {
-            //console.log(e.detail.current)
             this.setData({
                 cur: e.detail.current
             })
+            this.triggerEvent("change",e.detail.current);
         },
         toTap(e) {
             let item = e.currentTarget.dataset.item;
-            console.log(item)
-            //this.triggerEvent("close");
+            //如果类型、url为空，或者类型为eve时，以事件返回。
+            if (!item.type || !item.url || item.type === 'eve') {
+                this.triggerEvent("uiTap", item);
+            } else {
+                this._toPath(item.url,item.type);
+            }
         },
     }
 })

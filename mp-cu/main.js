@@ -108,6 +108,45 @@ let baseMethod = {
             url: this.data.$cuStore.sys_home_page
         });
     },
+    _toPath(url, type = '') {
+        switch (type) {
+            case 'switchTab':
+                wx.switchTab({
+                    url: url,
+                    fail(res) {
+                        console.log(res);
+                    }
+                });
+                break;
+            case 'reLaunch':
+                wx.reLaunch({
+                    url: url,
+                    success(res) {
+                        console.log(res);
+                    },
+                    fail(res) {
+                        console.log(res);
+                    }
+                });
+                break;
+            case 'redirectTo':
+                wx.redirectTo({
+                    url: url,
+                    fail(res) {
+                        console.log(res);
+                    }
+                });
+                break;
+            default:
+                wx.navigateTo({
+                    url: url,
+                    fail(res) {
+                        console.log(res);
+                    }
+                })
+                break;
+        }
+    },
     _backPage() {
         if (this.sys_isFirstPage()) {
             this._toHome();
@@ -231,7 +270,7 @@ export default class ColorUI {
                 let pageLife = [
                     "data", "onLoad", "onShow", "onReady", "onHide", "onUnload", "onPullDownRefresh",
                     "onReachBottom", "onShareAppMessage", "onPageScroll", "onTabItemTap", "setTheme",
-                    "setMain", "setText", "_toHome", "_backPage", "sys_isFirstPage"
+                    "setMain", "setText", "_toHome", "_toPath", "_backPage", "sys_isFirstPage"
                 ]
                 Object.keys(that.methods).forEach((key) => {
                     if (typeof that.methods[key] === "function" && !pageLife.some((item) => item === key)) {
