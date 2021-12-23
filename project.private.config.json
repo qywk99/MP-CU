@@ -11,7 +11,14 @@
       "list": []
     },
     "miniprogram": {
-      "list": []
+      "list": [
+        {
+          "name": "实验室",
+          "pathName": "pages/test/home",
+          "query": "",
+          "scene": null
+        }
+      ]
     }
   }
 }

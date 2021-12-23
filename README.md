@@ -1,6 +1,6 @@
 # MP CU
 
-<p><a href="update.md">更新日志(Beta V3.2.8)</a> | <a href="http://mp.color-ui.com/">在线文档</a>（开发中...）</p>
+<p><a href="http://mp.color-ui.com/update/">更新日志(Beta V3.2.8)</a> | <a href="http://mp.color-ui.com/">在线文档</a>（完善中...）</p>
 
 <img width="120px" src="https://github.com/iZaiZaiA/iZaiZaiA/blob/img/mp-cu/mp-cu.jpg" />
 
@@ -286,6 +286,20 @@ export const colorUI = new ColorUI({
 
 
 <hr/>
+
+### :sparkling_heart: 支持这个项目
+
+我们尽己所能地进行开源，并且我们尽量回复每个在使用项目时需要帮助的人。
+
+很明显，这需要时间，但你可以免费享受这些。
+
+然而, 如果你正在使用这个项目并感觉良好，或只是想要支持我们继续开发，你可以通过如下方式：
+
+- 在你的 开源项目 中使用 MP-CU 时，链接指向这里[https://github.com/Color-UI/MP-CU](https://github.com/Color-UI/MP-CU) :D
+- Star 并 分享这个项目 :rocket:
+
+谢谢！ :heart:
+
 
 ### License
 
