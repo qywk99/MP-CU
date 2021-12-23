@@ -1,0 +1,1 @@
+const e={key:"v-34541f28",path:"/component/loading.html",title:"\u52A0\u8F7D",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[{level:2,title:"\u793A\u4F8B",slug:"\u793A\u4F8B",children:[]},{level:2,title:"\u53C2\u6570",slug:"\u53C2\u6570",children:[]}],git:{updatedTime:1640069513e3},filePathRelative:"component/loading.md"};export{e as data};
