@@ -20,7 +20,7 @@
 备用在线文档：[https://mp-cu.izaizai.cn/](https://mp-cu.izaizai.cn/) （防止Github抽风，挂在vercel.com上的，建议收藏下）
 
 
-内置的vuex 渲染引擎参考了 [https://github.com/xiaoyao96/wxMiniStore](https://github.com/xiaoyao96/wxMiniStore) 的项目。
+内置的vuex 渲染引擎参考了 [wxMiniStore](https://github.com/xiaoyao96/wxMiniStore) 项目。
 
 <hr/>
 
