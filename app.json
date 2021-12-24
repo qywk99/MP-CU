@@ -44,8 +44,6 @@
         "pages/document/picker/picker",
         "pages/document/text-color/text-color",
         "pages/document/iconfont/iconfont",
-        "pages/demo/system/system",
-        "pages/demo/navbar/navbar",
         "pages/demo/background/background",
         "pages/demo/avatar/avatar",
         "pages/demo/wallpaper/wallpaper",
@@ -65,7 +63,8 @@
             "pages": [
                 "list/fictitious-list/index",
                 "list/old-list/index",
-                "fixed-tools/index"
+                "fixed-tools/index",
+                "dot-tag/dot-tag"
             ]
         }
     ],

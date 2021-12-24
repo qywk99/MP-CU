@@ -1,0 +1,51 @@
+<ui-sys doc title="点标签">
+    <view class="ui-container">
+
+        <ui-title title="点标签" depth="2" ui="m-2" isIcon/>
+        <view class="paragraph">常见于在图片上的标签。</view>
+
+        <view class="m-2 img-dot-tag">
+            <ui-img ui="radius border" src="{{imgA}}"/>
+
+            <dot-tag name="ColorUI" ui="dot-tag-left" animation left/>
+
+            <dot-tag name="MP-CU" ui="dot-tag-top" animation top/>
+
+            <dot-tag name="组件库" ui="dot-tag-right" animation right/>
+
+            <dot-tag name="点标签点标签" ui="dot-tag-bottom" animation bottom/>
+        </view>
+
+        <ui-title title="尺寸" depth="2" ui="m-2 mt-5" isIcon/>
+        <view class="m-2 img-dot-tag">
+            <ui-img ui="radius border" src="{{imgB}}"/>
+
+            <dot-tag name="ColorUI" ui="dot-tag-left sm" animation left/>
+
+            <dot-tag name="MP-CU" ui="dot-tag-top" animation top/>
+
+            <dot-tag name="组件库" ui="dot-tag-right lg" animation right/>
+
+            <dot-tag name="点标签点标签" ui="dot-tag-bottom xxl" animation bottom/>
+        </view>
+
+        <ui-title title="其它类型" depth="2" ui="m-2 mt-5" isIcon/>
+        <view class="m-2 img-dot-tag">
+            <ui-img ui="radius border" src="{{imgC}}"/>
+
+            <dot-tag name="不动" ui="dot-tag-right" right/>
+
+            <dot-tag ui="dot-tag-top" animation top>我是谁？</dot-tag>
+
+            <dot-tag ui="dot-tag-left lg" animation left>
+                <text class="_icon-warn-o text-blue"/>
+            </dot-tag>
+
+            <dot-tag ui="dot-tag-bottom lg" animation bottom>
+                <text class="cicon-creative"/>
+                <text class="ml-2">加点图标</text>
+            </dot-tag>
+        </view>
+
+    </view>
+</ui-sys>

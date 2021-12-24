@@ -1,0 +1,7 @@
+<view class="ui-dot-tag {{ui}} {{bg}} {{animationVal}} {{position}}">
+    <view class="ui-dot-tag-view">
+        <block wx:if="{{!name}}"><slot></slot></block>
+        <block wx:else>{{name}}</block>
+        <view class="ui-dot-tag-dot"/>
+    </view>
+</view>
