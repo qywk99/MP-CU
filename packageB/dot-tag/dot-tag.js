@@ -1,6 +1,6 @@
 Page({
     data: {
-        imgA: '', imgB: '', imgC: ''
+        imgA: '', imgB: '', imgC: '', imgD: '', x: 60, y: 40,
     },
     onLoad() {
         let list = [];
@@ -11,13 +11,25 @@ Page({
         let imgA = this.getImage(list);
         let imgB = this.getImage(list);
         let imgC = this.getImage(list);
+        let imgD = this.getImage(list);
         this.setData({
             imgA: imgA,
             imgB: imgB,
-            imgC: imgC
+            imgC: imgC,
+            imgD: imgD
         })
     },
     getImage(list) {
         return list[Math.floor(Math.random() * list.length)];
+    },
+    tapDotTag(e) {
+        console.log(11)
+        this.$tips('点击了：'+e.detail)
+    },
+    movableChange(e) {
+        this.setData({
+            x: e.detail.x,
+            y: e.detail.y
+        })
     },
 })

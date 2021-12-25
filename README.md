@@ -307,6 +307,9 @@ export const colorUI = new ColorUI({
 谢谢！ :heart:
 
 
+<hr/>
+
+
 ### License
 
 MIT © [MP CU](https://github.com/Color-UI/MP-CU)
