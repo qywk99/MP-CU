@@ -1,8 +1,4 @@
 <ui-sys doc title="单选框">
-    <view class="ui-container">
-        <ui-title title="简介" depth="2" isIcon/>
-        <view class="paragraph">单选框</view>
-    </view>
 
     <ui-title title="基础用法" depth="2" isIcon ui="mx-4"/>
     <view class="p-4">值: {{ radio }}</view>

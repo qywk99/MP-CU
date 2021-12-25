@@ -11,20 +11,7 @@
       "list": []
     },
     "miniprogram": {
-      "list": [
-        {
-          "name": "实验室",
-          "pathName": "pages/test/home",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "点标签",
-          "pathName": "packageB/dot-tag/dot-tag",
-          "query": "",
-          "scene": null
-        }
-      ]
+      "list": []
     }
   }
 }

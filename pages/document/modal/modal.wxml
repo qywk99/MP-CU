@@ -63,23 +63,23 @@
 
     <ui-modal show="{{target === 'top'}}" mask="40" align="top">
         <view class="p-5 flex-center">
-            <image src="/static/logo.png" mode="aspectFill"/>
+            <image src="/static/logo.png" mode="aspectFill" style="height: 360rpx;width: 360rpx;"/>
         </view>
     </ui-modal>
     <ui-modal show="{{target === 'drawer'}}" mask="40" align="bottom">
         <view class="p-5 flex-center">
-            <image src="/static/logo.png" mode="aspectFill"/>
+            <image src="/static/logo.png" mode="aspectFill" style="height: 360rpx;width: 360rpx;"/>
         </view>
     </ui-modal>
 
     <ui-modal show="{{target === 'transparent1'}}" transparent mask="40" iconCancel>
         <view class="p-5 flex-center">
-            <image src="/static/logo.png" mode="aspectFill"/>
+            <image src="/static/logo.png" mode="aspectFill" style="height: 360rpx;width: 360rpx;"/>
         </view>
     </ui-modal>
     <ui-modal show="{{target === 'transparent2'}}" cancelText="再见" confirmText="好的" transparent mask="40">
         <view class="p-5 flex-center">
-            <image src="/static/logo.png" mode="aspectFill"/>
+            <image src="/static/logo.png" mode="aspectFill" style="height: 360rpx;width: 360rpx;"/>
         </view>
     </ui-modal>
 </ui-sys>

@@ -64,7 +64,8 @@
                 "list/fictitious-list/index",
                 "list/old-list/index",
                 "fixed-tools/index",
-                "dot-tag/dot-tag"
+                "dot-tag/dot-tag",
+                "layout/layout"
             ]
         }
     ],

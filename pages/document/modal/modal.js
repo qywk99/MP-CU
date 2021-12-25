@@ -4,7 +4,7 @@ Page({
     },
     show() {
         this.$showDialog({
-            title : 'colorUI弹窗',
+            //title : 'colorUI弹窗',
             content: '这是一个模态弹窗',
             success: res => {
                 console.log(res)

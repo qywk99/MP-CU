@@ -4,7 +4,7 @@
         <ui-title depth="2" title="默认" isIcon/>
         <ui-switch/>
 
-        <ui-title depth="2" title="默认" isIcon/>
+        <ui-title depth="2" title="颜色" isIcon/>
         <ui-switch bg="bg-red"/>
 
     </view>

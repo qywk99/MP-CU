@@ -71,6 +71,11 @@
         width: #{100% / 12 * $i};
     }
 }
+@for $i from 1 through 24 {
+    .ui-col-lg-#{$i} {
+        width: calc(100% / 24 * #{$i});
+    }
+}
 // 小屏
 @media screen and (min-width: 0px) {
     @include make_col('xs');
@@ -99,4 +104,7 @@
 // 超大屏
 @media screen and (min-width: 1920px) {
     @include make_col('xxl');
+}
+ui-col {
+    display: contents;
 }

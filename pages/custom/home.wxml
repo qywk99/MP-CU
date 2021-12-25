@@ -14,7 +14,7 @@
     <view class="ui-container">
         <ui-title title="定制服务" depth="2" isIcon/>
         <view class="paragraph">
-            下方仅为演示，不是真实价格，由于目前移植适配到原生小程序的事情较多，暂不接受定制，如有模板或组件的定制需要，可联系QQ：1273753708（ColorUI作者）
+            下方仅为演示，不是真实价格，由于目前移植适配到原生小程序的事情较多，暂不接受定制，如有模板或组件的定制需要，可联系QQ：1273753708（ColorUI作者，文晓港）
         </view>
     </view>
     <ui-radio-group bg="bg-red-thin" value="{{radio}}" clearable bind:change="radioChange">

@@ -44,7 +44,7 @@ Component({
         zIndex: {
             type: Number,
             optionalTypes: String,
-            value: 0
+            value: 12
         },
         placeholder: {
             type: Boolean,

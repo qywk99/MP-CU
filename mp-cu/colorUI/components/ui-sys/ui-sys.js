@@ -34,7 +34,7 @@ Component({
         loading: {  //是否加载
             type: String,
             optionalTypes: Boolean,
-            default: 'auto'
+            value: 'auto'
         },
         tabbar: {
             type: Boolean,
@@ -52,9 +52,7 @@ Component({
                 wx.hideTabBar();
                 this._onPage();
             }
-            this.setData({
-                isLoading: loading
-            })
+            this.setData({isLoading: loading})
             this.setLoading();
         },
     },
@@ -65,9 +63,7 @@ Component({
             }
         },
         'loading'(val) {
-            this.setData({
-                isLoading: val
-            })
+            this.setData({isLoading: val})
             this.setLoading();
         },
     },
@@ -78,9 +74,7 @@ Component({
             let url = page[page.length - 1].route
             this.data.$cuConfig.tabBar.map((item,index)=>{
                 if(item.url === '/'+url) {
-                    _this.setData({
-                        tabBarIndex: index
-                    })
+                    _this.setData({tabBarIndex: index})
                 }
             })
         },
@@ -88,9 +82,7 @@ Component({
             let _this = this;
             setTimeout(() => {
                 if (_this.data.loading === 'auto') {
-                    _this.setData({
-                        isLoading: false
-                    })
+                    _this.setData({isLoading: false})
                 }
             }, 800);
         },

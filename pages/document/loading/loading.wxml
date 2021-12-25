@@ -1,7 +1,5 @@
 <ui-sys doc title="加载">
     <view class="ui-container">
-        <ui-title title="简介" depth="2" isIcon/>
-        <view class="paragraph">加载</view>
 
         <ui-loading/>
         <ui-loading color/>

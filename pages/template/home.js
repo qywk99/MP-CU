@@ -41,7 +41,13 @@ Page({
 
     },
     toProductDetail(e) {
-
+        this.$showDialog({
+            content: '模板都还没有，后续慢慢上，需要的可联系QQ：1273753708（ColorUI作者，文晓港）',
+            showCancel: false,
+            success: res => {
+                console.log(res);
+            }
+        });
     },
     // 监听用户滑动页面事件。
     onPageScroll(e) {

@@ -120,7 +120,15 @@
 }
 
 //小程序的组件元素结构与uni-app不一样，在处理首个或最后一个元素的特定样式时，需要特殊处理
-
+ui-form-group {
+    display: contents;
+}
+ui-input-box {
+    display: contents;
+    input {
+        width: 100%;
+    }
+}
 ui-form ui-form-group:first-child .ui-form-group:after {
     display: none;
 }

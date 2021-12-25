@@ -49,10 +49,11 @@ Component({
     },
     observers: {
         title(val) {
-			if (val&&!this.data.isLoading) {
+            let _this = this;
+			if (val && !_this.data.isLoading) {
                 setTimeout(() => {
-                    this.hide();
-                }, this.data.duration);
+                    _this.hide();
+                }, _this.data.duration);
             }
 		}
     },
@@ -63,8 +64,8 @@ Component({
                 '$toast.icon':'',
                 '$toast.image':'',
                 '$toast.duration': 0,
-                '$toast.mask':false,
-                '$toast.isLoading':false,
+                '$toast.mask': false,
+                '$toast.isLoading': false,
             })
         }
     }

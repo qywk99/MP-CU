@@ -13,10 +13,16 @@ Page({
         },
         isLoading: false,
         wxisLoading: false,
+        check: false
     },
     tabNavChange(e) {
         this.setData({
             tabCur: e.detail.index
+        })
+    },
+    checkChange(e) {
+        this.setData({
+            check: e.detail
         })
     },
 })

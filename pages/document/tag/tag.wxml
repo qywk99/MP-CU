@@ -1,8 +1,5 @@
 <ui-sys doc title="标签">
     <view class="ui-container">
-        <!-- 简介 -->
-        <ui-title title="简介" depth="2" isIcon/>
-        <view class="paragraph">标签组件</view>
 
         <ui-title title="默认标签" depth="2" isIcon/>
         <view class="p-3 ui-BG radius border">

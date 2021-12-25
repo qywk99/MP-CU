@@ -1,6 +1,6 @@
 <ui-sys title="栅栏">
     <view class="ui-grid p-3">
-        <view class="ui-col-6 ui-col-lg-4" wx:for="{{6}}" wx:key="index">
+        <view class="ui-col-6 ui-cols-lg-4" wx:for="{{6}}" wx:key="index">
             <view class="p-5 bg-blue m-2">{{index+1}}</view>
         </view>
     </view>

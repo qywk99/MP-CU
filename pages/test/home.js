@@ -10,6 +10,8 @@ Page({
             title: '悬浮工具栏', text: '右下角悬浮工具栏', name: '@iZaiZaiA', url: 'fixed-tools/index'
         }, {
             title: '点标签', text: '常见于在图片上的标签', name: '@iZaiZaiA', url: 'dot-tag/dot-tag'
+        }, {
+            title: '布局', text: '通过row和col组件布局', name: '@iZaiZaiA', url: 'layout/layout'
         }],
     },
     onLoad() {

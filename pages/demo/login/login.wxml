@@ -41,7 +41,9 @@
                 </ui-form-group>
             </ui-form>
         </block>
-        <view class="my-3">我已阅读并接受</view>
+        <view class="my-3">
+            <ui-checkbox value="{{check}}" bind:change="checkChange">我已阅读并接受</ui-checkbox>
+        </view>
         <view class="mt-5">
             <button class="ui-btn bg-blue-gradient radius lg block shadow-blue" bindtap="loginSubmit" disabled="{{isLoading}}">
                 <text>登录</text>
