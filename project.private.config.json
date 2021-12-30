@@ -11,7 +11,14 @@
       "list": []
     },
     "miniprogram": {
-      "list": []
+      "list": [
+        {
+          "name": "步进器",
+          "pathName": "packageB/stepper/stepper",
+          "query": "",
+          "scene": null
+        }
+      ]
     }
   }
 }

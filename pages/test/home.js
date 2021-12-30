@@ -12,6 +12,8 @@ Page({
             title: '点标签', text: '常见于在图片上的标签', name: '@iZaiZaiA', url: 'dot-tag/dot-tag'
         }, {
             title: '布局', text: '通过row和col组件布局', name: '@iZaiZaiA', url: 'layout/layout'
+        }, {
+            title: '步进器', text: '常用于数量加减的组件', name: '@iZaiZaiA', url: 'stepper/stepper'
         }],
     },
     onLoad() {
