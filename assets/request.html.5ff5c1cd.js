@@ -1,0 +1,1 @@
+const e={key:"v-a1003b10",path:"/api/request.html",title:"\u8BF7\u6C42",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[{level:2,title:"\u914D\u7F6E\u53C2\u6570",slug:"\u914D\u7F6E\u53C2\u6570",children:[]},{level:2,title:"\u8BF7\u6C42\u914D\u7F6E",slug:"\u8BF7\u6C42\u914D\u7F6E",children:[]}],git:{updatedTime:1640880806e3},filePathRelative:"api/request.md"};export{e as data};
