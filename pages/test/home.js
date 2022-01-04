@@ -14,6 +14,12 @@ Page({
             title: '布局', text: '通过row和col组件布局', name: '@iZaiZaiA', url: 'layout/layout'
         }, {
             title: '步进器', text: '常用于数量加减的组件', name: '@iZaiZaiA', url: 'stepper/stepper'
+        }, {
+            title: '消息提示', text: '在页面顶部展示消息提示', name: '@iZaiZaiA', url: 'notify/notify'
+        }, {
+            title: '分割线', text: '将内容分割为多个区域', name: '@iZaiZaiA', url: 'divider/divider'
+        }, {
+            title: '搜索栏', text: '搜索场景的输入框组件', name: '@iZaiZaiA', url: 'search-bar/search-bar'
         }],
     },
     onLoad() {
