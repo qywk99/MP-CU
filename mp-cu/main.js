@@ -184,10 +184,8 @@ export default class ColorUI {
         config.theme = config.theme||'auto'
         config.main = config.main||'blue'
         config.text = config.text||1
-        config.footer = config.footer||true
         config.homePath = config.homePath||'/pages/index/index'
         config.tabBar = config.tabBar||[]
-        config.share = config.share||false
         config.shareTitle = config.shareTitle||''
         //处理数据
         this.config = config
