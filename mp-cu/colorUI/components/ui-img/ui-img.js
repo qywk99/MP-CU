@@ -41,7 +41,7 @@ Component({
         },
         current: {
             type: Number,
-            value: -1
+            value: 0
         },
         //加载本地图片
         local: {
