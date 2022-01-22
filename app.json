@@ -152,6 +152,5 @@
         ]
     },
     "darkmode": true,
-    "lazyCodeLoading": "requiredComponents",
     "sitemapLocation": "sitemap.json"
 }

@@ -57,9 +57,7 @@ Component({
     },
     methods: {
         swiperChange(e) {
-            this.setData({
-                cur: e.detail.current
-            })
+            this.setData({cur: e.detail.current})
             this.triggerEvent("change",e.detail.current);
         },
         toTap(e) {
