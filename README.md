@@ -4,7 +4,7 @@
 
 <img width="120px" src="https://github.com/iZaiZaiA/iZaiZaiA/blob/img/mp-cu/mp-cu.jpg" />
 
-<hr/>
+---
 
 ### 介绍
 
@@ -22,7 +22,7 @@
 
 内置的vuex 渲染引擎参考了 [wxMiniStore](https://github.com/xiaoyao96/wxMiniStore) 项目。
 
-<hr/>
+---
 
 ### 准备配置
 
@@ -48,7 +48,7 @@
 
 ```
 
-<hr/>
+---
 
 
 ### 框架配置
@@ -79,7 +79,7 @@ App({
 
 ```
 
-<hr/>
+---
 
 相关文件路径：
 
@@ -94,7 +94,7 @@ App({
 
 ```
 
-<hr/>
+---
 
 ### 组件使用方式
 
@@ -109,7 +109,7 @@ App({
 ```
 
 
-<hr/>
+---
 
 
 ### colorUI MP-CU 扩展包
@@ -223,7 +223,7 @@ export const colorUI = new ColorUI({
 - [x] 设置主颜色		[使用方法参考](#_setMain)
 - [x] 设置字号等级	[使用方法参考](#_setText)
 
-<hr/>
+----
 
 
 ### 内置方法详解
@@ -279,7 +279,7 @@ export const colorUI = new ColorUI({
 ```
 
 
-<hr/>
+---
 
 
 ### 鸣谢
@@ -287,22 +287,50 @@ export const colorUI = new ColorUI({
 
 感谢团队成员 
 
-<a href="https://github.com/weilanwl" target="_blank"><img src="https://avatars.githubusercontent.com/u/24801605?v=4" style="width: 80px; border-radius: 5px;"/></a> 
-<a href="https://github.com/bypanghu" target="_blank"><img src="https://avatars.githubusercontent.com/u/56402715?v=4" style="width: 80px; border-radius: 5px;"/></a>
+<table>
+    <tbody>
+        <tr>
+            <td align="center" valign="middle">
+                <a href="https://github.com/weilanwl" target="_blank">
+                    <img width="80px" src="https://avatars.githubusercontent.com/u/24801605?v=4" alt="@weilanwl">
+                    <div>@weilanwl</div>
+                </a>
+            </td>
+            <td align="center" valign="middle">
+                <a href="https://github.com/bypanghu" target="_blank">
+                    <img width="80px" src="https://avatars.githubusercontent.com/u/56402715?v=4" alt="@bypanghu">
+                    <div>@bypanghu</div>
+                </a>
+            </td>
+        </tr>
+    </tbody>
+</table>
 
+----
 
 以及感谢突出贡献者、bug反馈者 
 
-<a href="https://github.com/CN-HM" target="_blank"><img src="https://avatars.githubusercontent.com/u/26593955?v=4" style="width: 60px; border-radius: 5px;"/></a>
+<table>
+    <tbody>
+        <tr>
+            <td align="center" valign="middle">
+                <a href="https://github.com/CN-HM" target="_blank">
+                    <img width="60px" src="https://avatars.githubusercontent.com/u/26593955?v=4" alt="@CN-HM">
+                    <div>@CN-HM</div>
+                </a>
+            </td>
+        </tr>
+    </tbody>
+</table>
 
-
+----
 
 还有stars的朋友们：
 
 [![Stargazers repo roster for @Color-UI/MP-CU](https://reporoster.com/stars/Color-UI/MP-CU)](https://github.com/Color-UI/MP-CU/stargazers)
 
 
-<hr/>
+----
 
 ### :sparkling_heart: 支持这个项目
 
@@ -318,7 +346,7 @@ export const colorUI = new ColorUI({
 谢谢！ :heart:
 
 
-<hr/>
+----
 
 
 ### License
