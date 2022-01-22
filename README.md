@@ -285,11 +285,13 @@ export const colorUI = new ColorUI({
 ### 鸣谢
 
 
-感谢团队成员 <a href="https://github.com/weilanwl"><img src="https://avatars.githubusercontent.com/u/24801605?v=4" /></a> 
-<a href="https://github.com/bypanghu"><img src="https://avatars.githubusercontent.com/u/56402715?v=4" /></a>
+感谢团队成员 
+<a href="https://github.com/weilanwl"><img src="https://avatars.githubusercontent.com/u/24801605?v=4" style="width: 90px; border-radius: 5px;"/></a> 
+<a href="https://github.com/bypanghu"><img src="https://avatars.githubusercontent.com/u/56402715?v=4" style="width: 90px; border-radius: 5px;"/></a>
 
 
-以及感谢突出贡献者、bug反馈者 【CN-HM[@CN-HM](https://github.com/CN-HM)】
+以及感谢突出贡献者、bug反馈者 
+<a href="https://github.com/CN-HM"><img src="https://avatars.githubusercontent.com/u/26593955?v=4" style="width: 90px; border-radius: 5px;"/></a>
 
 
 
