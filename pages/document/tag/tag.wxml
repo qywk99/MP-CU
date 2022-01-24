@@ -14,6 +14,7 @@
 
         <ui-title title="标签大小" depth="2" isIcon/>
         <view class="p-3 ui-BG radius border">
+			<ui-tag ui="xs" info="xs"/>
             <ui-tag ui="sm" info="sm"/>
             <ui-tag ui="" info="df"/>
             <ui-tag ui="lg" info="lg"/>
