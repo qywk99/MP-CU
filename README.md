@@ -1,24 +1,25 @@
-# MP CU
+<p align="center">
+    <img width="160px" src="https://github.com/iZaiZaiA/iZaiZaiA/blob/img/mp-cu/mp-cu.jpg" />
+</p>
 
-<p><a href="https://mp.color-ui.com/update/">更新日志(Beta V3.3.1)</a> | <a href="https://mp.color-ui.com/">在线文档</a></p>
+<p align="center">
+    <a href="https://mp.color-ui.com/update/">更新日志(Beta V3.3.1)</a> | <a href="https://mp.color-ui.com/">在线文档</a>
+</p>
 
-<img width="120px" src="https://github.com/iZaiZaiA/iZaiZaiA/blob/img/mp-cu/mp-cu.jpg" />
 
 ---
 
-### 介绍
+### MP-CU 介绍
 
 本项目为 `colorUI3.x` 微信小程序原生版。
 
-`colorUI3.x` 默认只支持 `uni-app`，本项目中 `colorUI` 框架为移植修改版。
+`colorUI3.x` 默认只支持 `uni-app`，本项目中 `colorUI` 为适配版。
 
 `colorUI3.x` 地址： [https://github.com/weilanwl/coloruiBeta](https://github.com/weilanwl/coloruiBeta)
-
 
 在线文档：[https://mp.color-ui.com/](https://mp.color-ui.com/) （主地址，挂在Github上的）
 
 备用在线文档：[https://mp-cu.izaizai.cn/](https://mp-cu.izaizai.cn/) （防止Github抽风，挂在vercel.com上的，建议收藏下）
-
 
 内置的vuex 渲染引擎参考了 [wxMiniStore](https://github.com/xiaoyao96/wxMiniStore) 项目。
 
@@ -49,7 +50,6 @@
 ```
 
 ---
-
 
 ### 框架配置
 
@@ -108,9 +108,7 @@ App({
 
 ```
 
-
 ---
-
 
 ### colorUI MP-CU 扩展包
 
@@ -278,12 +276,9 @@ export const colorUI = new ColorUI({
 
 ```
 
-
 ---
 
-
 ### 鸣谢
-
 
 感谢团队成员 
 
@@ -329,8 +324,29 @@ export const colorUI = new ColorUI({
 
 [![Stargazers repo roster for @Color-UI/MP-CU](https://reporoster.com/stars/Color-UI/MP-CU)](https://github.com/Color-UI/MP-CU/stargazers)
 
-
 ----
+
+### 使用了MP-CU的项目
+
+
+<table>
+    <tbody>
+        <tr>
+            <td align="center" valign="middle">
+                <img width="150px" src="https://user-images.githubusercontent.com/26593955/150722226-a4618563-27a8-4805-a4dc-f55326e47a29.jpg" alt="@CN-HM">
+                <div>逃离塔克夫指南</div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+<p align="center">
+    <a href="https://github.com/Color-UI/MP-CU/discussions/18"> >> 我的项目也想展示在这里<< </a>
+</p>
+
+
+---
 
 ### :sparkling_heart: 支持这个项目
 
@@ -345,10 +361,8 @@ export const colorUI = new ColorUI({
 
 谢谢！ :heart:
 
-
 ----
-
 
 ### License
 
-MIT © [MP CU](https://github.com/Color-UI/MP-CU)
+MIT © [MP CU](https://github.com/Color-UI/MP-CU) And [ColorUI](https://github.com/Color-UI)
