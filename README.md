@@ -336,6 +336,10 @@ export const colorUI = new ColorUI({
                 <img width="150px" src="https://user-images.githubusercontent.com/26593955/150722226-a4618563-27a8-4805-a4dc-f55326e47a29.jpg" alt="@CN-HM">
                 <div>逃离塔克夫指南</div>
             </td>
+            <td align="center" valign="middle">
+                <img width="150px" src="https://user-images.githubusercontent.com/19451694/153342500-f0e80ac4-e364-4eef-b94d-ffce8ca32ed6.jpg" alt="@extrastu">
+                <div>每图-故宫壁纸</div>
+            </td>
         </tr>
     </tbody>
 </table>
