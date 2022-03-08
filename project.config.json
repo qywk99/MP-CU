@@ -1,8 +1,5 @@
 {
     "description": "项目配置文件",
-    "packOptions": {
-        "ignore": []
-    },
     "setting": {
         "urlCheck": false,
         "es6": true,
@@ -44,18 +41,9 @@
         "ignoreUploadUnusedFiles": true
     },
     "compileType": "miniprogram",
-    "libVersion": "2.21.3",
+    "libVersion": "2.22.1",
     "appid": "",
     "projectname": "MP-CU",
-    "debugOptions": {
-        "hidedInDevtools": []
-    },
-    "scripts": {},
-    "staticServerOptions": {
-        "baseURL": "",
-        "servePath": ""
-    },
-    "isGameTourist": false,
     "condition": {
         "search": {
             "list": []
@@ -75,5 +63,19 @@
         "miniprogram": {
             "list": []
         }
+    },
+    "scripts": {},
+    "packOptions": {
+        "ignore": [],
+        "include": []
+    },
+    "watchOptions": {
+        "ignore": []
+    },
+    "debugOptions": {
+        "hidedInDevtools": []
+    },
+    "staticServerOptions": {
+        "servePath": ""
     }
 }
