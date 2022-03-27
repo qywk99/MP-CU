@@ -41,8 +41,8 @@
         "ignoreUploadUnusedFiles": true
     },
     "compileType": "miniprogram",
-    "libVersion": "2.22.1",
-    "appid": "",
+    "libVersion": "2.21.3",
+    "appid": "wx021a1b8ecfa78ba5",
     "projectname": "MP-CU",
     "condition": {
         "search": {
