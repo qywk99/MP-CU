@@ -41,9 +41,23 @@
         "ignoreUploadUnusedFiles": true
     },
     "compileType": "miniprogram",
-    "libVersion": "2.21.3",
+    "libVersion": "2.23.2",
     "appid": "wx021a1b8ecfa78ba5",
     "projectname": "MP-CU",
+    "scripts": {},
+    "packOptions": {
+        "ignore": [],
+        "include": []
+    },
+    "watchOptions": {
+        "ignore": []
+    },
+    "debugOptions": {
+        "hidedInDevtools": []
+    },
+    "staticServerOptions": {
+        "servePath": ""
+    },
     "condition": {
         "search": {
             "list": []
@@ -63,19 +77,5 @@
         "miniprogram": {
             "list": []
         }
-    },
-    "scripts": {},
-    "packOptions": {
-        "ignore": [],
-        "include": []
-    },
-    "watchOptions": {
-        "ignore": []
-    },
-    "debugOptions": {
-        "hidedInDevtools": []
-    },
-    "staticServerOptions": {
-        "servePath": ""
     }
 }

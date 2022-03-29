@@ -12,7 +12,7 @@
 
 在线文档：[https://mp.color-ui.com/](https://mp.color-ui.com/) （主地址，挂在Github上的）
 
-备用在线文档：[https://mp-cu.izaizai.cn/](https://mp-cu.izaizai.cn/) （防止Github抽风，挂在vercel.com上的，建议收藏下）
+备用在线文档：[https://mp.colorui.org/](https://mp.colorui.org/) （防止Github抽风，挂在vercel.com上的，建议收藏下）
 
 本项目地址：[https://github.com/Color-UI/MP-CU](https://github.com/Color-UI/MP-CU)
 

@@ -4,7 +4,7 @@ import { CUStoreInit } from '/store/index'
  * @author iZaiZaiA (https://github.com/iZaiZaiA)
  */
 
-let version = '3.3.1';
+let version = '3.3.2';
 
 let store = {}, sys_info = wx.getSystemInfoSync();
 let baseMethod = {

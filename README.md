@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-    <a href="https://mp.color-ui.com/update/">更新日志(Beta V3.3.1)</a> | <a href="https://mp.color-ui.com/">在线文档</a>
+    <a href="https://mp.color-ui.com/update/">更新日志(Beta V3.3.2)</a> | <a href="https://mp.color-ui.com/">在线文档</a>
 </p>
 
 
