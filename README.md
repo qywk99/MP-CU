@@ -345,15 +345,15 @@ export const colorUI = new ColorUI({
                 <div>微慕开源小程序</div>
             </td>
             <td align="center" valign="middle">
-                <img width="150px" src="https://user-images.githubusercontent.com/19451694/153342500-f0e80ac4-e364-4eef-b94d-ffce8ca32ed6.jpg" alt="@xtanyu">
+                <img width="150px" src="https://user-images.githubusercontent.com/50282105/170190355-c1101e72-b2be-4c9c-adef-6557bee67f4b.jpg" alt="@xtanyu">
                 <div>一键去水印</div>
             </td>
             <td align="center" valign="middle">
-                <img width="150px" src="https://user-images.githubusercontent.com/19451694/153342500-f0e80ac4-e364-4eef-b94d-ffce8ca32ed6.jpg" alt="@ch4ixin">
+                <img width="150px" src="https://user-images.githubusercontent.com/35681956/188177774-3312f3a8-b8d3-4af6-bbba-d0e3691ee2c0.jpg" alt="@ch4ixin">
                 <div>解忧小工具</div>
             </td>
             <td align="center" valign="middle">
-                <img width="150px" src="https://user-images.githubusercontent.com/19451694/153342500-f0e80ac4-e364-4eef-b94d-ffce8ca32ed6.jpg" alt="@extrastu">
+                <img width="150px" src="https://user-images.githubusercontent.com/19451694/195476778-77dfee82-c48a-43e0-a867-76d79f4f4edb.png" alt="@extrastu">
                 <div>口袋喇叭-地摊吆喝</div>
             </td>
         </tr>
