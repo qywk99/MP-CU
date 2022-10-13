@@ -340,6 +340,26 @@ export const colorUI = new ColorUI({
                 <img width="150px" src="https://user-images.githubusercontent.com/19451694/153342500-f0e80ac4-e364-4eef-b94d-ffce8ca32ed6.jpg" alt="@extrastu">
                 <div>每图-故宫壁纸</div>
             </td>
+            <td align="center" valign="middle">
+                
+                <img width="150px" src="https://user-images.githubusercontent.com/19451694/153342500-f0e80ac4-e364-4eef-b94d-ffce8ca32ed6.jpg" alt="@poisonboy">
+                <div>微慕开源小程序</div>
+            </td>
+            <td align="center" valign="middle">
+                
+                <img width="150px" src="https://user-images.githubusercontent.com/19451694/153342500-f0e80ac4-e364-4eef-b94d-ffce8ca32ed6.jpg" alt="@xtanyu">
+                <div>一键去水印</div>
+            </td>
+            <td align="center" valign="middle">
+                
+                <img width="150px" src="https://user-images.githubusercontent.com/19451694/153342500-f0e80ac4-e364-4eef-b94d-ffce8ca32ed6.jpg" alt="@ch4ixin">
+                <div>解忧小工具</div>
+            </td>
+            <td align="center" valign="middle">
+                
+                <img width="150px" src="https://user-images.githubusercontent.com/19451694/153342500-f0e80ac4-e364-4eef-b94d-ffce8ca32ed6.jpg" alt="@extrastu">
+                <div>口袋喇叭-地摊吆喝</div>
+            </td>
         </tr>
     </tbody>
 </table>
