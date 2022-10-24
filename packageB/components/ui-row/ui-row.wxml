@@ -1,3 +1,0 @@
-<view class="ui-grid {{bg}} {{ui}} {{align?'ui-grid-align-' + align:''}}" style="{{styleValue}}">
-    <slot></slot>
-</view>
