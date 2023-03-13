@@ -234,8 +234,8 @@ export default class ColorUI {
                 setStatusStyle(wx.getSystemInfoSync().theme === 'light' ? 'dark' : 'light')
             })
         } else {
-            wx.setStorageSync('sys_theme', this.config.theme)
-            setStatusStyle(this.config.theme === 'light' ? 'dark' : 'light');
+            wx.setStorageSync('sys_theme', store.state.sys_theme)
+            setStatusStyle(store.state.sys_theme === 'light' ? 'dark' : 'light');
         }
         const originPage = Page
         const originComponent = Component;
