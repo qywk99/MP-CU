@@ -227,7 +227,7 @@ export default class ColorUI {
             }
         };
         store = CUStoreInit(this.config)
-        if (this.config.theme === 'auto') {
+        if (store.state.sys_theme === 'auto') {
             wx.onThemeChange((res) => {
                 store.setState({sys_theme: 'auto'})
                 wx.setStorageSync('sys_theme', 'auto');
