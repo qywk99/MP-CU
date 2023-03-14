@@ -217,6 +217,7 @@ export const colorUI = new ColorUI({
 ### 内置方法
 - [x] 内置 store		[使用方法参考](#ColorUi.store)
 - [x] 页面返回函数	[使用方法参考](#_backPage)
+- [x] 返回首页	[使用方法参考](#_toHome)
 - [x] 切换主题		[使用方法参考](#_setTheme)
 - [x] 设置主颜色		[使用方法参考](#_setMain)
 - [x] 设置字号等级	[使用方法参考](#_setText)
@@ -226,9 +227,11 @@ export const colorUI = new ColorUI({
 
 ### 内置方法详解
 
+#### <span id='ColorUi.store'>内置 store</span>
+> 在需要设置的全局变量data调用 `this.setState()` ,再需获取全局变量data获取 `this.data.$cuStore` 的属性， 注意this 作用域的问题。
+
 #### <span id='_backPage'>页面返回函数</span>
 > colorui 3.x微信小程序版本因为所有页面都需要包裹 `ui-sys` ，所以对于大多数返回函数都无法使用，ColorUI为您在所有页面注册了返回函数，在需要返回的函数里调用 `this._backPage()` 注意this 作用域的问题。
-
 
 #### <span id='_toHome'>返回首页</span>
 > 在需要返回的函数里调用 `this._toHome()` 注意this 作用域的问题。
